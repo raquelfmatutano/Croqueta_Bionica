@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour
     public AudioSource walkingAudioSource;
     public AudioClip walk_soundClip;
 
+    public GameObject audio_area;
+
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -65,6 +67,15 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+
+        if(walkingAudioSource.isPlaying){
+            audio_area.SetActive(true);
+        }
+        else
+        {
+            audio_area.SetActive(false);
+        }
+
         if (inputEnabled)
         {
             yaw += lookInput.x * mouseSensitivity;
