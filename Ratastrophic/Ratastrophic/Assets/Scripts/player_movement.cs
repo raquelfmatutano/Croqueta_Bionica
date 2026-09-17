@@ -12,19 +12,53 @@ public class player_movemet : MonoBehaviour
     private Rigidbody _rigidbody;
     private Vector3 _moveDirection;
 
+    [Header("Audio Settings")]
+    public AudioSource walkingAudioSource;
+    public AudioClip walk_soundClip;
+    public GameObject audio_area;
+
     private void OnEnable() => moveAction.Enable();
     private void OnDisable() => moveAction.Disable();
 
     private void Start()
     {
+        if (walkingAudioSource == null) {
+            walkingAudioSource = gameObject.AddComponent<AudioSource>();
+        }
+
         _rigidbody = GetComponent<Rigidbody>();
         _rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
     }
 
     private void Update()
     {
+        if(walkingAudioSource.isPlaying){
+            audio_area.SetActive(true);
+        }
+        else
+        {
+            audio_area.SetActive(false);
+        }
+
         Vector2 input = moveAction.ReadValue<Vector2>();
         _moveDirection = new Vector3(input.x, 0f, input.y).normalized;
+
+        if (input.sqrMagnitude > 0.01f)
+        {
+            if (!walkingAudioSource.isPlaying)
+            {
+                walkingAudioSource.clip = walk_soundClip;
+                walkingAudioSource.loop = true;
+                walkingAudioSource.Play();
+            }
+        }
+        else
+        {
+            if (walkingAudioSource.isPlaying)
+            {
+                walkingAudioSource.Stop();
+            }
+        }
     }
 
     private void FixedUpdate()
