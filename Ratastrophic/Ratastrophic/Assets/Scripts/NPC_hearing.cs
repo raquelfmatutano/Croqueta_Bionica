@@ -4,6 +4,8 @@ public class NPC_hearing : MonoBehaviour
 {
     //public float NPC_speed = 5.0f; //esto en algun momento habria que moverlo a un sitio mejor
 
+    public GameObject alert_area;
+
     private Transform parent;
     private bool noise_heard = false;
     private Vector3 noise_coords;
@@ -23,9 +25,47 @@ public class NPC_hearing : MonoBehaviour
         }*/
     }
 
+    public void ReceiveAlert()
+    {
+        print(name + ": I heard you, let's go!");
+        NPC_state state = GetComponent<NPC_state>();
+        state.NPC_currentState = RobotState.INVESTIGACION;
+    }
+
     void OnTriggerEnter(Collider obj) {
         if(obj.tag == "Noise") {
             print("Noise detected");
+            NPC_state state = GetComponent<NPC_state>();
+            state.NPC_currentState = RobotState.INVESTIGACION;
+
+            if (alert_area) {
+                alert_area.SetActive(true);
+                //alert_area.SetActive(false);
+            }
+        
+
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 10f);
+            foreach (var hit in hitColliders)
+            {
+                if (hit.CompareTag("NPC"))
+                {
+                    NPC_hearing otherNPC = hit.GetComponent<NPC_hearing>();
+                    if (otherNPC != null && otherNPC != this)
+                    {
+                        print(name + ": Hey, do you hear me?");
+                        otherNPC.ReceiveAlert();
+                        
+                    }
+                }
+            }
         }
     }
+
+    /*private void OnTriggerStay(Collider obj)
+    {
+        if (obj.tag == "Alert")
+        {
+            print(name + ": I heard you, let's go");
+        }
+    }*/
 }
