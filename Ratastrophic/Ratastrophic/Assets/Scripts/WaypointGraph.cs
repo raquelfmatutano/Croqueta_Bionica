@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WaypointGraph : MonoBehaviour
 {
-    public List<Waypoint> waypoints = new List<Waypoint>();
+    private List<Waypoint> waypoints = new List<Waypoint>();
 
     private void Awake()
     {
@@ -12,16 +12,29 @@ public class WaypointGraph : MonoBehaviour
         );
     }
 
-    public Waypoint ObtenerWaypointAleatorio()
+    public Waypoint ObtenerWaypointAleatorio(Waypoint waypointActual)
     {
-        if (waypoints.Count == 0)
+        if (waypoints.Count <= 1)
+            return null;
+
+        List<Waypoint> posibles = new List<Waypoint>();
+
+        foreach (Waypoint waypoint in waypoints)
+        {
+            if (waypoint != null && waypoint != waypointActual)
+            {
+                posibles.Add(waypoint);
+            }
+        }
+
+        if (posibles.Count == 0)
             return null;
 
         int indice = Random.Range(
             0,
-            waypoints.Count
+            posibles.Count
         );
 
-        return waypoints[indice];
+        return posibles[indice];
     }
 }
