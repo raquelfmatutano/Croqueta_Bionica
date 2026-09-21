@@ -6,9 +6,9 @@ public class NPCPathfinding : MonoBehaviour
     
     public Waypoint waypointInicial;
 
-    private Waypoint waypointActual;
+    public Waypoint waypointActual;
 
-    private Waypoint objetivo;
+    public Waypoint objetivo;
 
     private WaypointGraph grafo;
 
@@ -21,6 +21,7 @@ public class NPCPathfinding : MonoBehaviour
     private int indiceRuta = 0;
 
     private bool puedeMoverse = false;
+    private bool deRuta = false;
 
     private void Start()
     {
@@ -40,7 +41,7 @@ public class NPCPathfinding : MonoBehaviour
         if (grafo == null)
         {
             Debug.LogError(
-                "No se ha encontrado ningún WaypointGraph en la escena."
+                "No se ha encontrado ningï¿½n WaypointGraph en la escena."
             );
 
             return;
@@ -60,6 +61,41 @@ public class NPCPathfinding : MonoBehaviour
         transform.position = waypointActual.transform.position;
 
         ElegirNuevoDestino();
+    }
+
+    public void IrADestino(Waypoint nuevoObjetivo, Waypoint actual) {
+        objetivo = nuevoObjetivo;
+        waypointActual = actual;
+
+        if (objetivo == null)
+        {
+            Debug.LogError(
+                "No se ha podido encontrar un nuevo waypoint."
+            );
+
+            return;
+        }
+
+        ruta = aStar.CalcularRuta(
+            waypointActual,
+            objetivo
+        );
+
+        if (ruta == null || ruta.Count == 0)
+        {
+            Debug.LogError(
+                "No se ha encontrado una ruta hasta " +
+                objetivo.name
+            );
+
+            return;
+        }
+
+        indiceRuta = 0;
+
+        Debug.Log(
+            "Nuevo destino: " + objetivo.name
+        );
     }
 
     private void ElegirNuevoDestino()
@@ -137,7 +173,10 @@ public class NPCPathfinding : MonoBehaviour
                     waypointActual.name
                 );
 
+                deRuta = false;
+
                 ElegirNuevoDestino();
+                deRuta = true;
             }
         }
     }
@@ -145,5 +184,6 @@ public class NPCPathfinding : MonoBehaviour
     public void ActivarMovimiento()
     {
         puedeMoverse = true;
+        deRuta = true;
     }
 }

@@ -2,18 +2,20 @@ using UnityEngine;
 
 public class NPC_hearing : MonoBehaviour
 {
-    //public float NPC_speed = 5.0f; //esto en algun momento habria que moverlo a un sitio mejor
-
     public GameObject alert_area;
 
     private Transform parent;
     private bool noise_heard = false;
     private Vector3 noise_coords;
+
+    private WaypointGraph grafo; 
+    private NPCPathfinding pathfinder;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //parent = gameObject.transform.parent;
+        grafo = FindFirstObjectByType<WaypointGraph>();
+        pathfinder = GetComponent<NPCPathfinding>();
     }
 
     // Update is called once per frame
@@ -66,6 +68,10 @@ public class NPC_hearing : MonoBehaviour
                     }
                 }
             }
+
+            Waypoint objective = grafo.createWaypoint(obj.transform.position);
+            Waypoint start = grafo.createWaypoint(transform.position);
+            pathfinder.IrADestino(objective, start);
             
         }
     }

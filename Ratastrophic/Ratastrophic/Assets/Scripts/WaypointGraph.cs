@@ -37,4 +37,23 @@ public class WaypointGraph : MonoBehaviour
 
         return posibles[indice];
     }
+
+    public Waypoint createWaypoint(Vector3 pos) {
+        GameObject newWaypoint = new GameObject();
+        newWaypoint.transform.position = new Vector3(pos.x, 0, pos.z);
+        newWaypoint.name = "Go_to";
+        newWaypoint.AddComponent<Waypoint>();
+        
+        Waypoint newWaypoint_component = newWaypoint.GetComponent<Waypoint>();
+
+
+        
+        newWaypoint_component.vecinos = waypoints; //vecinos
+        print(newWaypoint_component.vecinos);
+
+        waypoints.Add(newWaypoint_component);
+
+        return newWaypoint_component;
+
+    }
 }
