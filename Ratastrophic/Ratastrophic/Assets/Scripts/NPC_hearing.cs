@@ -69,9 +69,13 @@ public class NPC_hearing : MonoBehaviour
                 }
             }
 
-            Waypoint objective = grafo.createWaypoint(obj.transform.position);
-            Waypoint start = grafo.createWaypoint(transform.position);
+            Waypoint start = grafo.createWaypoint(transform.position, pathfinder.objetivo, "start");
+            Waypoint objective = grafo.createWaypoint(obj.transform.position, start, "objective");
+
+            start.vecinos.Add(objective);
             pathfinder.IrADestino(objective, start);
+
+            grafo.deleteWaypoints();
             
         }
     }

@@ -41,7 +41,7 @@ public class NPCPathfinding : MonoBehaviour
         if (grafo == null)
         {
             Debug.LogError(
-                "No se ha encontrado ning�n WaypointGraph en la escena."
+                "No se ha encontrado ningun WaypointGraph en la escena."
             );
 
             return;

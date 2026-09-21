@@ -4,6 +4,7 @@ using UnityEngine;
 public class WaypointGraph : MonoBehaviour
 {
     private List<Waypoint> waypoints = new List<Waypoint>();
+    private List<Waypoint> waypoints_to_delete = new List<Waypoint>();
 
     private void Awake()
     {
@@ -38,22 +39,29 @@ public class WaypointGraph : MonoBehaviour
         return posibles[indice];
     }
 
-    public Waypoint createWaypoint(Vector3 pos) {
+    public Waypoint createWaypoint(Vector3 pos, Waypoint neighbour, string name) {
         GameObject newWaypoint = new GameObject();
         newWaypoint.transform.position = new Vector3(pos.x, 0, pos.z);
-        newWaypoint.name = "Go_to";
+        newWaypoint.name = name;
         newWaypoint.AddComponent<Waypoint>();
         
         Waypoint newWaypoint_component = newWaypoint.GetComponent<Waypoint>();
 
-
-        
-        newWaypoint_component.vecinos = waypoints; //vecinos
-        print(newWaypoint_component.vecinos);
-
+        newWaypoint_component.vecinos.Add(neighbour);
         waypoints.Add(newWaypoint_component);
+
+        waypoints_to_delete.Add(newWaypoint_component);
 
         return newWaypoint_component;
 
+    }
+
+    public void deleteWaypoints() {
+        foreach (Waypoint wp in waypoints_to_delete) {
+            waypoints.Remove(wp);
+        }
+
+        waypoints_to_delete.Clear();
+        print("borraos");
     }
 }
