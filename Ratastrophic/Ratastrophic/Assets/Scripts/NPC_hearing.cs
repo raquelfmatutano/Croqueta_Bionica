@@ -27,8 +27,12 @@ public class NPC_hearing : MonoBehaviour
 
     public void ReceiveAlert()
     {
-        print(name + ": I heard you, let's go!");
         NPC_state state = GetComponent<NPC_state>();
+        if (state.NPC_currentState != RobotState.PATRULLA)
+            return;
+        
+
+        print(name + ": I heard you, let's go!");
         state.NPC_currentState = RobotState.INVESTIGACION;
     }
 
@@ -36,15 +40,19 @@ public class NPC_hearing : MonoBehaviour
         if(obj.tag == "Noise") {
             print("Noise detected");
             NPC_state state = GetComponent<NPC_state>();
+            if (state.NPC_currentState != RobotState.PATRULLA)
+                return;
+
             state.NPC_currentState = RobotState.INVESTIGACION;
 
             if (alert_area) {
                 alert_area.SetActive(true);
-                //alert_area.SetActive(false);
+                
             }
         
 
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 10f);
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 10f);
+            alert_area.SetActive(false);
             foreach (var hit in hitColliders)
             {
                 if (hit.CompareTag("NPC"))
@@ -52,12 +60,13 @@ public class NPC_hearing : MonoBehaviour
                     NPC_hearing otherNPC = hit.GetComponent<NPC_hearing>();
                     if (otherNPC != null && otherNPC != this)
                     {
-                        print(name + ": Hey, do you hear me?");
+                        print(name + ": Hey, do you hear me, " + hit.name + "?");
                         otherNPC.ReceiveAlert();
                         
                     }
                 }
             }
+            
         }
     }
 
