@@ -7,6 +7,8 @@ public class NPC_vision : MonoBehaviour
     private Transform parent;
     private bool player_seen = false;
     private Transform player;
+
+    public Collision vision_area;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +28,9 @@ public class NPC_vision : MonoBehaviour
     void OnTriggerEnter(Collider obj) {
         if(obj.tag == "Player") {
             print("Player seen!.");
+            
+            NPC_state state = GetComponent<NPC_state>();
+            state.NPC_currentState = RobotState.PERSECUCION;
         }
     }
 }
