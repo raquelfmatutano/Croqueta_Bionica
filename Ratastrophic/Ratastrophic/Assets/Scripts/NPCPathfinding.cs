@@ -12,7 +12,7 @@ public class NPCPathfinding : MonoBehaviour
 
     private WaypointGraph grafo;
 
-    public float velocidad = 3f;
+    public float velocidad = 1f;
 
     private AStar aStar;
 
@@ -22,10 +22,13 @@ public class NPCPathfinding : MonoBehaviour
 
     private bool puedeMoverse = false;
     private bool deRuta = false;
+    private NPC_state state;
+    public Transform player_tranform;
 
     private void Start()
     {
         aStar = GetComponent<AStar>();
+        state = GetComponent<NPC_state>();
 
         if (aStar == null)
         {
@@ -136,21 +139,28 @@ public class NPCPathfinding : MonoBehaviour
 
     private void Update()
     {
+        Transform waypointDestino = transform;
 
-        if (!puedeMoverse)
+        if (state.NPC_currentState == RobotState.PERSECUCION) {
+            waypointDestino = player_tranform;
+        }
+
+        else {
+            if (!puedeMoverse)
             return;
 
-        if (ruta == null || ruta.Count == 0)
-            return;
+            if (ruta == null || ruta.Count == 0)
+                return;
 
-        if (indiceRuta >= ruta.Count)
-            return;
+            if (indiceRuta >= ruta.Count)
+                return;
 
-        Waypoint waypointDestino = ruta[indiceRuta];
+            waypointDestino = ruta[indiceRuta].transform;
+        }
 
         transform.position = Vector3.MoveTowards(
             transform.position,
-            waypointDestino.transform.position,
+            waypointDestino.position,
             velocidad * Time.deltaTime
         );
 

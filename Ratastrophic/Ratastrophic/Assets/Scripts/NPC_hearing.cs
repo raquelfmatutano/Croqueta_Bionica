@@ -3,6 +3,7 @@ using UnityEngine;
 public class NPC_hearing : MonoBehaviour
 {
     public GameObject alert_area;
+    public NPC_state state;
 
     private Transform parent;
     private bool noise_heard = false;
@@ -21,15 +22,12 @@ public class NPC_hearing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (noise_heard){
-            float step =  NPC_speed * Time.deltaTime;
-            parent.position = Vector3.MoveTowards(parent.position, noise_coords, step);
-        }*/
+
     }
 
     public void ReceiveAlert()
     {
-        NPC_state state = GetComponent<NPC_state>();
+        
         if (state.NPC_currentState != RobotState.PATRULLA)
             return;
         

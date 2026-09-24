@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 6872384659538319009}
   - component: {fileID: 6433680618261672746}
   - component: {fileID: 5357647045148028269}
-  - component: {fileID: 7823657192825117784}
   - component: {fileID: 5308326109191699364}
   - component: {fileID: 8464657329291745401}
   - component: {fileID: 4361554471669786362}
   - component: {fileID: 3654417176758176}
   - component: {fileID: 8152027165033591409}
   - component: {fileID: 2985345768090351513}
+  - component: {fileID: 8979156441293109949}
   m_Layer: 0
   m_Name: DEBUG_NPC
   m_TagString: NPC
@@ -101,27 +101,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7823657192825117784
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787604950602349222}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5308326109191699364
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -215,6 +194,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5d74e88a84f9b40b4f1dae481640a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC_vision
+  NPC_follow_speed: 5
+--- !u!136 &8979156441293109949
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787604950602349222}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6508162
+  m_Height: 3.185701
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0928504, z: 0}
 --- !u!1 &4182550002178963609
 GameObject:
   m_ObjectHideFlags: 0
