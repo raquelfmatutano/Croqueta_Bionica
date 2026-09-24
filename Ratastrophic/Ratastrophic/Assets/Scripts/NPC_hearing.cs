@@ -10,13 +10,12 @@ public class NPC_hearing : MonoBehaviour
     private Vector3 noise_coords;
 
     private WaypointGraph grafo; 
-    private NPCPathfinding pathfinder;
+    public NPCPathfinding pathfinder;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         grafo = FindFirstObjectByType<WaypointGraph>();
-        pathfinder = GetComponent<NPCPathfinding>();
     }
 
     // Update is called once per frame
@@ -39,7 +38,6 @@ public class NPC_hearing : MonoBehaviour
     void OnTriggerEnter(Collider obj) {
         if(obj.tag == "Noise") {
             print("Noise detected");
-            NPC_state state = GetComponent<NPC_state>();
             if (state.NPC_currentState != RobotState.PATRULLA)
                 return;
 

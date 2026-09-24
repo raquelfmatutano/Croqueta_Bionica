@@ -184,6 +184,9 @@ public class NPCPathfinding : MonoBehaviour
                 );
 
                 deRuta = false;
+                if (state.NPC_currentState == RobotState.INVESTIGACION) {
+                    state.NPC_currentState = RobotState.PATRULLA;
+                }
 
                 ElegirNuevoDestino();
                 deRuta = true;
