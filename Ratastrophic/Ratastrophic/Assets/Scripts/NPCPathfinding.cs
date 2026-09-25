@@ -164,6 +164,10 @@ public class NPCPathfinding : MonoBehaviour
             velocidad * Time.deltaTime
         );
 
+        Vector3 direccion = waypointDestino.position - transform.position;
+        Quaternion lookRotation = Quaternion.LookRotation(direccion);
+        transform.rotation = Quaternion.Slerp (transform.rotation, lookRotation, Time.deltaTime * 10f);
+
         float distancia = Vector3.Distance(
             transform.position,
             waypointDestino.transform.position
