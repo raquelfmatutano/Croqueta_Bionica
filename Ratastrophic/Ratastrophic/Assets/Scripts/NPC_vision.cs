@@ -15,8 +15,7 @@ public class NPC_vision : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //parent = gameObject.transform.parent;
-        print(state);
+
     }
 
     // Update is called once per frame
@@ -34,6 +33,15 @@ public class NPC_vision : MonoBehaviour
             player = obj.transform;
             
             state.NPC_currentState = RobotState.PERSECUCION;
+        }
+    }
+
+    void OnTriggerExit(Collider obj) {
+        if(obj.tag == "Player" && state.NPC_currentState == RobotState.PERSECUCION) {
+            print("Player lost.");
+            player = null;
+            
+            state.NPC_currentState = RobotState.PATRULLA;
         }
     }
 }

@@ -169,55 +169,56 @@ public class NPCPathfinding : MonoBehaviour
             if (indiceRuta >= ruta.Count)
                 return;
 
-        }
+            waypointDestino = ruta[indiceRuta].transform;
         
-        if (indiceRuta == ruta.Count - 1)
-        {
-            float distanciaFinal = Vector3.Distance(
-                transform.position,
-                ruta[indiceRuta].transform.position
-            );
-
-            if (distanciaFinal <= distanciaPreparacion)
+            if (indiceRuta == ruta.Count - 1)
             {
-                bool rutaPreparada = PrepararSiguienteRuta();
+                float distanciaFinal = Vector3.Distance(
+                    transform.position,
+                    waypointDestino.position
+                );
 
-                if (rutaPreparada &&
-                    Vector3.Distance(
-                        transform.position,
-                        ruta[indiceRuta].transform.position
-                    ) <= radioLlegada)
+                if (distanciaFinal <= distanciaPreparacion)
                 {
-                    indiceRuta++;
-                    if (state.NPC_currentState == RobotState.INVESTIGACION) {
-                        state.NPC_currentState = RobotState.PATRULLA;
+                    bool rutaPreparada = PrepararSiguienteRuta();
+
+                    if (rutaPreparada &&
+                        Vector3.Distance(
+                            transform.position,
+                            waypointDestino.position
+                        ) <= radioLlegada)
+                    {
+                        indiceRuta++;
+                        if (state.NPC_currentState == RobotState.INVESTIGACION) {
+                            state.NPC_currentState = RobotState.PATRULLA;
+                        }
+                        
                     }
-                    
                 }
             }
+
+            if (indiceRuta >= ruta.Count)
+                return;
+
+            while (indiceRuta < ruta.Count - 1)
+            {
+                float distanciaWaypoint = Vector3.Distance(
+                    transform.position,
+                    waypointDestino.transform.position
+                );
+
+                if (distanciaWaypoint > radioLlegada)
+                    break;
+
+                indiceRuta++;
+            }
+
+            if (indiceRuta >= ruta.Count)
+                return;
         }
-
-        if (indiceRuta >= ruta.Count)
-            return;
-
-        while (indiceRuta < ruta.Count - 1)
-        {
-            float distanciaWaypoint = Vector3.Distance(
-                transform.position,
-                ruta[indiceRuta].transform.position
-            );
-
-            if (distanciaWaypoint > radioLlegada)
-                break;
-
-            indiceRuta++;
-        }
-
-        if (indiceRuta >= ruta.Count)
-            return;
 
         Vector3 posicionObjetivo =
-            ruta[indiceRuta].transform.position;
+            waypointDestino.transform.position;
 
         Vector3 haciaObjetivo =
             posicionObjetivo - transform.position;
@@ -246,7 +247,7 @@ public class NPCPathfinding : MonoBehaviour
 
         transform.position += velocidadActual * Time.deltaTime;
 
-        // Girar hacia la direcci�n real del movimiento.
+        // Girar hacia la direccion real del movimiento.
         Vector3 direccionMovimiento = velocidadActual;
         direccionMovimiento.y = 0f;
 
