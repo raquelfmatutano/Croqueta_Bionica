@@ -6,8 +6,10 @@ public class NPCPathfinding : MonoBehaviour
 {
     public Waypoint waypointInicial;
 
-    private Waypoint waypointActual;
-    private Waypoint objetivo;
+    public Waypoint waypointActual;
+
+    public Waypoint objetivo;
+
     private WaypointGraph grafo;
 
     
@@ -26,6 +28,7 @@ public class NPCPathfinding : MonoBehaviour
     private int indiceRuta = 0;
 
     private bool puedeMoverse = false;
+    private bool deRuta = false;
 
     private void Start()
     {
@@ -41,7 +44,7 @@ public class NPCPathfinding : MonoBehaviour
 
         if (grafo == null)
         {
-            Debug.LogError("No se ha encontrado ningún WaypointGraph.");
+            Debug.LogError("No se ha encontrado ningun WaypointGraph.");
             return;
         }
 
@@ -55,6 +58,41 @@ public class NPCPathfinding : MonoBehaviour
         transform.position = waypointActual.transform.position;
 
         ElegirNuevoDestino();
+    }
+
+    public void IrADestino(Waypoint nuevoObjetivo, Waypoint actual) {
+        objetivo = nuevoObjetivo;
+        waypointActual = actual;
+
+        if (objetivo == null)
+        {
+            Debug.LogError(
+                "No se ha podido encontrar un nuevo waypoint."
+            );
+
+            return;
+        }
+
+        ruta = aStar.CalcularRuta(
+            waypointActual,
+            objetivo
+        );
+
+        if (ruta == null || ruta.Count == 0)
+        {
+            Debug.LogError(
+                "No se ha encontrado una ruta hasta " +
+                objetivo.name
+            );
+
+            return;
+        }
+
+        indiceRuta = 0;
+
+        Debug.Log(
+            "Nuevo destino: " + objetivo.name
+        );
     }
 
     private void ElegirNuevoDestino()
@@ -193,7 +231,7 @@ public class NPCPathfinding : MonoBehaviour
 
         transform.position += velocidadActual * Time.deltaTime;
 
-        // Girar hacia la dirección real del movimiento.
+        // Girar hacia la direcciï¿½n real del movimiento.
         Vector3 direccionMovimiento = velocidadActual;
         direccionMovimiento.y = 0f;
 
@@ -215,5 +253,6 @@ public class NPCPathfinding : MonoBehaviour
     public void ActivarMovimiento()
     {
         puedeMoverse = true;
+        deRuta = true;
     }
 }
