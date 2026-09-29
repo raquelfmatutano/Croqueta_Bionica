@@ -1,9 +1,9 @@
+
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCPathfinding : MonoBehaviour
 {
-    
     public Waypoint waypointInicial;
 
     public Waypoint waypointActual;
@@ -12,12 +12,19 @@ public class NPCPathfinding : MonoBehaviour
 
     private WaypointGraph grafo;
 
-    public float velocidad = 1f;
+    
+    public float velocidad = 3f;
+    public float fuerzaMaxima = 5f;
+
+    
+    public float radioLlegada = 0.3f;
+    public float distanciaPreparacion = 2f;
+    public float velocidadGiro = 5f;
+
+    private Vector3 velocidadActual;
 
     private AStar aStar;
-
     private List<Waypoint> ruta;
-
     private int indiceRuta = 0;
 
     private bool puedeMoverse = false;
@@ -32,10 +39,7 @@ public class NPCPathfinding : MonoBehaviour
 
         if (aStar == null)
         {
-            Debug.LogError(
-                "El NPC necesita el componente AStar."
-            );
-
+            Debug.LogError("El NPC necesita el componente AStar.");
             return;
         }
 
@@ -43,24 +47,17 @@ public class NPCPathfinding : MonoBehaviour
 
         if (grafo == null)
         {
-            Debug.LogError(
-                "No se ha encontrado ningun WaypointGraph en la escena."
-            );
-
+            Debug.LogError("No se ha encontrado ningun WaypointGraph.");
             return;
         }
 
         if (waypointInicial == null)
         {
-            Debug.LogError(
-                "Debes asignar el waypoint inicial del NPC."
-            );
-
+            Debug.LogError("Debes asignar el waypoint inicial.");
             return;
         }
 
         waypointActual = waypointInicial;
-
         transform.position = waypointActual.transform.position;
 
         ElegirNuevoDestino();
@@ -107,35 +104,52 @@ public class NPCPathfinding : MonoBehaviour
 
         if (objetivo == null)
         {
-            Debug.LogError(
-                "No se ha podido encontrar un nuevo waypoint."
-            );
-
+            Debug.LogError("No se ha podido encontrar un nuevo waypoint.");
             return;
         }
 
-        ruta = aStar.CalcularRuta(
-            waypointActual,
-            objetivo
-        );
+        ruta = aStar.CalcularRuta(waypointActual, objetivo);
 
         if (ruta == null || ruta.Count == 0)
         {
-            Debug.LogError(
-                "No se ha encontrado una ruta hasta " +
-                objetivo.name
-            );
-
+            Debug.LogError("No se ha encontrado una ruta hasta " + objetivo.name);
             return;
         }
 
-        indiceRuta = 0;
+        indiceRuta = ruta.Count > 1 ? 1 : 0;
 
-        Debug.Log(
-            "Nuevo destino: " + objetivo.name
-        );
+        Debug.Log("Nuevo destino: " + objetivo.name);
     }
 
+    private bool PrepararSiguienteRuta()
+    {
+       
+        Waypoint nuevoObjetivo =
+            grafo.ObtenerWaypointAleatorio(objetivo);
+
+        if (nuevoObjetivo == null)
+            return false;
+
+        List<Waypoint> nuevaRuta = aStar.CalcularRuta(
+            objetivo,
+            nuevoObjetivo
+        );
+
+        if (nuevaRuta == null || nuevaRuta.Count < 2)
+            return false;
+
+       
+        for (int i = 1; i < nuevaRuta.Count; i++)
+        {
+            ruta.Add(nuevaRuta[i]);
+        }
+
+        objetivo = nuevoObjetivo;
+
+        Debug.Log("Ruta ampliada. Nuevo destino: " + objetivo.name);
+
+        return true;
+    }
 
     private void Update()
     {
@@ -155,46 +169,97 @@ public class NPCPathfinding : MonoBehaviour
             if (indiceRuta >= ruta.Count)
                 return;
 
-            waypointDestino = ruta[indiceRuta].transform;
+        
+        if (indiceRuta == ruta.Count - 1)
+        {
+            float distanciaFinal = Vector3.Distance(
+                transform.position,
+                ruta[indiceRuta].transform.position
+            );
+
+            if (distanciaFinal <= distanciaPreparacion)
+            {
+                bool rutaPreparada = PrepararSiguienteRuta();
+
+                if (rutaPreparada &&
+                    Vector3.Distance(
+                        transform.position,
+                        ruta[indiceRuta].transform.position
+                    ) <= radioLlegada)
+                {
+                    indiceRuta++;
+                    if (state.NPC_currentState == RobotState.INVESTIGACION) {
+                        state.NPC_currentState = RobotState.PATRULLA;
+                    }
+                }
+            }
         }
 
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            waypointDestino.position,
-            velocidad * Time.deltaTime
-        );
+        if (indiceRuta >= ruta.Count)
+            return;
 
-        Vector3 direccion = waypointDestino.position - transform.position;
-        Quaternion lookRotation = Quaternion.LookRotation(direccion);
-        transform.rotation = Quaternion.Slerp (transform.rotation, lookRotation, Time.deltaTime * 10f);
-
-        float distancia = Vector3.Distance(
-            transform.position,
-            waypointDestino.transform.position
-        );
-
-        if (distancia < 0.1f)
+        while (indiceRuta < ruta.Count - 1)
         {
+            float distanciaWaypoint = Vector3.Distance(
+                transform.position,
+                ruta[indiceRuta].transform.position
+            );
+
+            if (distanciaWaypoint > radioLlegada)
+                break;
+
             indiceRuta++;
+        }
 
-            if (indiceRuta >= ruta.Count)
-            {
-                
-                waypointActual = objetivo;
+        if (indiceRuta >= ruta.Count)
+            return;
 
-                Debug.Log(
-                    "El NPC ha llegado a " +
-                    waypointActual.name
-                );
+        Vector3 posicionObjetivo =
+            ruta[indiceRuta].transform.position;
 
-                deRuta = false;
-                if (state.NPC_currentState == RobotState.INVESTIGACION) {
-                    state.NPC_currentState = RobotState.PATRULLA;
-                }
+        Vector3 haciaObjetivo =
+            posicionObjetivo - transform.position;
 
-                ElegirNuevoDestino();
-                deRuta = true;
-            }
+        // SEEK
+        Vector3 velocidadDeseada =
+            haciaObjetivo.sqrMagnitude > 0.001f
+                ? haciaObjetivo.normalized * velocidad
+                : Vector3.zero;
+
+        // STEERING 
+        Vector3 fuerzaDireccion =
+            velocidadDeseada - velocidadActual;
+
+        fuerzaDireccion = Vector3.ClampMagnitude(
+            fuerzaDireccion,
+            fuerzaMaxima
+        );
+
+        velocidadActual += fuerzaDireccion * Time.deltaTime;
+
+        velocidadActual = Vector3.ClampMagnitude(
+            velocidadActual,
+            velocidad
+        );
+
+        transform.position += velocidadActual * Time.deltaTime;
+
+        // Girar hacia la direcci�n real del movimiento.
+        Vector3 direccionMovimiento = velocidadActual;
+        direccionMovimiento.y = 0f;
+
+        if (direccionMovimiento.sqrMagnitude > 0.001f)
+        {
+            Quaternion rotacionObjetivo = Quaternion.LookRotation(
+                direccionMovimiento,
+                Vector3.up
+            );
+
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                rotacionObjetivo,
+                velocidadGiro * Time.deltaTime
+            );
         }
     }
 
