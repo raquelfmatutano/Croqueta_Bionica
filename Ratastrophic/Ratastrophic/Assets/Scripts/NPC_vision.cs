@@ -2,35 +2,46 @@ using UnityEngine;
 
 public class NPC_vision : MonoBehaviour
 {
-    //public float NPC_speed = 5.0f; //esto en algun momento habria que moverlo a un sitio mejor
+    public float NPC_follow_speed = 10f; //esto en algun momento habria que moverlo a un sitio mejor
 
     private Transform parent;
     private bool player_seen = false;
     private Transform player;
 
     public Collision vision_area;
+
+    public NPC_state state;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        parent = gameObject.transform.parent;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        /* if (player_seen){
-            float step =  NPC_speed * Time.deltaTime;
-            parent.position = Vector3.MoveTowards(parent.position, player.gameObject.transform.position, step);
-        } */
+        // if (state.NPC_currentState == RobotState.PERSECUCION){
+        //     float step =  NPC_follow_speed * Time.deltaTime;
+        //     transform.position = Vector3.MoveTowards(transform.position, player.position, step);
+        // }
     }
 
     void OnTriggerEnter(Collider obj) {
         if(obj.tag == "Player") {
             print("Player seen!.");
+            player = obj.transform;
             
-            NPC_state state = GetComponent<NPC_state>();
             state.NPC_currentState = RobotState.PERSECUCION;
+        }
+    }
+
+    void OnTriggerExit(Collider obj) {
+        if(obj.tag == "Player" && state.NPC_currentState == RobotState.PERSECUCION) {
+            print("Player lost.");
+            player = null;
+            
+            state.NPC_currentState = RobotState.PATRULLA;
         }
     }
 }

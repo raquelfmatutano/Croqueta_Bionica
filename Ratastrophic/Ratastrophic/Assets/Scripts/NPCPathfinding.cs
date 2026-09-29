@@ -29,10 +29,13 @@ public class NPCPathfinding : MonoBehaviour
 
     private bool puedeMoverse = false;
     private bool deRuta = false;
+    private NPC_state state;
+    public Transform player_tranform;
 
     private void Start()
     {
         aStar = GetComponent<AStar>();
+        state = GetComponent<NPC_state>();
 
         if (aStar == null)
         {
@@ -150,59 +153,72 @@ public class NPCPathfinding : MonoBehaviour
 
     private void Update()
     {
-        if (!puedeMoverse)
+        Transform waypointDestino = transform;
+
+        if (state.NPC_currentState == RobotState.PERSECUCION) {
+            waypointDestino = player_tranform;
+        }
+
+        else {
+            if (!puedeMoverse)
             return;
 
-        if (ruta == null || ruta.Count == 0)
-            return;
+            if (ruta == null || ruta.Count == 0)
+                return;
 
-        if (indiceRuta >= ruta.Count)
-            return;
+            if (indiceRuta >= ruta.Count)
+                return;
 
+            waypointDestino = ruta[indiceRuta].transform;
         
-        if (indiceRuta == ruta.Count - 1)
-        {
-            float distanciaFinal = Vector3.Distance(
-                transform.position,
-                ruta[indiceRuta].transform.position
-            );
-
-            if (distanciaFinal <= distanciaPreparacion)
+            if (indiceRuta == ruta.Count - 1)
             {
-                bool rutaPreparada = PrepararSiguienteRuta();
+                float distanciaFinal = Vector3.Distance(
+                    transform.position,
+                    waypointDestino.position
+                );
 
-                if (rutaPreparada &&
-                    Vector3.Distance(
-                        transform.position,
-                        ruta[indiceRuta].transform.position
-                    ) <= radioLlegada)
+                if (distanciaFinal <= distanciaPreparacion)
                 {
-                    indiceRuta++;
+                    bool rutaPreparada = PrepararSiguienteRuta();
+
+                    if (rutaPreparada &&
+                        Vector3.Distance(
+                            transform.position,
+                            waypointDestino.position
+                        ) <= radioLlegada)
+                    {
+                        indiceRuta++;
+                        if (state.NPC_currentState == RobotState.INVESTIGACION) {
+                            state.NPC_currentState = RobotState.PATRULLA;
+                        }
+                        
+                    }
                 }
             }
+
+            if (indiceRuta >= ruta.Count)
+                return;
+
+            while (indiceRuta < ruta.Count - 1)
+            {
+                float distanciaWaypoint = Vector3.Distance(
+                    transform.position,
+                    waypointDestino.transform.position
+                );
+
+                if (distanciaWaypoint > radioLlegada)
+                    break;
+
+                indiceRuta++;
+            }
+
+            if (indiceRuta >= ruta.Count)
+                return;
         }
-
-        if (indiceRuta >= ruta.Count)
-            return;
-
-        while (indiceRuta < ruta.Count - 1)
-        {
-            float distanciaWaypoint = Vector3.Distance(
-                transform.position,
-                ruta[indiceRuta].transform.position
-            );
-
-            if (distanciaWaypoint > radioLlegada)
-                break;
-
-            indiceRuta++;
-        }
-
-        if (indiceRuta >= ruta.Count)
-            return;
 
         Vector3 posicionObjetivo =
-            ruta[indiceRuta].transform.position;
+            waypointDestino.transform.position;
 
         Vector3 haciaObjetivo =
             posicionObjetivo - transform.position;
@@ -231,7 +247,7 @@ public class NPCPathfinding : MonoBehaviour
 
         transform.position += velocidadActual * Time.deltaTime;
 
-        // Girar hacia la direcci�n real del movimiento.
+        // Girar hacia la direccion real del movimiento.
         Vector3 direccionMovimiento = velocidadActual;
         direccionMovimiento.y = 0f;
 

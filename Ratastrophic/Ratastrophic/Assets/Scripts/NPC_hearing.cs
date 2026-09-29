@@ -3,33 +3,30 @@ using UnityEngine;
 public class NPC_hearing : MonoBehaviour
 {
     public GameObject alert_area;
+    public NPC_state state;
 
     private Transform parent;
     private bool noise_heard = false;
     private Vector3 noise_coords;
 
     private WaypointGraph grafo; 
-    private NPCPathfinding pathfinder;
+    public NPCPathfinding pathfinder;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         grafo = FindFirstObjectByType<WaypointGraph>();
-        pathfinder = GetComponent<NPCPathfinding>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (noise_heard){
-            float step =  NPC_speed * Time.deltaTime;
-            parent.position = Vector3.MoveTowards(parent.position, noise_coords, step);
-        }*/
+
     }
 
     public void ReceiveAlert()
     {
-        NPC_state state = GetComponent<NPC_state>();
+        
         if (state.NPC_currentState != RobotState.PATRULLA)
             return;
         
@@ -41,7 +38,6 @@ public class NPC_hearing : MonoBehaviour
     void OnTriggerEnter(Collider obj) {
         if(obj.tag == "Noise") {
             print("Noise detected");
-            NPC_state state = GetComponent<NPC_state>();
             if (state.NPC_currentState != RobotState.PATRULLA)
                 return;
 
