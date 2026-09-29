@@ -169,6 +169,7 @@ public class NPCPathfinding : MonoBehaviour
             if (indiceRuta >= ruta.Count)
                 return;
 
+        }
         
         if (indiceRuta == ruta.Count - 1)
         {
@@ -191,6 +192,7 @@ public class NPCPathfinding : MonoBehaviour
                     if (state.NPC_currentState == RobotState.INVESTIGACION) {
                         state.NPC_currentState = RobotState.PATRULLA;
                     }
+                    
                 }
             }
         }
