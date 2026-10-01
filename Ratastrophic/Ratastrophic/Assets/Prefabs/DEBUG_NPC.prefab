@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3654417176758176}
   - component: {fileID: 8152027165033591409}
   - component: {fileID: 8979156441293109949}
+  - component: {fileID: 5584045923402166679}
   m_Layer: 0
   m_Name: DEBUG_NPC
   m_TagString: NPC
@@ -156,6 +157,10 @@ MonoBehaviour:
   waypointActual: {fileID: 0}
   objetivo: {fileID: 0}
   velocidad: 3
+  fuerzaMaxima: 5
+  radioLlegada: 0.3
+  distanciaPreparacion: 2
+  velocidadGiro: 5
   player_tranform: {fileID: 0}
 --- !u!114 &8152027165033591409
 MonoBehaviour:
@@ -192,6 +197,25 @@ CapsuleCollider:
   m_Height: 3.185701
   m_Direction: 1
   m_Center: {x: 0, y: 1.0928504, z: 0}
+--- !u!114 &5584045923402166679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787604950602349222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b485f12f740c25429834ed6fd18f50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  detectionDistance: 3
+  whiskerAngle: 30
+  rayOriginHeight: 0.5
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 64
+  avoidanceWeight: 2.5
 --- !u!1 &4124939195767747532
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,10 +32,13 @@ public class NPCPathfinding : MonoBehaviour
     private NPC_state state;
     public Transform player_tranform;
 
+    private NPC_ObjectDetection objectDetection;
+
     private void Start()
     {
         aStar = GetComponent<AStar>();
         state = GetComponent<NPC_state>();
+        objectDetection = GetComponent<NPC_ObjectDetection>();
 
         if (aStar == null)
         {
@@ -123,6 +126,9 @@ public class NPCPathfinding : MonoBehaviour
 
     private bool PrepararSiguienteRuta()
     {
+        if (state.NPC_currentState == RobotState.INVESTIGACION) {
+            state.NPC_currentState = RobotState.PATRULLA;
+        }
        
         Waypoint nuevoObjetivo =
             grafo.ObtenerWaypointAleatorio(objetivo);
@@ -189,9 +195,6 @@ public class NPCPathfinding : MonoBehaviour
                         ) <= radioLlegada)
                     {
                         indiceRuta++;
-                        if (state.NPC_currentState == RobotState.INVESTIGACION) {
-                            state.NPC_currentState = RobotState.PATRULLA;
-                        }
                         
                     }
                 }
@@ -217,11 +220,8 @@ public class NPCPathfinding : MonoBehaviour
                 return;
         }
 
-        Vector3 posicionObjetivo =
-            waypointDestino.transform.position;
-
-        Vector3 haciaObjetivo =
-            posicionObjetivo - transform.position;
+        Vector3 posicionObjetivo = waypointDestino.transform.position;
+        Vector3 haciaObjetivo = posicionObjetivo - transform.position;
 
         // SEEK
         Vector3 velocidadDeseada =
@@ -230,8 +230,13 @@ public class NPCPathfinding : MonoBehaviour
                 : Vector3.zero;
 
         // STEERING 
-        Vector3 fuerzaDireccion =
-            velocidadDeseada - velocidadActual;
+        Vector3 fuerzaDireccion = velocidadDeseada - velocidadActual;
+
+        if (objectDetection != null)
+        {
+            Vector3 avoidanceForce = objectDetection.CalculateAvoidanceForce();
+            fuerzaDireccion += avoidanceForce * fuerzaMaxima;
+        }
 
         fuerzaDireccion = Vector3.ClampMagnitude(
             fuerzaDireccion,
