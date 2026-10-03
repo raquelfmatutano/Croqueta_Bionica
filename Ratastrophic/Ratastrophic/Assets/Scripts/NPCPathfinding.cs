@@ -58,7 +58,9 @@ public class NPCPathfinding : MonoBehaviour
         }
 
         waypointActual = waypointInicial;
-        transform.position = waypointActual.transform.position;
+        Vector3 posicion = waypointActual.transform.position;//cambio para que no se hunda en el suelo
+        posicion.y = transform.position.y;//cambio
+        transform.position = posicion;//cambio
 
         ElegirNuevoDestino();
     }
