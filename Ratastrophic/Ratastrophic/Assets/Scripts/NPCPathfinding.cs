@@ -91,7 +91,7 @@ public class NPCPathfinding : MonoBehaviour
             return;
         }
 
-        indiceRuta = 0;
+        indiceRuta = ruta.Count > 1 ? 1 : 0; //cambio
 
         Debug.Log(
             "Nuevo destino: " + objetivo.name
@@ -204,7 +204,7 @@ public class NPCPathfinding : MonoBehaviour
             {
                 float distanciaWaypoint = Vector3.Distance(
                     transform.position,
-                    waypointDestino.transform.position
+                    ruta[indiceRuta].transform.position //cambio
                 );
 
                 if (distanciaWaypoint > radioLlegada)
@@ -215,6 +215,8 @@ public class NPCPathfinding : MonoBehaviour
 
             if (indiceRuta >= ruta.Count)
                 return;
+
+            waypointDestino = ruta[indiceRuta].transform; //cambio
         }
 
         Vector3 posicionObjetivo =
