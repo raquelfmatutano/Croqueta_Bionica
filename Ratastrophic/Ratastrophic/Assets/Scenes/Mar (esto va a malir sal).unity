@@ -3835,6 +3835,7 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &645270634
 MonoBehaviour:
@@ -4152,6 +4153,7 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &704513682
 MonoBehaviour:
@@ -6608,6 +6610,7 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &1176780253
 MonoBehaviour:
@@ -6709,6 +6712,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1185476928}
   - component: {fileID: 1185476929}
+  - component: {fileID: 1185476931}
+  - component: {fileID: 1185476930}
   m_Layer: 0
   m_Name: MEOW_Unit
   m_TagString: Untagged
@@ -6747,6 +6752,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MEOW_InspeccionSala
   visionNPC: {fileID: 816003433}
   inspeccionEnCurso: 0
+  movimientoNPC: {fileID: 1185476931}
+  idSala: 0
+--- !u!114 &1185476930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185476927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0703b48044dcc40a9df75e1514426f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AStar
+--- !u!114 &1185476931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185476927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31c13129ccc763e4c9753221aa15db55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCPathfinding
+  waypointInicial: {fileID: 0}
+  waypointActual: {fileID: 0}
+  objetivo: {fileID: 0}
+  velocidad: 3
+  fuerzaMaxima: 5
+  radioLlegada: 0.3
+  distanciaPreparacion: 2
+  velocidadGiro: 5
+  controlExterno: 1
+  player_tranform: {fileID: 0}
 --- !u!1001 &1201169942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10986,6 +11027,7 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &1978779372
 MonoBehaviour:
