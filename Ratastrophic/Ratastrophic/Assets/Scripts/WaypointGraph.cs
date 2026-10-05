@@ -6,6 +6,36 @@ public class WaypointGraph : MonoBehaviour
     private List<Waypoint> waypoints = new List<Waypoint>();
     private List<Waypoint> waypoints_to_delete = new List<Waypoint>();
 
+    public List<Waypoint> ObtenerWaypointsSala(int idSala)//cambio
+    {
+        List<Waypoint> waypointsSala = new List<Waypoint>();
+
+        foreach (Waypoint waypoint in waypoints)
+        {
+            if (waypoint != null && waypoint.idSala == idSala)
+            {
+                waypointsSala.Add(waypoint);
+            }
+        }
+
+        return waypointsSala;
+    }
+
+    public List<int> ObtenerIdsSalas()//cambio
+    {
+        List<int> idsSalas = new List<int>();
+
+        foreach (Waypoint waypoint in waypoints)
+        {
+            if (waypoint != null && !idsSalas.Contains(waypoint.idSala))
+            {
+                idsSalas.Add(waypoint.idSala);
+            }
+        }
+
+        return idsSalas;
+    }
+
     private void Awake()
     {
         waypoints.AddRange(
