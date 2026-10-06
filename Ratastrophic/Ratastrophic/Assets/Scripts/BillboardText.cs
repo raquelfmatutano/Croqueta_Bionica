@@ -7,7 +7,6 @@ public class BillboardText : MonoBehaviour
     public TMP_Text textComponent;
 
     void Start() {
-        //textComponent = GetComponent<TMP_Text>();
     }
 
     void Update()
