@@ -4,6 +4,7 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     public List<Waypoint> vecinos = new List<Waypoint>();
+    public int idSala;//cambio
 
     private void OnDrawGizmos()
     {
