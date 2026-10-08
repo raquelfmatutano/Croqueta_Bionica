@@ -34,7 +34,9 @@ public class NPC_hearing : MonoBehaviour
         print(name + ": I heard you, let's go!");
         state.NPC_currentState = RobotState.INVESTIGACION;
 
-        pathfinder.IrADestino(objective, pathfinder.objetivo);
+        Waypoint start = grafo.find_nearest_waypoint(transform.position);
+
+        pathfinder.IrADestino(objective, start);
     }
 
     void OnTriggerEnter(Collider obj) {
@@ -51,14 +53,15 @@ public class NPC_hearing : MonoBehaviour
 
             if (alert_area) {
                 alert_area.SetActive(true);
-                
+                print("Area activated");
             }
         
 
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, 10f);
-            alert_area.SetActive(false);
+            
             foreach (var hit in hitColliders)
             {
+                print ("I found something");
                 if (hit.CompareTag("NPC"))
                 {
                     NPC_hearing otherNPC = hit.GetComponent<NPC_hearing>();
@@ -70,6 +73,8 @@ public class NPC_hearing : MonoBehaviour
                     }
                 }
             }
+
+            alert_area.SetActive(false);
 
             pathfinder.IrADestino(objective, start);
 
