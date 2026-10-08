@@ -24,7 +24,7 @@ public class NPC_hearing : MonoBehaviour
 
     }
 
-    public void ReceiveAlert()
+    public void ReceiveAlert(Waypoint objective)
     {
         
         if (state.NPC_currentState != RobotState.PATRULLA)
@@ -33,6 +33,8 @@ public class NPC_hearing : MonoBehaviour
 
         print(name + ": I heard you, let's go!");
         state.NPC_currentState = RobotState.INVESTIGACION;
+
+        pathfinder.IrADestino(objective, pathfinder.objetivo);
     }
 
     void OnTriggerEnter(Collider obj) {
@@ -42,6 +44,10 @@ public class NPC_hearing : MonoBehaviour
                 return;
 
             state.NPC_currentState = RobotState.INVESTIGACION;
+
+            //encontrar waypoint mas cercano al sonido
+            Waypoint objective = grafo.find_nearest_waypoint(obj.transform.position);
+            Waypoint start = grafo.find_nearest_waypoint(transform.position);
 
             if (alert_area) {
                 alert_area.SetActive(true);
@@ -59,19 +65,21 @@ public class NPC_hearing : MonoBehaviour
                     if (otherNPC != null && otherNPC != this)
                     {
                         print(name + ": Hey, do you hear me, " + hit.name + "?");
-                        otherNPC.ReceiveAlert();
+                        otherNPC.ReceiveAlert(objective);
                         
                     }
                 }
             }
 
-            Waypoint start = grafo.createWaypoint(transform.position, pathfinder.objetivo, "start");
+            pathfinder.IrADestino(objective, start);
+
+            /*Waypoint start = grafo.createWaypoint(transform.position, pathfinder.objetivo, "start");
             Waypoint objective = grafo.createWaypoint(obj.transform.position, start, "objective");
 
             start.vecinos.Add(objective);
             pathfinder.IrADestino(objective, start);
 
-            grafo.deleteWaypoints();
+            grafo.deleteWaypoints();*/
             
         }
     }
@@ -83,4 +91,6 @@ public class NPC_hearing : MonoBehaviour
             print(name + ": I heard you, let's go");
         }
     }*/
+
+    
 }

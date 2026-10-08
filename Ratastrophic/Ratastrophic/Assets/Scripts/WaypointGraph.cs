@@ -36,6 +36,22 @@ public class WaypointGraph : MonoBehaviour
         return idsSalas;
     }
 
+    public Waypoint find_nearest_waypoint(Vector3 coords) {
+        float min_distance = 999999;
+        Waypoint final_waypoint = null;
+
+        foreach (Waypoint current_waypoint in waypoints) {
+            float current_distance = Vector3.Distance(coords, current_waypoint.transform.position);
+
+            if (current_distance < min_distance) {
+                min_distance = current_distance;
+                final_waypoint = current_waypoint;
+            }
+        }
+
+        return final_waypoint;
+    }
+
     private void Awake()
     {
         waypoints.AddRange(
