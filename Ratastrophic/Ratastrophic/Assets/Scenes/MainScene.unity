@@ -375,6 +375,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5278436423513126159, guid: de6b2baa142c2034993470ae4b46ca28, type: 3}
+      propertyPath: moveSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2923,11 +2927,11 @@ PrefabInstance:
     - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: player_tranform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 127514488}
     - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: waypointInicial
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1033897107}
     - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_Name
       value: DEBUG_NPC 2
@@ -2938,7 +2942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4635,60 +4639,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 235966925}
     m_Modifications:
     - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: velocidad
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: fuerzaMaxima
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: radioLlegada
-      value: 0.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: velocidadGiro
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: player_tranform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 127514488}
     - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: waypointInicial
       value: 
       objectReference: {fileID: 1033897107}
-    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: distanciaPreparacion
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_Name
       value: DEBUG_NPC
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5584045923402166679, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: rayOriginHeight
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5584045923402166679, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: detectionDistance
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4730,10 +4690,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8925802489393543231, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: pathfinder
-      value: 
-      objectReference: {fileID: 988233167}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5740,17 +5696,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
   m_PrefabInstance: {fileID: 753507186}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &988233167 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-  m_PrefabInstance: {fileID: 753507186}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c13129ccc763e4c9753221aa15db55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCPathfinding
 --- !u!1 &998216048
 GameObject:
   m_ObjectHideFlags: 0
@@ -6798,7 +6743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1185476928
 Transform:
   m_ObjectHideFlags: 0

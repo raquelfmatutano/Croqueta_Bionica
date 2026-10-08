@@ -21,6 +21,9 @@ public class NPC_vision : MonoBehaviour
     public Collision vision_area;
 
     public NPC_state state;
+
+    public LayerMask obstacleMask;
+    public float rayOriginHeight = 0.5f;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,13 +34,27 @@ public class NPC_vision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (state.NPC_currentState == RobotState.PERSECUCION){
-        //     float step =  NPC_follow_speed * Time.deltaTime;
-        //     transform.position = Vector3.MoveTowards(transform.position, player.position, step);
-        // }
+
+    }
+
+    private bool check_for_walls(Transform obj_seen) {
+        Vector3 origin = transform.position + Vector3.up * rayOriginHeight;
+        Vector3 forward = transform.forward;
+
+        float detectionDistance = Vector3.Distance(obj_seen.position, transform.position);
+
+        if (Physics.Raycast(origin, forward, out RaycastHit hitCenter, detectionDistance, obstacleMask))
+        {
+            print("Hay un obstaculo en medio. No veo nada");
+            return true;
+        }
+
+        return false;
     }
 
     void OnTriggerEnter(Collider obj) {
+        if(check_for_walls(obj.transform)) return;
+
         if(obj.tag == "Player") {
             print("Player seen!.");
             player = obj.transform;
