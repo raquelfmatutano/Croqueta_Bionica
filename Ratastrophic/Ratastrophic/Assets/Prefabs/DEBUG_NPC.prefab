@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: baabacd0973dc6f45a7a0c12a9546081, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -918,6 +918,10 @@ MonoBehaviour:
   jugadorVistoDuranteInspeccion: 0
   NPC_follow_speed: 5
   state: {fileID: 8464657329291745401}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 64
+  rayOriginHeight: 0.5
 --- !u!4 &2975373964047266685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: baabacd0973dc6f45a7a0c12a9546081, type: 3}
