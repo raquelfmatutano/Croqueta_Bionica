@@ -6,12 +6,25 @@ public class EscapeZone : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            player_movemet player = other.GetComponent<player_movemet>();
+            // GetComponentInParent por si el collider del Player esta en un objeto hijo
+            player_movemet player = other.GetComponentInParent<player_movemet>();
 
-            // Comprueba si el jugador tiene la pocion
-            if (player != null && player.hasPotion)
+            if (player == null)
             {
-                GameManager.Instance.TriggerWin();
+                Debug.LogError("Error: El objeto con Tag 'Player' no tiene el script 'player_movemet'.");
+                return;
+            }
+
+            if (player.hasPotion)
+            {
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.TriggerWin();
+                }
+                else
+                {
+                    Debug.LogError("Error: No existe un GameManager en la escena o no tiene el script asignado.");
+                }
             }
             else
             {
