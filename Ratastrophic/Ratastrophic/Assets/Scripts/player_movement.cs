@@ -8,6 +8,7 @@ public class player_movemet : MonoBehaviour
     [Header("Settings")]
     public float moveSpeed = 5.0f;
     public float rotationSpeed = 15.0f;
+    public bool hasPotion = false;
 
     private Rigidbody _rigidbody;
     private Vector3 _moveDirection;
