@@ -551,6 +551,7 @@ MonoBehaviour:
     m_Flags: 0
   moveSpeed: 5
   rotationSpeed: 15
+  hasPotion: 0
   walkingAudioSource: {fileID: 453007302}
   walk_soundClip: {fileID: 8300000, guid: af8a29f9b4e55fa48ae16d7ab644b09e, type: 3}
   audio_area: {fileID: 1526778402}
@@ -939,7 +940,7 @@ Transform:
   m_GameObject: {fileID: 1743829388}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.46, y: 0.77236, z: 1.4}
+  m_LocalPosition: {x: -1.49, y: 0.48, z: 0.83}
   m_LocalScale: {x: 0.5244591, y: 0.5244591, z: 0.5244591}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -959,6 +960,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object_noise
   impactSound: {fileID: 8300000, guid: e4e34b9de9b589347b47dfc7726e707f, type: 3}
   soundCooldown: 0.5
+  minPitch: 0.9
+  maxPitch: 1.1
+  noiseRadius: 2
+  noiseDuration: 2
 --- !u!82 &1743829395
 AudioSource:
   m_ObjectHideFlags: 0
