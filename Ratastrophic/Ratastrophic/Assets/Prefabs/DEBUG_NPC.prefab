@@ -141,7 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d17ebde0e579874ba15c12444ddf528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  NPC_currentState: 0
+  seesPlayer: 0
+  hearsNoise: 0
+  pathfinder: {fileID: 3654417176758176}
+  grafo: {fileID: 0}
 --- !u!114 &3654417176758176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +160,7 @@ MonoBehaviour:
   waypointInicial: {fileID: 0}
   waypointActual: {fileID: 0}
   objetivo: {fileID: 0}
+  waypointDestino: {fileID: 0}
   velocidad: 9
   fuerzaMaxima: 15
   radioLlegada: 0.9

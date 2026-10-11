@@ -1,20 +1,42 @@
 using UnityEngine;
 
-public enum RobotState {PATRULLA, INVESTIGACION, PERSECUCION, NONE};
-
 public class NPC_state : MonoBehaviour
 {
-    public RobotState NPC_currentState;
+    public State NPC_currentState { get; private set; }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public PatrullarState patrullarState;
+    public InvestigarState investigarState;
+    public PerseguirState perseguirState;
+
+    public bool seesPlayer;
+    public bool hearsNoise;
+
+    public NPCPathfinding pathfinder;
+    public WaypointGraph grafo;
+
+    private void Awake()
     {
-        NPC_currentState = RobotState.PATRULLA;
+        patrullarState = new PatrullarState(this);
+        investigarState = new InvestigarState(this);
+        perseguirState = new PerseguirState(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        if (grafo == null)
+            grafo = FindFirstObjectByType<WaypointGraph>();
+        ChangeState(patrullarState);
+    }
+
+    private void Update()
+    {
+        //NPC_currentState?.Update();
+    }
+
+    public void ChangeState(State newState)
+    {
+        NPC_currentState?.Exit();
+        NPC_currentState = newState;
+        NPC_currentState.Enter();
     }
 }

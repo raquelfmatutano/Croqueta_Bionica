@@ -17,10 +17,10 @@ public class BillboardText : MonoBehaviour
             transform.rotation = Camera.main.transform.rotation;
         }
 
-        if (state.NPC_currentState == RobotState.INVESTIGACION) {
+        if (state.NPC_currentState is InvestigarState) {
             textComponent.text = "?";
         }
-        else if (state.NPC_currentState == RobotState.PERSECUCION) {
+        else if (state.NPC_currentState is PerseguirState) {
             textComponent.text = "!";
         }
 
