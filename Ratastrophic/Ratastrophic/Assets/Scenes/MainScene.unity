@@ -3912,6 +3912,7 @@ MonoBehaviour:
   waypointInicial: {fileID: 0}
   waypointActual: {fileID: 0}
   objetivo: {fileID: 0}
+  waypointDestino: {fileID: 0}
   velocidad: 1.5
   fuerzaMaxima: 5
   radioLlegada: 0.3
@@ -4230,6 +4231,7 @@ MonoBehaviour:
   waypointInicial: {fileID: 0}
   waypointActual: {fileID: 0}
   objetivo: {fileID: 0}
+  waypointDestino: {fileID: 0}
   velocidad: 2.5
   fuerzaMaxima: 5
   radioLlegada: 0.3
@@ -6632,6 +6634,7 @@ MonoBehaviour:
   waypointInicial: {fileID: 0}
   waypointActual: {fileID: 0}
   objetivo: {fileID: 0}
+  waypointDestino: {fileID: 0}
   velocidad: 2
   fuerzaMaxima: 5
   radioLlegada: 0.3
@@ -11048,6 +11051,7 @@ MonoBehaviour:
   waypointInicial: {fileID: 0}
   waypointActual: {fileID: 0}
   objetivo: {fileID: 0}
+  waypointDestino: {fileID: 0}
   velocidad: 3
   fuerzaMaxima: 5
   radioLlegada: 0.3
