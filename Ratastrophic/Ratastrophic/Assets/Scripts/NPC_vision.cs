@@ -9,8 +9,8 @@ public class NPC_vision : MonoBehaviour
         Gato
     }
 
-    public TipoNPC tipoNPC;//cambio
-    public bool jugadorVistoDuranteInspeccion = false;//cambio
+    public TipoNPC tipoNPC;
+    public bool jugadorVistoDuranteInspeccion = false;
 
     public float NPC_follow_speed = 10f; //esto en algun momento habria que moverlo a un sitio mejor
 
@@ -59,10 +59,9 @@ public class NPC_vision : MonoBehaviour
             print("Player seen!.");
             player = obj.transform;
             
-            //cambio
             if (tipoNPC == TipoNPC.Robot)
             {
-                state.NPC_currentState = RobotState.PERSECUCION;
+                state.NPC_currentState.PlayerSpotted();
             }
             else if (tipoNPC == TipoNPC.Gato)
             {
@@ -73,35 +72,27 @@ public class NPC_vision : MonoBehaviour
     }
 
     void OnTriggerExit(Collider obj) {
-        //if(obj.tag == "Player" && state.NPC_currentState == RobotState.PERSECUCION) {
-        //    print("Player lost.");
-        //    player = null;
 
-        //    state.NPC_currentState = RobotState.PATRULLA;
-        //}
-
-        if (obj.CompareTag("Player")) //cambio
+        if (obj.CompareTag("Player"))
         {
             player = null;
             player_seen = false;
 
-            if (tipoNPC == TipoNPC.Robot &&
-                state != null &&
-                state.NPC_currentState == RobotState.PERSECUCION)
+            if (tipoNPC == TipoNPC.Robot && state != null)
             {
 
                 print("Player lost.");
-                state.NPC_currentState = RobotState.PATRULLA;
+                state.NPC_currentState.PlayerLost();
             }
         }
     }
 
-    public void IniciarInspeccion()//cambio
+    public void IniciarInspeccion()
     {
         jugadorVistoDuranteInspeccion = false;
     }
 
-    public bool PuedeColocarCartel()//cambio
+    public bool PuedeColocarCartel()
     {
         return !jugadorVistoDuranteInspeccion;
     }

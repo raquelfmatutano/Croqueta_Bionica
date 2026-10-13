@@ -5,11 +5,9 @@ using UnityEngine;
 public class NPCPathfinding : MonoBehaviour
 {
     public Waypoint waypointInicial;
-
     public Waypoint waypointActual;
-
     public Waypoint objetivo;
-
+    public Transform waypointDestino;
     private WaypointGraph grafo;
 
     
@@ -132,9 +130,7 @@ public class NPCPathfinding : MonoBehaviour
 
     private bool PrepararSiguienteRuta()
     {
-        if (state.NPC_currentState == RobotState.INVESTIGACION) {
-            state.NPC_currentState = RobotState.PATRULLA;
-        }
+        state.NPC_currentState.NoiseReached();
        
         Waypoint nuevoObjetivo =
             grafo.ObtenerWaypointAleatorio(objetivo);
@@ -165,68 +161,68 @@ public class NPCPathfinding : MonoBehaviour
 
     private void Update()
     {
-        Transform waypointDestino = transform;
+        waypointDestino = transform;
 
-        if (state.NPC_currentState == RobotState.PERSECUCION) {
+        /*if (state.NPC_currentState == RobotState.PERSECUCION) {
             waypointDestino = player_tranform;
-        }
+        }*/
 
-        else {
-            if (!puedeMoverse)
+        //else {
+        if (!puedeMoverse)
+        return;
+
+        if (ruta == null || ruta.Count == 0)
             return;
 
-            if (ruta == null || ruta.Count == 0)
-                return;
+        if (indiceRuta >= ruta.Count)
+            return;
 
-            if (indiceRuta >= ruta.Count)
-                return;
+        waypointDestino = ruta[indiceRuta].transform;
+    
+        if (indiceRuta == ruta.Count - 1)
+        {
+            float distanciaFinal = Vector3.Distance(
+                transform.position,
+                waypointDestino.position
+            );
 
-            waypointDestino = ruta[indiceRuta].transform;
-        
-            if (indiceRuta == ruta.Count - 1)
+            if (!controlExterno && (distanciaFinal <= distanciaPreparacion))//cambio
             {
-                float distanciaFinal = Vector3.Distance(
-                    transform.position,
-                    waypointDestino.position
-                );
+                bool rutaPreparada = PrepararSiguienteRuta();
 
-                if (!controlExterno && (distanciaFinal <= distanciaPreparacion))//cambio
+                if (rutaPreparada &&
+                    Vector3.Distance(
+                        transform.position,
+                        waypointDestino.position
+                    ) <= radioLlegada)
                 {
-                    bool rutaPreparada = PrepararSiguienteRuta();
-
-                    if (rutaPreparada &&
-                        Vector3.Distance(
-                            transform.position,
-                            waypointDestino.position
-                        ) <= radioLlegada)
-                    {
-                        indiceRuta++;
-                        
-                    }
+                    indiceRuta++;
+                    
                 }
             }
-
-            if (indiceRuta >= ruta.Count)
-                return;
-
-            while (indiceRuta < ruta.Count - 1)
-            {
-                float distanciaWaypoint = Vector3.Distance(
-                    transform.position,
-                    ruta[indiceRuta].transform.position //cambio
-                );
-
-                if (distanciaWaypoint > radioLlegada)
-                    break;
-
-                indiceRuta++;
-            }
-
-            if (indiceRuta >= ruta.Count)
-                return;
-
-            waypointDestino = ruta[indiceRuta].transform; //cambio
         }
+
+        if (indiceRuta >= ruta.Count)
+            return;
+
+        while (indiceRuta < ruta.Count - 1)
+        {
+            float distanciaWaypoint = Vector3.Distance(
+                transform.position,
+                ruta[indiceRuta].transform.position //cambio
+            );
+
+            if (distanciaWaypoint > radioLlegada)
+                break;
+
+            indiceRuta++;
+        }
+
+        if (indiceRuta >= ruta.Count)
+            return;
+
+        waypointDestino = ruta[indiceRuta].transform; //cambio
+        //}
 
         Vector3 posicionObjetivo = waypointDestino.transform.position;
         Vector3 haciaObjetivo = posicionObjetivo - transform.position;
