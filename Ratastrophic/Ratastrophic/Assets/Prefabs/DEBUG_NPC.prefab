@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b485f12f740c25429834ed6fd18f50d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  detectionDistance: 9
-  whiskerAngle: 30
+  detectionDistance: 4
+  whiskerAngle: 15
   rayOriginHeight: 1.5
   obstacleMask:
     serializedVersion: 2
