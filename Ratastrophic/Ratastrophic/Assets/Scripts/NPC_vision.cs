@@ -42,6 +42,11 @@ public class NPC_vision : MonoBehaviour
         Vector3 forward = transform.forward;
 
         float detectionDistance = Vector3.Distance(obj_seen.position, transform.position);
+        print("robot" + transform.position);
+        print("origen ray" + origin);
+        print("jugador" + obj_seen.transform.position);
+
+        print("foward" + forward);
 
         if (Physics.Raycast(origin, forward, out RaycastHit hitCenter, detectionDistance, obstacleMask))
         {
@@ -49,13 +54,16 @@ public class NPC_vision : MonoBehaviour
             return true;
         }
 
+        print("no he visto nada");
+
         return false;
     }
 
     void OnTriggerEnter(Collider obj) {
-        if(check_for_walls(obj.transform)) return;
-
         if(obj.tag == "Player") {
+            if(check_for_walls(obj.transform)) 
+                return;
+
             print("Player seen!.");
             player = obj.transform;
             
