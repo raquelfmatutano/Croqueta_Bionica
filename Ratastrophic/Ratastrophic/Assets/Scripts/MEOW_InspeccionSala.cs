@@ -5,7 +5,7 @@ public class MEOW_InspeccionSala : MonoBehaviour
 {
     public NPC_vision visionNPC;
     public bool inspeccionEnCurso = false;
-    public NPCPathfinding movimientoNPC;
+    public MEOW_Pathfinding movimientoNPC;
     private WaypointGraph grafo;
     private List<Waypoint> waypointsSala = new List<Waypoint>();
     private List<Waypoint> waypointsVisitados = new List<Waypoint>();
