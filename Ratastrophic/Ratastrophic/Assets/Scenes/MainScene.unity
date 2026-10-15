@@ -990,7 +990,7 @@ Transform:
   m_GameObject: {fileID: 108675617}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4383711, y: 0, z: 0, w: 0.89879405}
-  m_LocalPosition: {x: 10.53, y: 40, z: -6.1000004}
+  m_LocalPosition: {x: -15.355889, y: 43, z: -55.173584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1508,7 +1508,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &235966925
 Transform:
   m_ObjectHideFlags: 0
@@ -3918,7 +3918,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &645270634
 MonoBehaviour:
@@ -4237,7 +4236,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &704513682
 MonoBehaviour:
@@ -6640,7 +6638,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &1176780253
 MonoBehaviour:
@@ -6742,8 +6739,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1185476928}
   - component: {fileID: 1185476929}
-  - component: {fileID: 1185476931}
   - component: {fileID: 1185476932}
+  - component: {fileID: 1185476933}
   m_Layer: 0
   m_Name: MEOW_Unit
   m_TagString: Untagged
@@ -6782,29 +6779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MEOW_InspeccionSala
   visionNPC: {fileID: 816003433}
   inspeccionEnCurso: 0
-  movimientoNPC: {fileID: 1185476931}
---- !u!114 &1185476931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185476927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c13129ccc763e4c9753221aa15db55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCPathfinding
-  waypointInicial: {fileID: 1033897107}
-  waypointActual: {fileID: 0}
-  objetivo: {fileID: 0}
-  velocidad: 6
-  fuerzaMaxima: 5
-  radioLlegada: 0.3
-  distanciaPreparacion: 2
-  velocidadGiro: 5
-  controlExterno: 1
-  player_tranform: {fileID: 127514488}
+  movimientoNPC: {fileID: 1185476933}
 --- !u!114 &1185476932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6817,6 +6792,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0703b48044dcc40a9df75e1514426f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AStar
+--- !u!114 &1185476933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185476927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f97c42c71ec6d0449e41160b0b77226, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MEOW_Pathfinding
+  waypointInicial: {fileID: 1033897107}
+  waypointActual: {fileID: 0}
+  objetivo: {fileID: 0}
+  waypointDestino: {fileID: 0}
+  velocidad: 6
+  fuerzaMaxima: 5
+  radioLlegada: 0.3
+  velocidadGiro: 5
 --- !u!1001 &1201169942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8527,7 +8522,7 @@ MonoBehaviour:
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 1185476928}
+    TrackingTarget: {fileID: 127514488}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -8559,7 +8554,7 @@ Transform:
   m_GameObject: {fileID: 1533141667}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4383711, y: 0, z: 0, w: 0.89879405}
-  m_LocalPosition: {x: 10.53, y: 40, z: -6.1000004}
+  m_LocalPosition: {x: -15.355889, y: 43, z: -55.173584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11057,7 +11052,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &1978779372
 MonoBehaviour:

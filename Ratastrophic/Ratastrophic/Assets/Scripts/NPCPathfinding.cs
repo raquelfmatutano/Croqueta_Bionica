@@ -26,8 +26,6 @@ public class NPCPathfinding : MonoBehaviour
     private int indiceRuta = 0;
 
     private bool puedeMoverse = false;
-    private bool deRuta = false;
-    public bool controlExterno = false;//cambio, para que el gato no elija destino random
     private NPC_state state;
     public Transform player_tranform;
 
@@ -72,10 +70,8 @@ public class NPCPathfinding : MonoBehaviour
         posicion.y = transform.position.y;//cambio
         transform.position = posicion;//cambio
 
-        if (!controlExterno)//cambio
-        {
-            ElegirNuevoDestino();
-        }
+        ElegirNuevoDestino();
+        
     }
 
     public void IrADestino(Waypoint nuevoObjetivo, Waypoint actual) {
@@ -206,7 +202,7 @@ public class NPCPathfinding : MonoBehaviour
                 waypointDestino.position
             );
 
-            if (!controlExterno && (distanciaFinal <= distanciaPreparacion))//cambio
+            if (distanciaFinal <= distanciaPreparacion)//cambio
             {
                 bool rutaPreparada = PrepararSiguienteRuta();
 
@@ -298,7 +294,6 @@ public class NPCPathfinding : MonoBehaviour
     public void ActivarMovimiento()
     {
         puedeMoverse = true;
-        deRuta = true;
     }
 
     public bool HaLlegadoADestino()//cambio
