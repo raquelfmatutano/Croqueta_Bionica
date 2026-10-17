@@ -39,16 +39,18 @@ public class NPC_vision : MonoBehaviour
 
     private bool check_for_walls(Transform obj_seen) {
         Vector3 origin = transform.position + Vector3.up * rayOriginHeight;
+        Vector3 targetPosition = obj_seen.position + Vector3.up * 1.0f;
         Vector3 forward = transform.forward;
 
-        float detectionDistance = Vector3.Distance(obj_seen.position, transform.position);
-        print("robot" + transform.position);
-        print("origen ray" + origin);
-        print("jugador" + obj_seen.transform.position);
+        Vector3 directionToPlayer = targetPosition - origin;
 
-        print("foward" + forward);
+        float detectionDistance = Vector3.Distance(targetPosition, transform.position);
+        directionToPlayer.Normalize();
 
-        if (Physics.Raycast(origin, forward, out RaycastHit hitCenter, detectionDistance, obstacleMask))
+        Debug.DrawRay(origin, directionToPlayer * detectionDistance, Color.red, 1.0f);
+        
+
+        if (Physics.Raycast(origin, directionToPlayer, out RaycastHit hitCenter, detectionDistance, obstacleMask))
         {
             print("Hay un obstaculo en medio. No veo nada");
             return true;
