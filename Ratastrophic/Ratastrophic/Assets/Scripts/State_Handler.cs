@@ -7,7 +7,7 @@ public class PatrullarState : State
 
     public override void Enter()
     {
-        Debug.Log("Entering Patrol State");
+        npc.pathfinder.esInvestigando = false;
     }
 
     public override void Update()
@@ -47,6 +47,7 @@ public class InvestigarState : State
     }
 
     public override void NoiseReached() {
+        npc.pathfinder.esInvestigando = false;
         npc.ChangeState(npc.patrullarState);
     }
 
@@ -61,6 +62,7 @@ public class InvestigarState : State
         {
             Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
             npc.pathfinder.IrADestino(targetWaypoint, start);
+            npc.pathfinder.esInvestigando = true;
         }
     }
 

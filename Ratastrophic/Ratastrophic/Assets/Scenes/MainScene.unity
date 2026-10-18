@@ -3934,6 +3934,8 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  radioFrenado: 5
+  esInvestigando: 0
   player_tranform: {fileID: 0}
 --- !u!114 &645270634
 MonoBehaviour:
@@ -4252,6 +4254,8 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  radioFrenado: 5
+  esInvestigando: 0
   player_tranform: {fileID: 0}
 --- !u!114 &704513682
 MonoBehaviour:
@@ -5017,7 +5021,7 @@ MonoBehaviour:
   state: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   rayOriginHeight: 0.5
 --- !u!1 &824752575
 GameObject:
@@ -6658,6 +6662,8 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  radioFrenado: 5
+  esInvestigando: 0
   player_tranform: {fileID: 0}
 --- !u!114 &1176780253
 MonoBehaviour:
@@ -11072,6 +11078,8 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  radioFrenado: 5
+  esInvestigando: 0
   player_tranform: {fileID: 0}
 --- !u!114 &1978779372
 MonoBehaviour:

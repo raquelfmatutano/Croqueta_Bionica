@@ -19,6 +19,9 @@ public class NPCPathfinding : MonoBehaviour
     public float distanciaPreparacion = 2f;
     public float velocidadGiro = 5f;
 
+    public float radioFrenado = 5f;
+    public bool esInvestigando = false;
+
     private Vector3 velocidadActual;
 
     private AStar aStar;
@@ -146,7 +149,6 @@ public class NPCPathfinding : MonoBehaviour
 
     private bool PrepararSiguienteRuta()
     {
-        state.NPC_currentState.NoiseReached();
        
         Waypoint nuevoObjetivo =
             grafo.ObtenerWaypointAleatorio(objetivo);
@@ -179,11 +181,6 @@ public class NPCPathfinding : MonoBehaviour
     {
         waypointDestino = transform;
 
-        /*if (state.NPC_currentState == RobotState.PERSECUCION) {
-            waypointDestino = player_tranform;
-        }*/
-
-        //else {
         if (!puedeMoverse)
         return;
 
@@ -202,18 +199,15 @@ public class NPCPathfinding : MonoBehaviour
                 waypointDestino.position
             );
 
-            if (distanciaFinal <= distanciaPreparacion)//cambio
+            // SOLO amplia la ruta si NO esta investigando un ruido
+            if (!esInvestigando && distanciaFinal <= distanciaPreparacion)
             {
                 bool rutaPreparada = PrepararSiguienteRuta();
 
                 if (rutaPreparada &&
-                    Vector3.Distance(
-                        transform.position,
-                        waypointDestino.position
-                    ) <= radioLlegada)
+                    Vector3.Distance(transform.position, waypointDestino.position) <= radioLlegada)
                 {
                     indiceRuta++;
-                    
                 }
             }
         }
@@ -225,7 +219,7 @@ public class NPCPathfinding : MonoBehaviour
         {
             float distanciaWaypoint = Vector3.Distance(
                 transform.position,
-                ruta[indiceRuta].transform.position //cambio
+                ruta[indiceRuta].transform.position
             );
 
             if (distanciaWaypoint > radioLlegada)
@@ -237,17 +231,29 @@ public class NPCPathfinding : MonoBehaviour
         if (indiceRuta >= ruta.Count)
             return;
 
-        waypointDestino = ruta[indiceRuta].transform; //cambio
-        //}
+        waypointDestino = ruta[indiceRuta].transform;
+
+
 
         Vector3 posicionObjetivo = waypointDestino.transform.position;
         Vector3 haciaObjetivo = posicionObjetivo - transform.position;
+        Vector3 velocidadDeseada;
 
-        // SEEK
-        Vector3 velocidadDeseada =
-            haciaObjetivo.sqrMagnitude > 0.001f
+        bool esUltimoNode = (indiceRuta == ruta.Count - 1);
+
+        if (esInvestigando && esUltimoNode)
+        {
+            // ARRIVAL
+            velocidadDeseada = CalcularArrive(posicionObjetivo);
+            print("usando arrival");
+        }
+        else
+        {
+            // SEEK
+            velocidadDeseada = haciaObjetivo.sqrMagnitude > 0.001f
                 ? haciaObjetivo.normalized * velocidad
                 : Vector3.zero;
+        }
 
         // STEERING 
         Vector3 fuerzaDireccion = velocidadDeseada - velocidadActual;
@@ -312,4 +318,36 @@ public class NPCPathfinding : MonoBehaviour
         puedeMoverse = false;
         velocidadActual = Vector3.zero;
     }
+
+    private Vector3 CalcularArrive(Vector3 posicionObjetivo)
+    {
+        Vector3 haciaObjetivo = posicionObjetivo - transform.position;
+        haciaObjetivo.y = 0f; 
+
+        float distancia = haciaObjetivo.magnitude;
+        print("distancia: " + distancia);
+        Vector3 velocidadDeseada;
+
+        if (distancia < radioFrenado)
+        {
+            float velocidadAtenuada = (distancia / radioFrenado) * velocidad;
+            velocidadDeseada = haciaObjetivo.normalized * velocidadAtenuada;
+        }
+        else
+        {
+            velocidadDeseada = haciaObjetivo.normalized * velocidad;
+        }
+        print("Magnitud velocidad deseada: " + velocidadDeseada.magnitude);
+
+        // Cuando la velocidad deseada sea muy baja o la distancia sea menor al radio de llegada
+        if (distancia <= radioLlegada || velocidadDeseada.magnitude < 0.1f)
+        {
+            velocidadActual = Vector3.zero; //Se para
+            state.NPC_currentState.NoiseReached();
+            return Vector3.zero;
+        }
+
+        return velocidadDeseada;
+    }
+
 }
