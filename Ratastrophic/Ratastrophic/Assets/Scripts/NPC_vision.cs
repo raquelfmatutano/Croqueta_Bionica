@@ -18,7 +18,8 @@ public class NPC_vision : MonoBehaviour
     private bool player_seen = false;
     private Transform player;
 
-    public Collision vision_area;
+    public Collider vision_area;
+    private bool visionActiva = true;
 
     public NPC_state state;
 
@@ -62,7 +63,11 @@ public class NPC_vision : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider obj) {
-        if(obj.tag == "Player") {
+
+        if (tipoNPC == TipoNPC.Gato && !visionActiva)
+            return;
+
+        if (obj.tag == "Player") {
             if(check_for_walls(obj.transform)) 
                 return;
 
@@ -105,5 +110,36 @@ public class NPC_vision : MonoBehaviour
     public bool PuedeColocarCartel()
     {
         return !jugadorVistoDuranteInspeccion;
+    }
+
+    public void ActivarVision()
+    {
+        visionActiva = true;
+
+        if (vision_area != null)
+        {
+            vision_area.enabled = true;
+
+            Renderer rend = vision_area.GetComponent<Renderer>();
+            if (rend != null)
+                rend.enabled = true;
+        }
+    }
+
+    public void DesactivarVision()
+    {
+        if (tipoNPC != TipoNPC.Gato)
+            return;
+
+        visionActiva = false;
+
+        if (vision_area != null)
+        {
+            vision_area.enabled = false;
+
+            Renderer rend = vision_area.GetComponent<Renderer>();
+            if (rend != null)
+                rend.enabled = false;
+        }
     }
 }

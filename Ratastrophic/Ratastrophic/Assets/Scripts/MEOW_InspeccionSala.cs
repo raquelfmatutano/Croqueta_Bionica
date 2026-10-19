@@ -11,7 +11,8 @@ public class MEOW_InspeccionSala : MonoBehaviour
     private List<Waypoint> waypointsVisitados = new List<Waypoint>();
     private List<int> idsSalas = new List<int>();
     private int indiceSalaActual = 0;
-    private Dictionary<int, bool> resultadosPorSala = new Dictionary<int, bool>();//para guardar en qué sala ha visto al jugador
+    private Dictionary<int, bool> resultadosPorSala = new Dictionary<int, bool>();//para guardar en que sala ha visto al jugador
+    private bool desplazandoseEntreSalas = false;
 
     private void Start()
     {
@@ -69,15 +70,6 @@ public class MEOW_InspeccionSala : MonoBehaviour
         if (!inspeccionEnCurso)
             return;
 
-        if (!movimientoNPC.HaLlegadoADestino())
-            return;
-
-        if (!waypointsVisitados.Contains(movimientoNPC.objetivo))
-        {
-            waypointsVisitados.Add(movimientoNPC.objetivo);
-        }
-
-        IrAlSiguienteWaypoint();
     }
 
     public void ComenzarInspeccion()
@@ -106,6 +98,7 @@ public class MEOW_InspeccionSala : MonoBehaviour
         inspeccionEnCurso = true;
         waypointsVisitados.Clear();
 
+        visionNPC.ActivarVision();
         visionNPC.IniciarInspeccion();
 
         if (waypointsSala.Contains(movimientoNPC.waypointActual))
@@ -156,6 +149,7 @@ public class MEOW_InspeccionSala : MonoBehaviour
         if (pendientes.Count == 0)
         {
             int idSalaTerminada = idsSalas[indiceSalaActual];
+            visionNPC.DesactivarVision();
 
             resultadosPorSala[idSalaTerminada] =
                 visionNPC.jugadorVistoDuranteInspeccion;
@@ -182,7 +176,8 @@ public class MEOW_InspeccionSala : MonoBehaviour
                 return;
             }
 
-            visionNPC.IniciarInspeccion();
+            desplazandoseEntreSalas = true;
+            visionNPC.DesactivarVision();
 
             IrAlSiguienteWaypoint();
             return;
@@ -190,10 +185,63 @@ public class MEOW_InspeccionSala : MonoBehaviour
 
         Waypoint siguiente = pendientes[Random.Range(0, pendientes.Count)];
 
-        Waypoint actual = movimientoNPC.objetivo != null
-            ? movimientoNPC.objetivo
-            : movimientoNPC.waypointActual;
+        Waypoint actual = movimientoNPC.waypointActual;
 
         movimientoNPC.IrADestino(siguiente, actual);
+    }
+
+    private void OnEnable()
+    {
+        if (movimientoNPC != null)
+            movimientoNPC.AlcanzoWaypoint += GestionarWaypointAlcanzado;
+    }
+
+    private void OnDisable()
+    {
+        if (movimientoNPC != null)
+            movimientoNPC.AlcanzoWaypoint -= GestionarWaypointAlcanzado;
+    }
+
+    private void ComprobarEntradaSala(Waypoint waypoint)
+    {
+        if (!desplazandoseEntreSalas)
+            return;
+
+        if (indiceSalaActual < 0 || indiceSalaActual >= idsSalas.Count)
+            return;
+
+        int idSalaObjetivo = idsSalas[indiceSalaActual];
+
+        if (waypoint == null || waypoint.idSala != idSalaObjetivo)
+            return;
+
+        desplazandoseEntreSalas = false;
+
+        visionNPC.ActivarVision();
+        visionNPC.IniciarInspeccion();
+
+        waypointsVisitados.Clear();
+        waypointsVisitados.Add(waypoint);
+
+        Debug.Log("Gato ha entrado en la sala " + idSalaObjetivo +
+                  " por el waypoint " + waypoint.name);
+    }
+
+    private void GestionarWaypointAlcanzado(Waypoint waypoint)
+    {
+       if (!inspeccionEnCurso || waypoint == null)
+            return;
+
+        ComprobarEntradaSala(waypoint);
+
+        if (waypoint != movimientoNPC.objetivo)
+            return;
+
+        if (!waypointsVisitados.Contains(waypoint))
+        {
+            waypointsVisitados.Add(waypoint);
+        }
+
+        IrAlSiguienteWaypoint();
     }
 }
