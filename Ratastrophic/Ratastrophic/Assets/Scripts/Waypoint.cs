@@ -22,5 +22,9 @@ public class Waypoint : MonoBehaviour
         }
 
         Gizmos.DrawSphere(transform.position, 0.2f);
+
+        // Radio de llegada: zona que el gato debe alcanzar
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, 4f);
     }
 }

@@ -18,7 +18,8 @@ public class NPC_vision : MonoBehaviour
     private bool player_seen = false;
     private Transform player;
 
-    public Collision vision_area;
+    public Collider vision_area;
+    private bool visionActiva = true;
 
     public NPC_state state;
 
@@ -39,23 +40,37 @@ public class NPC_vision : MonoBehaviour
 
     private bool check_for_walls(Transform obj_seen) {
         Vector3 origin = transform.position + Vector3.up * rayOriginHeight;
+        Vector3 targetPosition = obj_seen.position + Vector3.up * 1.0f;
         Vector3 forward = transform.forward;
 
-        float detectionDistance = Vector3.Distance(obj_seen.position, transform.position);
+        Vector3 directionToPlayer = targetPosition - origin;
 
-        if (Physics.Raycast(origin, forward, out RaycastHit hitCenter, detectionDistance, obstacleMask))
+        float detectionDistance = Vector3.Distance(targetPosition, transform.position);
+        directionToPlayer.Normalize();
+
+        Debug.DrawRay(origin, directionToPlayer * detectionDistance, Color.red, 1.0f);
+        
+
+        if (Physics.Raycast(origin, directionToPlayer, out RaycastHit hitCenter, detectionDistance, obstacleMask))
         {
             print("Hay un obstaculo en medio. No veo nada");
             return true;
         }
 
+        print("no he visto nada");
+
         return false;
     }
 
     void OnTriggerEnter(Collider obj) {
-        if(check_for_walls(obj.transform)) return;
 
-        if(obj.tag == "Player") {
+        if (tipoNPC == TipoNPC.Gato && !visionActiva)
+            return;
+
+        if (obj.tag == "Player") {
+            if(check_for_walls(obj.transform)) 
+                return;
+
             print("Player seen!.");
             player = obj.transform;
             
@@ -95,5 +110,36 @@ public class NPC_vision : MonoBehaviour
     public bool PuedeColocarCartel()
     {
         return !jugadorVistoDuranteInspeccion;
+    }
+
+    public void ActivarVision()
+    {
+        visionActiva = true;
+
+        if (vision_area != null)
+        {
+            vision_area.enabled = true;
+
+            Renderer rend = vision_area.GetComponent<Renderer>();
+            if (rend != null)
+                rend.enabled = true;
+        }
+    }
+
+    public void DesactivarVision()
+    {
+        if (tipoNPC != TipoNPC.Gato)
+            return;
+
+        visionActiva = false;
+
+        if (vision_area != null)
+        {
+            vision_area.enabled = false;
+
+            Renderer rend = vision_area.GetComponent<Renderer>();
+            if (rend != null)
+                rend.enabled = false;
+        }
     }
 }

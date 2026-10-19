@@ -26,14 +26,12 @@ public class NPCPathfinding : MonoBehaviour
     private int indiceRuta = 0;
 
     private bool puedeMoverse = false;
-    private bool deRuta = false;
-    public bool controlExterno = false;//cambio, para que el gato no elija destino random
     private NPC_state state;
     public Transform player_tranform;
 
     private NPC_ObjectDetection objectDetection;
 
-    private void Start()
+    private void Awake()//para que no de errores porque otros scripts necesitan las referencias
     {
         aStar = GetComponent<AStar>();
         state = GetComponent<NPC_state>();
@@ -44,7 +42,10 @@ public class NPCPathfinding : MonoBehaviour
             Debug.LogError("El NPC necesita el componente AStar.");
             return;
         }
+    }
 
+    private void Start()
+    {
         grafo = FindFirstObjectByType<WaypointGraph>();
 
         if (grafo == null)
@@ -60,14 +61,17 @@ public class NPCPathfinding : MonoBehaviour
         }
 
         waypointActual = waypointInicial;
+        Debug.Log("Vigilante - waypointInicial: " +
+            (waypointInicial != null ? waypointInicial.name : "NULL"));//para ver por qu� dan error las referencias
+
+        Debug.Log("Vigilante - waypointActual: " +
+            (waypointActual != null ? waypointActual.name : "NULL"));
         Vector3 posicion = waypointActual.transform.position;//cambio para que no se hunda en el suelo
         posicion.y = transform.position.y;//cambio
         transform.position = posicion;//cambio
 
-        if (!controlExterno)//cambio
-        {
-            ElegirNuevoDestino();
-        }
+        ElegirNuevoDestino();
+        
     }
 
     public void IrADestino(Waypoint nuevoObjetivo, Waypoint actual) {
@@ -80,6 +84,18 @@ public class NPCPathfinding : MonoBehaviour
                 "No se ha podido encontrar un nuevo waypoint."
             );
 
+            return;
+        }
+
+        if (aStar == null)
+        {
+            Debug.LogError("El vigilante no tiene una referencia v�lida a AStar.");
+            return;
+        }
+
+        if (waypointActual == null)
+        {
+            Debug.LogError("El waypoint actual es null.");
             return;
         }
 
@@ -186,7 +202,7 @@ public class NPCPathfinding : MonoBehaviour
                 waypointDestino.position
             );
 
-            if (!controlExterno && (distanciaFinal <= distanciaPreparacion))//cambio
+            if (distanciaFinal <= distanciaPreparacion)//cambio
             {
                 bool rutaPreparada = PrepararSiguienteRuta();
 
@@ -278,7 +294,6 @@ public class NPCPathfinding : MonoBehaviour
     public void ActivarMovimiento()
     {
         puedeMoverse = true;
-        deRuta = true;
     }
 
     public bool HaLlegadoADestino()//cambio
