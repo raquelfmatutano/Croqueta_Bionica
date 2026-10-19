@@ -459,6 +459,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 9175888716975090107, guid: de6b2baa142c2034993470ae4b46ca28, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9771,14 +9775,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DEBUG_NPC 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9819,10 +9815,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8925802489393543231, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: pathfinder
-      value: 
-      objectReference: {fileID: 534517005}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10797,17 +10789,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
   m_PrefabInstance: {fileID: 464425841}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &534517005 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-  m_PrefabInstance: {fileID: 464425841}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c13129ccc763e4c9753221aa15db55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCPathfinding
 --- !u!1 &541665562
 GameObject:
   m_ObjectHideFlags: 0
@@ -12839,7 +12820,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &645270634
 MonoBehaviour:
@@ -14027,7 +14007,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &704513682
 MonoBehaviour:
@@ -16072,10 +16051,11 @@ MonoBehaviour:
   tipoNPC: 0
   jugadorVistoDuranteInspeccion: 0
   NPC_follow_speed: 10
+  vision_area: {fileID: 0}
   state: {fileID: 0}
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   rayOriginHeight: 0.5
 --- !u!1001 &816214484
 PrefabInstance:
@@ -19595,25 +19575,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 235966925}
     m_Modifications:
-    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: player_tranform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: waypointInicial
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_Name
       value: DEBUG_NPC 2 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19655,10 +19619,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8925802489393543231, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-      propertyPath: pathfinder
-      value: 
-      objectReference: {fileID: 2046466118}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22097,7 +22057,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &1176780253
 MonoBehaviour:
@@ -22239,8 +22198,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MEOW_InspeccionSala
   visionNPC: {fileID: 816003433}
   inspeccionEnCurso: 0
-  movimientoNPC: {fileID: 1185476931}
-  idSala: 0
+  movimientoNPC: {fileID: 0}
+  todosLosCarteles: []
 --- !u!114 &1185476930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22274,7 +22233,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 1
   player_tranform: {fileID: 0}
 --- !u!1001 &1187367801
 PrefabInstance:
@@ -40875,7 +40833,6 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
-  controlExterno: 0
   player_tranform: {fileID: 0}
 --- !u!114 &1978779372
 MonoBehaviour:
@@ -43060,17 +43017,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
   m_PrefabInstance: {fileID: 1043541854}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2046466118 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
-  m_PrefabInstance: {fileID: 1043541854}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31c13129ccc763e4c9753221aa15db55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCPathfinding
 --- !u!1 &2054403336
 GameObject:
   m_ObjectHideFlags: 0
