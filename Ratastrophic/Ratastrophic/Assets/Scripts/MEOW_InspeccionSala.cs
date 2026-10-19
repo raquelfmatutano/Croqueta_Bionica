@@ -6,6 +6,7 @@ public class MEOW_InspeccionSala : MonoBehaviour
     public NPC_vision visionNPC;
     public bool inspeccionEnCurso = false;
     public MEOW_Pathfinding movimientoNPC;
+    public List<MEOW_CartelEntrada> todosLosCarteles = new List<MEOW_CartelEntrada>();
     private WaypointGraph grafo;
     private List<Waypoint> waypointsSala = new List<Waypoint>();
     private List<Waypoint> waypointsVisitados = new List<Waypoint>();
@@ -13,6 +14,7 @@ public class MEOW_InspeccionSala : MonoBehaviour
     private int indiceSalaActual = 0;
     private Dictionary<int, bool> resultadosPorSala = new Dictionary<int, bool>();//para guardar en que sala ha visto al jugador
     private bool desplazandoseEntreSalas = false;
+    
 
     private void Start()
     {
@@ -159,6 +161,18 @@ public class MEOW_InspeccionSala : MonoBehaviour
                 " terminada. Jugador visto: " +
                 resultadosPorSala[idSalaTerminada]
             );
+
+            //Colocar carteles
+            if (!resultadosPorSala[idSalaTerminada])
+            {
+                foreach (MEOW_CartelEntrada cartel in todosLosCarteles)
+                {
+                    if (cartel.PerteneceASala(idSalaTerminada) && !cartel.YaColocado)
+                    {
+                        cartel.ColocarCartel();
+                    }
+                }
+            }
 
             indiceSalaActual++;
 
