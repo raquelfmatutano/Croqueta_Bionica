@@ -1,8 +1,7 @@
 
 using UnityEngine;
 
-public class NoiseObject : MonoBehaviour
-{
+public class NoiseObject : MonoBehaviour{
     public AudioClip impactSound;
     public float soundCooldown = 0.5f;
     public float minPitch = 0.9f;
@@ -16,26 +15,21 @@ public class NoiseObject : MonoBehaviour
     private float nextSoundTime;
     private GameObject currentNoiseArea;
 
-    private void Start()
-    {
+    private void Start(){
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            audioSource.PlayOneShot(impactSound);
-        }
-    }
+    private void OnCollisionEnter(Collision collision){
 
-    private void OnCollisionStay(Collision collision)
-    {
         TryPlaySound(collision);
     }
 
-    private void TryPlaySound(Collision collision)
-    {
+    private void OnCollisionStay(Collision collision){
+
+        TryPlaySound(collision);
+    }
+
+    private void TryPlaySound(Collision collision){
         if (!collision.gameObject.CompareTag("Player"))
             return;
 
@@ -50,12 +44,10 @@ public class NoiseObject : MonoBehaviour
         CreateNoiseArea();
     }
 
-    private void CreateNoiseArea()
-    {
+    private void CreateNoiseArea(){
 
         // Destruir la esfera anterior si existe
-        if (currentNoiseArea != null)
-        {
+        if (currentNoiseArea != null){
             Destroy(currentNoiseArea);
         }
 
