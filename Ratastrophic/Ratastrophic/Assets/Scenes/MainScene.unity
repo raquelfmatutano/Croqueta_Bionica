@@ -1524,7 +1524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &235966925
 Transform:
   m_ObjectHideFlags: 0
@@ -5128,7 +5128,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
+      propertyPath: velocidad
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: player_tranform
@@ -7577,6 +7581,7 @@ GameObject:
   - component: {fileID: 1185476929}
   - component: {fileID: 1185476932}
   - component: {fileID: 1185476933}
+  - component: {fileID: 1185476934}
   m_Layer: 0
   m_Name: MEOW_Unit
   m_TagString: Untagged
@@ -7661,6 +7666,26 @@ MonoBehaviour:
   fuerzaMaxima: 5
   radioLlegada: 4
   velocidadGiro: 3
+--- !u!114 &1185476934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185476927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a50128e000a2944f80c4d1635bb8eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MEOW_NPC_state
+  seesPlayer: 0
+  hearsNoise: 0
+  pathfinder: {fileID: 0}
+  grafo: {fileID: 0}
+  inspeccionSala: {fileID: 1185476929}
+  visionNPC: {fileID: 816003433}
+  meowPathfinder: {fileID: 1185476933}
+  waypointJugadorVisto: {fileID: 0}
 --- !u!1 &1199626668
 GameObject:
   m_ObjectHideFlags: 0
