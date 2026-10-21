@@ -177,23 +177,22 @@ public class NPCPathfinding : MonoBehaviour
 
     private void Update()
     {
-        waypointDestino = transform;
-
-        /*if (state.NPC_currentState == RobotState.PERSECUCION) {
+        if (state.NPC_currentState is PerseguirState) {
             waypointDestino = player_tranform;
-        }*/
+        }
 
-        //else {
-        if (!puedeMoverse)
-        return;
-
-        if (ruta == null || ruta.Count == 0)
+        else {
+            if (!puedeMoverse)
             return;
 
-        if (indiceRuta >= ruta.Count)
-            return;
+            if (ruta == null || ruta.Count == 0)
+                return;
 
-        waypointDestino = ruta[indiceRuta].transform;
+            if (indiceRuta >= ruta.Count)
+                return;
+
+            waypointDestino = ruta[indiceRuta].transform;
+        
     
         if (indiceRuta == ruta.Count - 1)
         {
@@ -238,7 +237,7 @@ public class NPCPathfinding : MonoBehaviour
             return;
 
         waypointDestino = ruta[indiceRuta].transform; //cambio
-        //}
+        }
 
         Vector3 posicionObjetivo = waypointDestino.transform.position;
         Vector3 haciaObjetivo = posicionObjetivo - transform.position;

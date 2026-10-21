@@ -25,6 +25,7 @@ public class NPC_state : MonoBehaviour
     {
         if (grafo == null)
             grafo = FindFirstObjectByType<WaypointGraph>();
+            
         ChangeState(patrullarState);
     }
 
