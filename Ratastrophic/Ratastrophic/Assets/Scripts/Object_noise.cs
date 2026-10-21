@@ -11,6 +11,9 @@ public class NoiseObject : MonoBehaviour{
     public float noiseRadius = 7f;
     public float noiseDuration = 2f;
 
+    [Header("Limpio/Sucio")]
+    public bool clean = true;
+
     private AudioSource audioSource;
     private float nextSoundTime;
     private GameObject currentNoiseArea;
@@ -34,6 +37,9 @@ public class NoiseObject : MonoBehaviour{
             return;
 
         if (Time.time < nextSoundTime)
+            return;
+        
+        if (!clean)
             return;
 
         nextSoundTime = Time.time + soundCooldown;
@@ -68,5 +74,8 @@ public class NoiseObject : MonoBehaviour{
         rb.useGravity = false;
 
         Destroy(currentNoiseArea, noiseDuration);
+
+        clean = false;
+        transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
     }
 }

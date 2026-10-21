@@ -26,7 +26,7 @@ public class NPCPathfinding : MonoBehaviour
     private int indiceRuta = 0;
 
     private bool puedeMoverse = false;
-    private NPC_state state;
+    public NPC_state state;
     public Transform player_tranform;
 
     private NPC_ObjectDetection objectDetection;
@@ -34,7 +34,9 @@ public class NPCPathfinding : MonoBehaviour
     private void Awake()//para que no de errores porque otros scripts necesitan las referencias
     {
         aStar = GetComponent<AStar>();
-        state = GetComponent<NPC_state>();
+        if(state == null)
+            state = GetComponent<NPC_state>();
+
         objectDetection = GetComponent<NPC_ObjectDetection>();
 
         if (aStar == null)
@@ -177,6 +179,7 @@ public class NPCPathfinding : MonoBehaviour
 
     private void Update()
     {
+
         if (state.NPC_currentState is PerseguirState) {
             waypointDestino = player_tranform;
         }
@@ -230,7 +233,7 @@ public class NPCPathfinding : MonoBehaviour
             if (distanciaWaypoint > radioLlegada)
                 break;
 
-            indiceRuta++;
+            indiceRuta++; //ha pasado por un waypoint
         }
 
         if (indiceRuta >= ruta.Count)
