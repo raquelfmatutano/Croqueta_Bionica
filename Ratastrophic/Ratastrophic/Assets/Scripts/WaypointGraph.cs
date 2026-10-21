@@ -23,6 +23,11 @@ public class WaypointGraph : MonoBehaviour
 
     public List<int> ObtenerIdsSalas()//cambio
     {
+        if (waypoints.Count == 0)
+        {
+            waypoints.AddRange(FindObjectsByType<Waypoint>(FindObjectsSortMode.None));
+        }
+
         List<int> idsSalas = new List<int>();
 
         foreach (Waypoint waypoint in waypoints)
