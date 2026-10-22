@@ -84,6 +84,15 @@ public class NPC_vision : MonoBehaviour
             }
             
         }
+
+        else if (obj.GetComponent<NoiseObject>()) {
+            NoiseObject obj_noise = obj.GetComponent<NoiseObject>();
+
+            if(!obj_noise.clean) {
+                state.NPC_currentState.InterestSpotted(obj.transform);
+                print("ewewewew");
+            }
+        }
     }
 
     void OnTriggerExit(Collider obj) {

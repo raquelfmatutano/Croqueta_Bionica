@@ -7,9 +7,12 @@ public class NPC_state : MonoBehaviour
     public PatrullarState patrullarState;
     public InvestigarState investigarState;
     public PerseguirState perseguirState;
+    public LimpiarState limpiarState;
 
     public bool seesPlayer;
     public bool hearsNoise;
+
+    public Transform currentInterest;
 
     public NPCPathfinding pathfinder;
     public WaypointGraph grafo;
@@ -19,6 +22,7 @@ public class NPC_state : MonoBehaviour
         patrullarState = new PatrullarState(this);
         investigarState = new InvestigarState(this);
         perseguirState = new PerseguirState(this);
+        limpiarState = new LimpiarState(this);
     }
 
     private void Start()

@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Shipping_Box_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2476610959022867442, guid: 795562cd47b6f9a46b3fe2061a23c7bc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8375390713722170566, guid: 795562cd47b6f9a46b3fe2061a23c7bc, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -532,6 +536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_Hangar_Gas_Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 5413758656826165693, guid: 1932f6a12921a93409ebb2a02bee368f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -559,6 +567,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -622,6 +634,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1955202021}
+    - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1955202026}
   m_SourcePrefab: {fileID: 100100000, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
 --- !u!4 &17084985 stripped
 Transform:
@@ -998,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Alien_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4048163405520908898, guid: c9914b10a3e38114d96b4e338aae337a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1019,6 +1038,10 @@ PrefabInstance:
     - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
@@ -1099,6 +1122,10 @@ PrefabInstance:
     - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bench_short (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5532968935105880031, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_LocalScale.x
@@ -1226,6 +1253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Crate_Wood_Small_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6647389897064652335, guid: 84e7bb05d79dd194abf53c73a500d9a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1313,6 +1344,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1189600316}
     m_Modifications:
+    - target: {fileID: 4634332173860708976, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715803615511597757, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7459278228646864915, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -1368,6 +1407,14 @@ PrefabInstance:
     - target: {fileID: 7840624752166007465, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
       propertyPath: m_Name
       value: Retro_Hangar_Vehicle_Flatbed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840624752166007465, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938270057411308947, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1454,6 +1501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1473,7 +1524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 80424787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Habitaci\xF3n grande com\xFAn"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1584,6 +1635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1668,6 +1723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallRackShelf
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 301c98fb4806c214c978173d88ba97cc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1741,6 +1800,10 @@ PrefabInstance:
     - target: {fileID: 7557365736407424180, guid: b70af73cfd2509149bb418699c8a3a7b, type: 3}
       propertyPath: m_Name
       value: osmic_retro_mesa_tv_flat_wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557365736407424180, guid: b70af73cfd2509149bb418699c8a3a7b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1839,7 +1902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 91151914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sala de descanso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2157,6 +2220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bed_simple
       objectReference: {fileID: 0}
+    - target: {fileID: 3158143802952315340, guid: c1a4bb6e343baef4c84afe7a8a9324b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2230,6 +2297,10 @@ PrefabInstance:
     - target: {fileID: 6647389897064652335, guid: 84e7bb05d79dd194abf53c73a500d9a0, type: 3}
       propertyPath: m_Name
       value: SM_Crate_Wood_Small_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647389897064652335, guid: 84e7bb05d79dd194abf53c73a500d9a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2596,6 +2667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2617,6 +2692,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -2750,6 +2829,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_Hangar_Gas_Cylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 5413758656826165693, guid: 1932f6a12921a93409ebb2a02bee368f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2830,6 +2913,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Crate_Wood_Small_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6647389897064652335, guid: 84e7bb05d79dd194abf53c73a500d9a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2851,6 +2938,10 @@ PrefabInstance:
     - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_Name
       value: Terminal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8626270491060177496, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2997,7 +3088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 123258085}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sala de almacenaje grande
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3046,6 +3137,10 @@ PrefabInstance:
     - target: {fileID: 1525650009799367052, guid: ee8f9569bc459a14aa267f7f23d0df4c, type: 3}
       propertyPath: m_Name
       value: Cosmic_Retro_Computer_14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525650009799367052, guid: ee8f9569bc459a14aa267f7f23d0df4c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2190968462595703606, guid: ee8f9569bc459a14aa267f7f23d0df4c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3120,6 +3215,10 @@ PrefabInstance:
     - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
@@ -3247,6 +3346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bed_simple (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3158143802952315340, guid: c1a4bb6e343baef4c84afe7a8a9324b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3301,7 +3404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144622002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3474,6 +3577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_table_small_square
       objectReference: {fileID: 0}
+    - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3586,6 +3693,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -3721,6 +3832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Element1m
       objectReference: {fileID: 0}
+    - target: {fileID: 1870842340807773136, guid: b072c5eeab3124f47bf382eb3123e093, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4407657907617330553, guid: b072c5eeab3124f47bf382eb3123e093, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -3791,6 +3906,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2027632632}
     m_Modifications:
+    - target: {fileID: -8651132170723679401, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8651132170723679401, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Size.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8651132170723679401, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7255726615699119716, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -3847,6 +3974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3857,6 +3988,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2037017876}
+    - targetCorrespondingSourceObject: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2037017881}
   m_SourcePrefab: {fileID: 100100000, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
 --- !u!4 &170205020 stripped
 Transform:
@@ -4114,6 +4248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TerminalSmool
       objectReference: {fileID: 0}
+    - target: {fileID: 6807838139565698250, guid: 9a8c9d8dbf3196c44814baf04ae9ff15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4135,6 +4273,10 @@ PrefabInstance:
     - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
@@ -4210,6 +4352,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Analyzer_DoubleScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1097560501507596402, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -4283,6 +4429,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -4474,6 +4624,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -4547,6 +4705,10 @@ PrefabInstance:
     - target: {fileID: 314718010197702884, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Wall_Terminal_Thin
+      objectReference: {fileID: 0}
+    - target: {fileID: 314718010197702884, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1086998019249807966, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
       propertyPath: m_LocalScale.x
@@ -4680,6 +4842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bed_simple (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3158143802952315340, guid: c1a4bb6e343baef4c84afe7a8a9324b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4701,6 +4867,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -4828,6 +4998,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Box_Wrapped_Small_01
       objectReference: {fileID: 0}
+    - target: {fileID: 8469765275836778941, guid: 27aa37669325c4e4f8eb6c4e245c8e22, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4902,6 +5076,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Microscope
       objectReference: {fileID: 0}
+    - target: {fileID: 3398733511418718325, guid: 7d0bea64c4704b8418d610ee92ee6579, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4975,6 +5153,10 @@ PrefabInstance:
     - target: {fileID: 7762174363240732653, guid: 1138e8ce71c731f4aaa5a9fb97c45907, type: 3}
       propertyPath: m_Name
       value: PipesBlack.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762174363240732653, guid: 1138e8ce71c731f4aaa5a9fb97c45907, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5056,6 +5238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5077,6 +5263,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -5155,7 +5345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 230767196}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5246,6 +5436,14 @@ PrefabInstance:
     - target: {fileID: 1879432794858949414, guid: 5557ed86709e29441ada3e09ce5bd011, type: 3}
       propertyPath: m_Name
       value: Retro_Hangar_Crane_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1879432794858949414, guid: 5557ed86709e29441ada3e09ce5bd011, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490627114961072147, guid: 5557ed86709e29441ada3e09ce5bd011, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5388,7 +5586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 234875908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5464,6 +5662,10 @@ PrefabInstance:
     - target: {fileID: 4871342542138309241, guid: 938cdc2175d83ee4da1a576438bbcb7e, type: 3}
       propertyPath: m_Name
       value: PipesWhiteCorner
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871342542138309241, guid: 938cdc2175d83ee4da1a576438bbcb7e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5848163275474903100, guid: 938cdc2175d83ee4da1a576438bbcb7e, type: 3}
       propertyPath: m_LocalScale.x
@@ -5597,6 +5799,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5624,6 +5830,10 @@ PrefabInstance:
     - target: {fileID: 5152724012962283708, guid: 8391bedc56fa9fa458eca120d7523eee, type: 3}
       propertyPath: m_Name
       value: SM_Box_Wrapped_Large_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152724012962283708, guid: 8391bedc56fa9fa458eca120d7523eee, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8049276319420378974, guid: 8391bedc56fa9fa458eca120d7523eee, type: 3}
       propertyPath: m_LocalScale.x
@@ -5698,6 +5908,14 @@ PrefabInstance:
     - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
@@ -5825,6 +6043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Alien_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4048163405520908898, guid: c9914b10a3e38114d96b4e338aae337a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5846,6 +6068,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -6098,6 +6324,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -6175,7 +6405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 288696743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Sala de investigaci\xF3n rob\xF3tica"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6284,6 +6514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall2_2.004 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5252292189305209115, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6305,6 +6539,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -6386,6 +6624,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Analyzer_DoubleScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1097560501507596402, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -6459,6 +6701,10 @@ PrefabInstance:
     - target: {fileID: 6229488655422067163, guid: eaf83230f52568c4495a0882e7042a12, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_arcade_machine_games
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229488655422067163, guid: eaf83230f52568c4495a0882e7042a12, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6717196092908391265, guid: eaf83230f52568c4495a0882e7042a12, type: 3}
       propertyPath: m_LocalScale.x
@@ -6570,6 +6816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Desk_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -6648,6 +6898,10 @@ PrefabInstance:
     - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Microscope (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
@@ -6770,6 +7024,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -6844,6 +7102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlantedWallElement.003
       objectReference: {fileID: 0}
+    - target: {fileID: 847109761195265125, guid: 7cf872adce4d34a40b134868e7fd6bdf, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2843446607915443898, guid: 7cf872adce4d34a40b134868e7fd6bdf, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
@@ -6917,6 +7179,10 @@ PrefabInstance:
     - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_Name
       value: Terminal (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8626270491060177496, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_LocalScale.x
@@ -6997,6 +7263,10 @@ PrefabInstance:
     - target: {fileID: 1115239389567228304, guid: 26d8b3a6a90e7b24bb2ebc35fd75250d, type: 3}
       propertyPath: m_Name
       value: Wall1.4_2.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115239389567228304, guid: 26d8b3a6a90e7b24bb2ebc35fd75250d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8008622310803005485, guid: 26d8b3a6a90e7b24bb2ebc35fd75250d, type: 3}
       propertyPath: m_LocalScale.x
@@ -7079,6 +7349,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &321963880
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7326,6 +7597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7434,6 +7709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -7496,6 +7775,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 822020845}
+    - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 822020850}
   m_SourcePrefab: {fileID: 100100000, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
 --- !u!4 &329535193 stripped
 Transform:
@@ -7575,6 +7857,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot
       objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
       value: 13
@@ -7648,6 +7934,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -7723,6 +8013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -7785,6 +8079,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 341033749}
+    - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 341033754}
   m_SourcePrefab: {fileID: 100100000, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
 --- !u!4 &341033745 stripped
 Transform:
@@ -7809,6 +8106,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &341033750
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7906,6 +8204,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &341033754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56083410}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.6187748, z: 0.6}
+  m_Center: {x: -0.00000093877316, y: 0.3093874, z: 0.00000008940697}
 --- !u!1 &342826523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7840624752166007465, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
@@ -7934,6 +8253,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &342900976
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8215,6 +8535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_b
       objectReference: {fileID: 0}
+    - target: {fileID: 300900534481118971, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1109807306562387009, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -8454,6 +8778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Alien_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4048163405520908898, guid: c9914b10a3e38114d96b4e338aae337a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8527,6 +8855,10 @@ PrefabInstance:
     - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8728,6 +9060,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Computer_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -8801,6 +9141,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -8924,6 +9268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall2_2.004 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5252292189305209115, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8997,6 +9345,10 @@ PrefabInstance:
     - target: {fileID: 3158143802952315340, guid: c1a4bb6e343baef4c84afe7a8a9324b4, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bed_simple
+      objectReference: {fileID: 0}
+    - target: {fileID: 3158143802952315340, guid: c1a4bb6e343baef4c84afe7a8a9324b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9184,9 +9536,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7762224025221115594, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
       propertyPath: m_Name
       value: StorageTub (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027228791024609348, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5103624227725451308, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9270,6 +9634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_dispenser_drink
       objectReference: {fileID: 0}
+    - target: {fileID: 7964624124445365919, guid: 15254a5f2f0b6dc4aa504ec35d160e36, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9291,6 +9659,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -9354,6 +9726,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 824747965}
+    - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 824747970}
   m_SourcePrefab: {fileID: 100100000, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
 --- !u!4 &397336117 stripped
 Transform:
@@ -9626,6 +10001,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Box_Wrapped_Small_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8469765275836778941, guid: 27aa37669325c4e4f8eb6c4e245c8e22, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9647,6 +10026,10 @@ PrefabInstance:
     - target: {fileID: 3624393213160962097, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_chair_comfy_orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624393213160962097, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4109462917755953803, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
       propertyPath: m_LocalScale.x
@@ -9808,6 +10191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -9892,6 +10279,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -9984,6 +10375,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 7
   noiseDuration: 2
+  clean: 1
 --- !u!82 &423960628
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10104,6 +10496,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &427774907
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10212,6 +10605,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -10335,6 +10732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Microscope (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -10408,6 +10809,10 @@ PrefabInstance:
     - target: {fileID: 2053841700987016199, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
       propertyPath: m_Name
       value: SM_Pallet_Wood_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053841700987016199, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5971819799661570025, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
       propertyPath: m_LocalScale.x
@@ -10711,6 +11116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DEBUG_NPC 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5308326109191699364, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10994,6 +11403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -11068,6 +11481,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -11141,6 +11562,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -11268,6 +11693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_table_small_square
       objectReference: {fileID: 0}
+    - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11375,6 +11804,10 @@ PrefabInstance:
     - target: {fileID: 8469765275836778941, guid: 27aa37669325c4e4f8eb6c4e245c8e22, type: 3}
       propertyPath: m_Name
       value: SM_Box_Wrapped_Small_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469765275836778941, guid: 27aa37669325c4e4f8eb6c4e245c8e22, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11546,6 +11979,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &513566362
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11654,6 +12088,10 @@ PrefabInstance:
     - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Analyzer_DoubleScreen (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1097560501507596402, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_LocalScale.x
@@ -11955,6 +12393,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Computer_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -12126,6 +12572,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &567691799
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12239,6 +12686,10 @@ PrefabInstance:
     - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
@@ -12372,6 +12823,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bed_simple (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3158143802952315340, guid: c1a4bb6e343baef4c84afe7a8a9324b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12393,6 +12848,10 @@ PrefabInstance:
     - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
@@ -12473,6 +12932,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -12605,6 +13068,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12639,6 +13106,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &592280125
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12800,6 +13268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_plate_large (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830098275434722719, guid: e6b94cc0086df1d4daa6042c1aa2ccbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12873,6 +13345,10 @@ PrefabInstance:
     - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Notebook (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12996,6 +13472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13023,6 +13503,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -13115,6 +13599,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 7
   noiseDuration: 2
+  clean: 1
 --- !u!82 &608830962
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13272,6 +13757,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall2_2.004
       objectReference: {fileID: 0}
+    - target: {fileID: 5252292189305209115, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13427,6 +13916,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
       propertyPath: m_Name
       value: ratastrophic_rat (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13606,6 +14099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -13738,6 +14235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_tablet_flat_a
       objectReference: {fileID: 0}
+    - target: {fileID: 2249425145768205834, guid: ab7ff21c5d49bfc43934a50e8ccd96b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13812,6 +14313,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_Hangar_Crane_Small (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1879432794858949414, guid: 5557ed86709e29441ada3e09ce5bd011, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490627114961072147, guid: 5557ed86709e29441ada3e09ce5bd011, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13879,6 +14388,7 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  state: {fileID: 0}
   player_tranform: {fileID: 0}
 --- !u!114 &645270634
 MonoBehaviour:
@@ -14068,6 +14578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_Hangar_Fuel_Unit
       objectReference: {fileID: 0}
+    - target: {fileID: 8513028046316734048, guid: 0aa5e7451cbbbf449b99ec80784434b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9038593936349060314, guid: 0aa5e7451cbbbf449b99ec80784434b4, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -14194,6 +14708,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipesBlack.001 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7762174363240732653, guid: 1138e8ce71c731f4aaa5a9fb97c45907, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14228,6 +14746,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &660484680
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14337,6 +14856,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Microscope
       objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -14410,6 +14933,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 7ba0b5a941909f2499cfeed8a6d6a591, type: 3}
       propertyPath: m_Name
       value: StorageRack_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7ba0b5a941909f2499cfeed8a6d6a591, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7ba0b5a941909f2499cfeed8a6d6a591, type: 3}
       propertyPath: m_LocalScale.x
@@ -14488,6 +15015,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cc04a9baa919bfe47af3b3cfc2bf1975, type: 3}
       propertyPath: m_Name
       value: StorageRack_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cc04a9baa919bfe47af3b3cfc2bf1975, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc04a9baa919bfe47af3b3cfc2bf1975, type: 3}
       propertyPath: m_LocalScale.x
@@ -14619,6 +15150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_mug_black
       objectReference: {fileID: 0}
+    - target: {fileID: 9205355636258480957, guid: c1c297de351cbbe429ca5989e987c6a7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14697,6 +15232,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeInsert1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e4b6707d5855c0341bd02acf914f663d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14718,6 +15257,14 @@ PrefabInstance:
     - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
@@ -14927,6 +15474,7 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  state: {fileID: 0}
   player_tranform: {fileID: 0}
 --- !u!114 &704513682
 MonoBehaviour:
@@ -15029,6 +15577,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: cc04a9baa919bfe47af3b3cfc2bf1975, type: 3}
       propertyPath: m_Name
       value: StorageRack_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cc04a9baa919bfe47af3b3cfc2bf1975, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cc04a9baa919bfe47af3b3cfc2bf1975, type: 3}
       propertyPath: m_LocalScale.x
@@ -15159,6 +15711,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
       propertyPath: m_Name
       value: ratastrophic_rat (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15384,6 +15940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Microscope
       objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -15510,6 +16070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipesBlack.001 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7762174363240732653, guid: 1138e8ce71c731f4aaa5a9fb97c45907, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15589,6 +16153,10 @@ PrefabInstance:
     - target: {fileID: 8469765275836778941, guid: 27aa37669325c4e4f8eb6c4e245c8e22, type: 3}
       propertyPath: m_Name
       value: SM_Box_Wrapped_Small_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469765275836778941, guid: 27aa37669325c4e4f8eb6c4e245c8e22, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15880,6 +16448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeInsert2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb9a47de7d0effa4c875fd32add63255, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15904,7 +16476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 753130648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15955,6 +16527,10 @@ PrefabInstance:
     - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_Name
       value: DEBUG_NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 5308326109191699364, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872384659538319009, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16114,6 +16690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Alien_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4048163405520908898, guid: c9914b10a3e38114d96b4e338aae337a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16135,6 +16715,10 @@ PrefabInstance:
     - target: {fileID: 847109761195265125, guid: 7cf872adce4d34a40b134868e7fd6bdf, type: 3}
       propertyPath: m_Name
       value: SlantedWallElement.003 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 847109761195265125, guid: 7cf872adce4d34a40b134868e7fd6bdf, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2843446607915443898, guid: 7cf872adce4d34a40b134868e7fd6bdf, type: 3}
       propertyPath: m_LocalScale.x
@@ -16288,6 +16872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Box_Wrapped_Large_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5152724012962283708, guid: 8391bedc56fa9fa458eca120d7523eee, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8049276319420378974, guid: 8391bedc56fa9fa458eca120d7523eee, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -16361,6 +16949,10 @@ PrefabInstance:
     - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
@@ -16436,6 +17028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_arcade_machine_games
       objectReference: {fileID: 0}
+    - target: {fileID: 6229488655422067163, guid: eaf83230f52568c4495a0882e7042a12, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6717196092908391265, guid: eaf83230f52568c4495a0882e7042a12, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -16509,6 +17105,14 @@ PrefabInstance:
     - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Computer_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -16714,6 +17318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_box_small_sea
       objectReference: {fileID: 0}
+    - target: {fileID: 854160639607694901, guid: f4fb36cc5309dd742ba66ad0772fa46f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16784,9 +17392,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7762224025221115594, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
       propertyPath: m_Name
       value: StorageTub
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027228791024609348, guid: d05ab248ce2563246a729d4e80de23ab, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17089,6 +17709,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -17175,6 +17799,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &811881861
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17389,6 +18014,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Reactor_Core_Tube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17422,6 +18051,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &822020846
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17519,6 +18149,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &822020850
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822020841}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.6187748, z: 0.6}
+  m_Center: {x: -0.000000461936, y: 0.3093874, z: -0.0000002682209}
 --- !u!1 &824747961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
@@ -17542,6 +18193,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &824747966
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17639,6 +18291,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &824747970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824747961}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.6187748, z: 0.6}
+  m_Center: {x: -0.00000093877316, y: 0.3093874, z: 0.000000029802322}
 --- !u!1 &824752575
 GameObject:
   m_ObjectHideFlags: 0
@@ -17752,6 +18425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17826,6 +18503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_tablet_flat_a (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2249425145768205834, guid: ab7ff21c5d49bfc43934a50e8ccd96b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17899,6 +18580,10 @@ PrefabInstance:
     - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Notebook (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18015,6 +18700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_Projector
       objectReference: {fileID: 0}
+    - target: {fileID: 5549297465520860400, guid: 6c0e4d2834ccfab4ea4e4dfb3581d00b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18093,6 +18782,10 @@ PrefabInstance:
     - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Notebook (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18201,6 +18894,10 @@ PrefabInstance:
     - target: {fileID: 2053841700987016199, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
       propertyPath: m_Name
       value: SM_Pallet_Wood_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053841700987016199, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5971819799661570025, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
       propertyPath: m_LocalScale.x
@@ -18362,6 +19059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terminal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8626270491060177496, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -18448,6 +19149,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &876244505
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18597,6 +19299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -18659,6 +19365,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1142843584}
+    - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1142843589}
   m_SourcePrefab: {fileID: 100100000, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
 --- !u!4 &881474808 stripped
 Transform:
@@ -18676,6 +19385,10 @@ PrefabInstance:
     - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Microscope (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
@@ -18748,7 +19461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 883459448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Habitaci\xF3n individual"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18791,6 +19504,14 @@ PrefabInstance:
     - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
@@ -18865,6 +19586,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -18957,6 +19682,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 7
   noiseDuration: 2
+  clean: 1
 --- !u!82 &896345855
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19063,7 +19789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 900922631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19237,6 +19963,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &915513534
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19394,6 +20121,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -19566,6 +20297,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &933811324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19680,6 +20412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
       value: 20
@@ -19754,6 +20490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_b (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 300900534481118971, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1109807306562387009, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -19827,6 +20567,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -19986,6 +20730,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -20167,6 +20915,10 @@ PrefabInstance:
     - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_table_small_square (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20389,6 +21141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_tablet_flat_a (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2249425145768205834, guid: ab7ff21c5d49bfc43934a50e8ccd96b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20410,6 +21166,10 @@ PrefabInstance:
     - target: {fileID: 300900534481118971, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_b (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 300900534481118971, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1109807306562387009, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
       propertyPath: m_LocalScale.x
@@ -20484,6 +21244,10 @@ PrefabInstance:
     - target: {fileID: 1560675332602161443, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Medical_Bed_Compact_2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560675332602161443, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2225747292139762585, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
       propertyPath: m_LocalScale.x
@@ -20606,6 +21370,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -20733,6 +21501,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipesBlackCorner
       objectReference: {fileID: 0}
+    - target: {fileID: 8793894456633155166, guid: a1d762a22d6414b43a56ae6d3e7e6d8e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20818,6 +21590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20892,6 +21668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: osmic_retro_mesa_tv_flat_wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7557365736407424180, guid: b70af73cfd2509149bb418699c8a3a7b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20961,6 +21741,10 @@ PrefabInstance:
     - target: {fileID: 1870842340807773136, guid: b072c5eeab3124f47bf382eb3123e093, type: 3}
       propertyPath: m_Name
       value: Element1m (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870842340807773136, guid: b072c5eeab3124f47bf382eb3123e093, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4407657907617330553, guid: b072c5eeab3124f47bf382eb3123e093, type: 3}
       propertyPath: m_LocalScale.x
@@ -21087,6 +21871,10 @@ PrefabInstance:
     - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Notebook
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21282,6 +22070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Reactor_Core_Tube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21355,6 +22147,10 @@ PrefabInstance:
     - target: {fileID: 3110510736190071685, guid: 5be221e3439287749b5f72b865041d09, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_vendor_snack (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3110510736190071685, guid: 5be221e3439287749b5f72b865041d09, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21465,6 +22261,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2027632632}
     m_Modifications:
+    - target: {fileID: 3078275239065776506, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078275239065776506, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Size.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3078275239065776506, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634332173860708976, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715803615511597757, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7459278228646864915, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -21521,6 +22337,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_Hangar_Vehicle_Flatbed (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7840624752166007465, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938270057411308947, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21531,6 +22355,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7840624752166007465, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1068175899}
+    - targetCorrespondingSourceObject: {fileID: 7840624752166007465, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1068175904}
   m_SourcePrefab: {fileID: 100100000, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
 --- !u!4 &1068175895 stripped
 Transform:
@@ -21555,6 +22382,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1068175900
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21652,6 +22480,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1068175904
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342826523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.76546556, y: 1.4306079, z: 1.6462166}
+  m_Center: {x: 0.00000095277403, y: 0.85883665, z: -0.03020963}
 --- !u!4 &1073752657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d5c03e299ea347046a29391e4c0de721, type: 3}
@@ -21680,6 +22529,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1076470677
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21788,6 +22638,10 @@ PrefabInstance:
     - target: {fileID: 8517445790406742783, guid: b9dd581be99d7b84ab71e4e9b6acda89, type: 3}
       propertyPath: m_Name
       value: Cosmic_Retro_Computer_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517445790406742783, guid: b9dd581be99d7b84ab71e4e9b6acda89, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9043187907512715333, guid: b9dd581be99d7b84ab71e4e9b6acda89, type: 3}
       propertyPath: m_LocalScale.x
@@ -21907,6 +22761,10 @@ PrefabInstance:
     - target: {fileID: 2053841700987016199, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
       propertyPath: m_Name
       value: SM_Pallet_Wood_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053841700987016199, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5971819799661570025, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
       propertyPath: m_LocalScale.x
@@ -22194,6 +23052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall2_2.004 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5252292189305209115, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22260,7 +23122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1111602605}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22307,6 +23169,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1113112476
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22468,6 +23331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_Retro_Computer_7
       objectReference: {fileID: 0}
+    - target: {fileID: 7754135464258298107, guid: 522f2ed413277974f912900bd445fa79, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22489,6 +23356,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -22561,7 +23432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1119083746}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22649,6 +23520,10 @@ PrefabInstance:
     - target: {fileID: 2249425145768205834, guid: ab7ff21c5d49bfc43934a50e8ccd96b8, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_tablet_flat_a (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2249425145768205834, guid: ab7ff21c5d49bfc43934a50e8ccd96b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22804,6 +23679,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1142843585
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22901,6 +23777,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1142843589
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142843580}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.6187748, z: 0.6}
+  m_Center: {x: 0.000000014901161, y: 0.30938745, z: -0.000000029802322}
 --- !u!1 &1144930554
 GameObject:
   m_ObjectHideFlags: 0
@@ -22960,6 +23857,10 @@ PrefabInstance:
     - target: {fileID: 1730465719365109865, guid: 63c2cad568cabdf4ebf93d1d500a700b, type: 3}
       propertyPath: m_Name
       value: Wall2_3.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730465719365109865, guid: 63c2cad568cabdf4ebf93d1d500a700b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8150953427054542884, guid: 63c2cad568cabdf4ebf93d1d500a700b, type: 3}
       propertyPath: m_LocalScale.x
@@ -23083,6 +23984,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall2_2.004 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5252292189305209115, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23104,6 +24009,10 @@ PrefabInstance:
     - target: {fileID: 1560675332602161443, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Medical_Bed_Compact_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560675332602161443, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2225747292139762585, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
       propertyPath: m_LocalScale.x
@@ -23231,6 +24140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_Projector
       objectReference: {fileID: 0}
+    - target: {fileID: 5549297465520860400, guid: 6c0e4d2834ccfab4ea4e4dfb3581d00b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23331,6 +24244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -23393,6 +24310,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1574692933}
+    - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1574692938}
   m_SourcePrefab: {fileID: 100100000, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
 --- !u!4 &1164691694 stripped
 Transform:
@@ -23572,6 +24492,7 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  state: {fileID: 0}
   player_tranform: {fileID: 0}
 --- !u!114 &1176780253
 MonoBehaviour:
@@ -23754,6 +24675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MEOW_NPC_state
   seesPlayer: 0
   hearsNoise: 0
+  currentInterest: {fileID: 0}
   pathfinder: {fileID: 0}
   grafo: {fileID: 0}
   inspeccionSala: {fileID: 1185476929}
@@ -23832,6 +24754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ratastrophic_rat (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23851,7 +24777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1189600316}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23947,6 +24873,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23968,6 +24898,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -24212,6 +25146,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -24298,6 +25236,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1210707977
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24507,6 +25446,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_dispenser_drink
       objectReference: {fileID: 0}
+    - target: {fileID: 7964624124445365919, guid: 15254a5f2f0b6dc4aa504ec35d160e36, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24528,6 +25471,14 @@ PrefabInstance:
     - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
@@ -24704,6 +25655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_Projector
       objectReference: {fileID: 0}
+    - target: {fileID: 5549297465520860400, guid: 6c0e4d2834ccfab4ea4e4dfb3581d00b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24725,6 +25680,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -24800,6 +25759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_b (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 300900534481118971, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1109807306562387009, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -24871,7 +25834,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235922816}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sala de electricidad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25073,6 +26036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_vendor_snack
       objectReference: {fileID: 0}
+    - target: {fileID: 3110510736190071685, guid: 5be221e3439287749b5f72b865041d09, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25094,6 +26061,10 @@ PrefabInstance:
     - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Microscope
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
@@ -25246,6 +26217,10 @@ PrefabInstance:
     - target: {fileID: 1560675332602161443, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Medical_Bed_Compact_2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560675332602161443, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2225747292139762585, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
       propertyPath: m_LocalScale.x
@@ -25616,6 +26591,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25650,6 +26629,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1278251985
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25811,6 +26791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_dispenser_drink (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7964624124445365919, guid: 15254a5f2f0b6dc4aa504ec35d160e36, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -25881,9 +26865,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6973225323063602298, guid: 6a17b450ac07d3e4cac7fddbdb7c9afb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6565282961007088898, guid: 6a17b450ac07d3e4cac7fddbdb7c9afb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2508187699400343729, guid: 6a17b450ac07d3e4cac7fddbdb7c9afb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6a17b450ac07d3e4cac7fddbdb7c9afb, type: 3}
       propertyPath: m_Name
       value: Toolbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a17b450ac07d3e4cac7fddbdb7c9afb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710854708169957303, guid: 6a17b450ac07d3e4cac7fddbdb7c9afb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3633909863259286182, guid: 6a17b450ac07d3e4cac7fddbdb7c9afb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7382102815673446346, guid: 6a17b450ac07d3e4cac7fddbdb7c9afb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25918,6 +26930,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1294248694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26307,6 +27320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -26380,6 +27397,10 @@ PrefabInstance:
     - target: {fileID: 3624393213160962097, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_chair_comfy_orange (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624393213160962097, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4109462917755953803, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
       propertyPath: m_LocalScale.x
@@ -26724,6 +27745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubeInsert2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb9a47de7d0effa4c875fd32add63255, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26745,6 +27770,10 @@ PrefabInstance:
     - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
@@ -26956,6 +27985,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_Hangar_Crane_Small
       objectReference: {fileID: 0}
+    - target: {fileID: 1879432794858949414, guid: 5557ed86709e29441ada3e09ce5bd011, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490627114961072147, guid: 5557ed86709e29441ada3e09ce5bd011, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26983,6 +28020,10 @@ PrefabInstance:
     - target: {fileID: 1560675332602161443, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Medical_Bed_Compact_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560675332602161443, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2225747292139762585, guid: a278660be24c4f146b4d18b7da12399f, type: 3}
       propertyPath: m_LocalScale.x
@@ -27110,6 +28151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TerminalSmool (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6807838139565698250, guid: 9a8c9d8dbf3196c44814baf04ae9ff15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27144,6 +28189,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1341524510
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27305,6 +28351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_dispenser_drink
       objectReference: {fileID: 0}
+    - target: {fileID: 7964624124445365919, guid: 15254a5f2f0b6dc4aa504ec35d160e36, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27326,6 +28376,10 @@ PrefabInstance:
     - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
@@ -27413,6 +28467,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1344789518
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27522,6 +28577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terminal
       objectReference: {fileID: 0}
+    - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8626270491060177496, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -27601,6 +28660,10 @@ PrefabInstance:
     - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Microscope
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
@@ -27762,6 +28825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Shipping_Box_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2476610959022867442, guid: 795562cd47b6f9a46b3fe2061a23c7bc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8375390713722170566, guid: 795562cd47b6f9a46b3fe2061a23c7bc, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -27848,6 +28915,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1355718101
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27957,6 +29025,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bench_short
       objectReference: {fileID: 0}
+    - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5532968935105880031, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
@@ -28030,6 +29102,10 @@ PrefabInstance:
     - target: {fileID: 3624393213160962097, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_chair_comfy_orange (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624393213160962097, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4109462917755953803, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
       propertyPath: m_LocalScale.x
@@ -28145,6 +29221,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ratastrophic_rat
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28166,6 +29246,14 @@ PrefabInstance:
     - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Computer_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -28252,6 +29340,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1373321861
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28533,6 +29622,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1389534237
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28642,6 +29732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bench_short (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5532968935105880031, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -28727,6 +29821,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1394450154
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28888,6 +29983,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_table_small_square (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28914,6 +30013,14 @@ PrefabInstance:
     - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Computer_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -29000,6 +30107,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1413198678
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29158,6 +30266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_arcade_machine_games
       objectReference: {fileID: 0}
+    - target: {fileID: 6229488655422067163, guid: eaf83230f52568c4495a0882e7042a12, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6717196092908391265, guid: eaf83230f52568c4495a0882e7042a12, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -29286,6 +30398,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1460428869
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29394,6 +30507,10 @@ PrefabInstance:
     - target: {fileID: 300900534481118971, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_b (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 300900534481118971, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1109807306562387009, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
       propertyPath: m_LocalScale.x
@@ -29555,6 +30672,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -29681,6 +30806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29715,6 +30844,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1462730266
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29824,6 +30954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -29910,6 +31044,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1462739320
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30019,6 +31154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Microscope (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -30092,6 +31231,14 @@ PrefabInstance:
     - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Computer_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -30296,6 +31443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01
       objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -30422,6 +31573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_plate_large
       objectReference: {fileID: 0}
+    - target: {fileID: 6830098275434722719, guid: e6b94cc0086df1d4daa6042c1aa2ccbe, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30513,6 +31668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Analyzer_DoubleScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1097560501507596402, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_LocalScale.x
       value: 7
@@ -30586,6 +31745,14 @@ PrefabInstance:
     - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Computer_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -30661,6 +31828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
       value: 7
@@ -30735,6 +31906,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Microscope (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -30808,6 +31983,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -30900,6 +32079,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1493571566
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31061,6 +32241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_table_small_square (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31158,7 +32342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1506668749}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Sala de investigaci\xF3n anat\xF3mica"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31215,6 +32399,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -31295,6 +32483,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -31382,6 +32574,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1509629363
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31491,6 +32684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -31582,6 +32779,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 7
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1518175867
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31942,6 +33140,10 @@ PrefabInstance:
     - target: {fileID: 6647389897064652335, guid: 84e7bb05d79dd194abf53c73a500d9a0, type: 3}
       propertyPath: m_Name
       value: SM_Crate_Wood_Small_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6647389897064652335, guid: 84e7bb05d79dd194abf53c73a500d9a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32318,6 +33520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -32380,6 +33586,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1537679271}
+    - targetCorrespondingSourceObject: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1537679276}
   m_SourcePrefab: {fileID: 100100000, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
 --- !u!4 &1537679267 stripped
 Transform:
@@ -32404,6 +33613,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1537679272
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32501,6 +33711,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1537679276
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845444439}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.6187748, z: 0.6}
+  m_Center: {x: -0.000000461936, y: 0.3093874, z: -0.0000002682209}
 --- !u!1001 &1541401745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32512,6 +33743,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -32599,6 +33834,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1541401751
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32708,6 +33944,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -32787,6 +34027,14 @@ PrefabInstance:
     - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Computer_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -32947,6 +34195,10 @@ PrefabInstance:
     - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bench_short (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5532968935105880031, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_LocalScale.x
@@ -33199,6 +34451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_Hangar_floor_tile_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4104946636678401695, guid: e96be6ad824153b48925a3bbda8d2bd0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33272,6 +34528,10 @@ PrefabInstance:
     - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Reactor_Core_Tube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33347,6 +34607,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_Retro_Computer_7
       objectReference: {fileID: 0}
+    - target: {fileID: 7754135464258298107, guid: 522f2ed413277974f912900bd445fa79, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33386,6 +34650,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1574692934
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33483,6 +34748,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1574692938
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574692929}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.6187748, z: 0.6}
+  m_Center: {x: -0.00000093877316, y: 0.3093874, z: 0.000000029802322}
 --- !u!1 &1585024993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2476610959022867442, guid: 795562cd47b6f9a46b3fe2061a23c7bc, type: 3}
@@ -33506,6 +34792,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1585024998
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33667,6 +34954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33728,6 +35019,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
       propertyPath: m_Name
       value: ratastrophic_rat (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33811,6 +35106,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1598131553
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34003,7 +35299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1603633739}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Sala de ant\xEDdotos"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34071,6 +35367,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1610645872
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34191,6 +35488,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1610733563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34430,6 +35728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Reactor_Core_Tube
       objectReference: {fileID: 0}
+    - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34500,9 +35802,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8199005351108037487, guid: b0015c65389e1fe4681f575175d8951c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 635547659545568360, guid: b0015c65389e1fe4681f575175d8951c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b0015c65389e1fe4681f575175d8951c, type: 3}
       propertyPath: m_Name
       value: Bin
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0015c65389e1fe4681f575175d8951c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027228791024609348, guid: b0015c65389e1fe4681f575175d8951c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34525,6 +35843,14 @@ PrefabInstance:
     - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
@@ -34743,6 +36069,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bed_simple
       objectReference: {fileID: 0}
+    - target: {fileID: 3158143802952315340, guid: c1a4bb6e343baef4c84afe7a8a9324b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34764,6 +36094,14 @@ PrefabInstance:
     - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Computer_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -34850,6 +36188,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1655773577
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34958,6 +36297,10 @@ PrefabInstance:
     - target: {fileID: 314718010197702884, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Wall_Terminal_Thin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 314718010197702884, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1086998019249807966, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
       propertyPath: m_LocalScale.x
@@ -35094,6 +36437,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1663076294
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35333,6 +36677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PipesWhite
       objectReference: {fileID: 0}
+    - target: {fileID: 5692225849648240481, guid: a4ecbcc3455218342a47f2a902f3e2c1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35360,6 +36708,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -35486,6 +36838,10 @@ PrefabInstance:
     - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Reactor_Core_Tube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35636,6 +36992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -35721,6 +37081,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1689253891
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35916,6 +37277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Pallet_Wood_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2053841700987016199, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5971819799661570025, guid: 38aca0c98d9253047bb88df72716dd9b, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
@@ -35990,6 +37355,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Computer_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -36063,6 +37436,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -36190,6 +37567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bed_simple (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3158143802952315340, guid: c1a4bb6e343baef4c84afe7a8a9324b4, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36211,6 +37592,10 @@ PrefabInstance:
     - target: {fileID: 3624393213160962097, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_chair_comfy_orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624393213160962097, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4109462917755953803, guid: df2c709cd06e45a40898e85f8d3fc798, type: 3}
       propertyPath: m_LocalScale.x
@@ -36334,6 +37719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall2_2.004
       objectReference: {fileID: 0}
+    - target: {fileID: 5252292189305209115, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36355,6 +37744,10 @@ PrefabInstance:
     - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Analyzer_DoubleScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1097560501507596402, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_LocalScale.x
@@ -36441,6 +37834,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1766844655
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36561,6 +37955,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1769831915
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36748,6 +38143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ratastrophic_rat (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36853,7 +38252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784737759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sala principal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36920,7 +38319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1788722877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37009,6 +38408,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
       propertyPath: m_Name
       value: ratastrophic_rat (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37119,6 +38522,10 @@ PrefabInstance:
     - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_Name
       value: Terminal (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8626270491060177496, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_LocalScale.x
@@ -37246,6 +38653,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Crate_Wood_Small_01
       objectReference: {fileID: 0}
+    - target: {fileID: 6647389897064652335, guid: 84e7bb05d79dd194abf53c73a500d9a0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37285,6 +38696,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1804599316
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37394,6 +38806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Wall_Terminal_Thin
       objectReference: {fileID: 0}
+    - target: {fileID: 314718010197702884, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1086998019249807966, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -37468,6 +38884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_b (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 300900534481118971, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1109807306562387009, guid: f2ef2020063b0a0489eb5cceb5eed127, type: 3}
       propertyPath: m_LocalScale.x
       value: 15
@@ -37541,6 +38961,10 @@ PrefabInstance:
     - target: {fileID: 314718010197702884, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Wall_Terminal_Thin
+      objectReference: {fileID: 0}
+    - target: {fileID: 314718010197702884, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1086998019249807966, guid: ca722cbfb240edc4f91680dd851f41d6, type: 3}
       propertyPath: m_LocalScale.x
@@ -37664,6 +39088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -37750,6 +39178,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1812748142
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37858,6 +39287,14 @@ PrefabInstance:
     - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
@@ -38019,6 +39456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -38105,6 +39546,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1816406397
 AudioSource:
   m_ObjectHideFlags: 0
@@ -38213,6 +39655,10 @@ PrefabInstance:
     - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
@@ -38401,6 +39847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_Retro_Computer_3
       objectReference: {fileID: 0}
+    - target: {fileID: 8517445790406742783, guid: b9dd581be99d7b84ab71e4e9b6acda89, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9043187907512715333, guid: b9dd581be99d7b84ab71e4e9b6acda89, type: 3}
       propertyPath: m_LocalScale.x
       value: 7
@@ -38471,6 +39921,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 288696743}
     m_Modifications:
+    - target: {fileID: 4634332173860708976, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715803615511597757, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7459278228646864915, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -38526,6 +39984,14 @@ PrefabInstance:
     - target: {fileID: 7840624752166007465, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
       propertyPath: m_Name
       value: Retro_Hangar_Vehicle_Flatbed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840624752166007465, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938270057411308947, guid: e1bbe2e165ed4e14dae83b0120a44743, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38650,6 +40116,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_tablet_flat_a
       objectReference: {fileID: 0}
+    - target: {fileID: 2249425145768205834, guid: ab7ff21c5d49bfc43934a50e8ccd96b8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38723,6 +40193,10 @@ PrefabInstance:
     - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Notebook (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38925,6 +40399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Microscope
       objectReference: {fileID: 0}
+    - target: {fileID: 3398733511418718325, guid: 7d0bea64c4704b8418d610ee92ee6579, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38946,6 +40424,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -39033,6 +40515,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1837845452
 AudioSource:
   m_ObjectHideFlags: 0
@@ -39194,6 +40677,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_laboratory_Biohazard_Barrel_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8068854344271234270, guid: 9c1786ed3bef3a145943b22c044969e6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39228,6 +40715,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1838325676
 AudioSource:
   m_ObjectHideFlags: 0
@@ -39337,6 +40825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -39410,6 +40902,10 @@ PrefabInstance:
     - target: {fileID: 2440397573938436587, guid: de20fb23929ee7849b191a1d93eece98, type: 3}
       propertyPath: m_Name
       value: Light.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440397573938436587, guid: de20fb23929ee7849b191a1d93eece98, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4105074573283425718, guid: de20fb23929ee7849b191a1d93eece98, type: 3}
       propertyPath: m_LocalScale.x
@@ -39525,6 +41021,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TerminalSmool
       objectReference: {fileID: 0}
+    - target: {fileID: 6807838139565698250, guid: 9a8c9d8dbf3196c44814baf04ae9ff15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39559,6 +41059,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1844520142
 AudioSource:
   m_ObjectHideFlags: 0
@@ -39668,6 +41169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bench_short (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5532968935105880031, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_LocalScale.x
       value: 8
@@ -39741,6 +41246,10 @@ PrefabInstance:
     - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
@@ -39893,6 +41402,10 @@ PrefabInstance:
     - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Microscope (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
@@ -40200,6 +41713,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1865321519
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40361,6 +41875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_table_small_square (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40461,6 +41979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terminal (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8626270491060177496, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5533009
@@ -40535,6 +42057,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1882273657
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40778,6 +42301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terminal (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3689324493416487752, guid: e2b49bcc493e915499b411d593a15088, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8626270491060177496, guid: e2b49bcc493e915499b411d593a15088, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.07231
@@ -40852,6 +42379,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1892024192
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41013,6 +42541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_table_small_square
       objectReference: {fileID: 0}
+    - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41170,6 +42702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_mug_black
       objectReference: {fileID: 0}
+    - target: {fileID: 9205355636258480957, guid: c1c297de351cbbe429ca5989e987c6a7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41191,6 +42727,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -41277,6 +42817,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1925910234
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41463,6 +43004,10 @@ PrefabInstance:
     - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Microscope (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
@@ -41710,6 +43255,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_shelf_wall_2slot
       objectReference: {fileID: 0}
+    - target: {fileID: 6139548687402891037, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6809407092431859111, guid: 2dd688a158de87f438488c6ac3d50181, type: 3}
       propertyPath: m_LocalScale.x
       value: 7
@@ -41795,6 +43344,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1944482531
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41915,6 +43465,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1949365225
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42023,6 +43574,10 @@ PrefabInstance:
     - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bench_short (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5532968935105880031, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_LocalScale.x
@@ -42236,6 +43791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cosmic_retro_mesa_mug_black
       objectReference: {fileID: 0}
+    - target: {fileID: 9205355636258480957, guid: c1c297de351cbbe429ca5989e987c6a7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42269,6 +43828,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1955202022
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42366,6 +43926,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1955202026
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955202017}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7, y: 0.6187748, z: 0.6}
+  m_Center: {x: -0.00000093877316, y: 0.3093874, z: 0.00000008940697}
 --- !u!1001 &1955771525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42456,6 +44037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Desk_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
       value: 10
@@ -42529,6 +44114,14 @@ PrefabInstance:
     - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Computer_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -42615,6 +44208,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1970949010
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42724,6 +44318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -42810,6 +44408,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1975657897
 AudioSource:
   m_ObjectHideFlags: 0
@@ -43010,6 +44609,7 @@ MonoBehaviour:
   radioLlegada: 0.3
   distanciaPreparacion: 2
   velocidadGiro: 5
+  state: {fileID: 0}
   player_tranform: {fileID: 0}
 --- !u!114 &1978779372
 MonoBehaviour:
@@ -43067,6 +44667,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1979409510
 AudioSource:
   m_ObjectHideFlags: 0
@@ -43175,6 +44776,10 @@ PrefabInstance:
     - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_bench_short
+      objectReference: {fileID: 0}
+    - target: {fileID: 5152924202976773477, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5532968935105880031, guid: aa6e1296c1691fc41ace371841c76f42, type: 3}
       propertyPath: m_LocalScale.x
@@ -43302,6 +44907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retro_Hangar_floor_tile_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4104946636678401695, guid: e96be6ad824153b48925a3bbda8d2bd0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43375,6 +44984,10 @@ PrefabInstance:
     - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Reactor_Core_Tube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807118273157789656, guid: 8df794ae8d19e6a42b4ec2ba09974c0b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43450,6 +45063,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ratastrophic_rat (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43471,6 +45088,10 @@ PrefabInstance:
     - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_books_set_a (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4395500798047197853, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
       propertyPath: m_LocalScale.x
@@ -43545,6 +45166,10 @@ PrefabInstance:
     - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Stool (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
@@ -43632,6 +45257,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &1998922191
 AudioSource:
   m_ObjectHideFlags: 0
@@ -43892,6 +45518,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall2_2.004 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5252292189305209115, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43913,6 +45543,10 @@ PrefabInstance:
     - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Microscope (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720158317474431021, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3383365776664894103, guid: e96e8ef7c68fab548adbeb70a9d4bf68, type: 3}
       propertyPath: m_LocalScale.x
@@ -43987,6 +45621,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -44110,6 +45748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall2_2.004 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5252292189305209115, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -44184,6 +45826,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Alien_01
       objectReference: {fileID: 0}
+    - target: {fileID: 4048163405520908898, guid: c9914b10a3e38114d96b4e338aae337a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -44257,6 +45903,10 @@ PrefabInstance:
     - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Notebook (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44406,6 +46056,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &2032208378
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44642,6 +46293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Stool (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -44728,6 +46383,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &2036614326
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44848,6 +46504,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &2037017877
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44945,6 +46602,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2037017881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037017872}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5802314, y: 0.51173437, z: 0.5802312}
+  m_Center: {x: 0.00000040233135, y: 0.25586724, z: -0.000000014901161}
 --- !u!1 &2039808283
 GameObject:
   m_ObjectHideFlags: 0
@@ -45005,6 +46683,10 @@ PrefabInstance:
     - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_Name
       value: CR_Lab2_Desk_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1548460275370086136, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2177187805238432834, guid: 44b7e6f384a14f04a845f7f3d49d6a17, type: 3}
       propertyPath: m_LocalScale.x
@@ -45091,6 +46773,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &2041023727
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45276,7 +46959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2054403337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Objetos con sonido
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45313,7 +46996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2064853241}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sala de ordenadores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45375,6 +47058,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &2067795714
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45484,6 +47168,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Crate_Wood_Large_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2643715462323950657, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7946504148046300687, guid: 4348f198f042dab4292dbd0798fa6b90, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -45570,6 +47258,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &2072715060
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45679,6 +47368,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Computer_01
       objectReference: {fileID: 0}
+    - target: {fileID: 5013460299054691738, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440156090113966150, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5681487986351271712, guid: e09344b36d6de0340b5838cfbd87ab6d, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -45764,6 +47461,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &2095989660
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45873,6 +47571,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -45944,7 +47650,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2115403903}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Sala de almacenaje peque\xF1a"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46046,6 +47752,10 @@ PrefabInstance:
     - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
       propertyPath: m_Name
       value: Cosmic_retro_mesa_table_small_square
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133605146130206113, guid: 65fb6db75aebac64cba54826a24eecb1, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46290,6 +48000,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Capsule_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3857120144817182310, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902046430067143299, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4525254480650079452, guid: 80af588e3fb39de4fa5180d5aed4b883, type: 3}
       propertyPath: m_LocalScale.x
       value: 6
@@ -46411,6 +48129,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
       propertyPath: m_Name
       value: ratastrophic_rat (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46572,6 +48294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CR_Lab2_Notebook (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4513863821606481670, guid: 4ec65026fe16c864faf528345c08d0fc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46593,6 +48319,10 @@ PrefabInstance:
     - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_Name
       value: Retro_laboratory_Analyzer_DoubleScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 319898349420182216, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1097560501507596402, guid: 682bcea0253c9214ba37ff0d6360ae67, type: 3}
       propertyPath: m_LocalScale.x
@@ -46680,6 +48410,7 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  clean: 1
 --- !u!82 &2142513572
 AudioSource:
   m_ObjectHideFlags: 0

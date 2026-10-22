@@ -18,6 +18,8 @@ public class NoiseObject : MonoBehaviour{
     private float nextSoundTime;
     private GameObject currentNoiseArea;
 
+    private SphereCollider cleaningArea;
+
     private void Start(){
         audioSource = GetComponent<AudioSource>();
     }
@@ -32,15 +34,50 @@ public class NoiseObject : MonoBehaviour{
         TryPlaySound(collision);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        TryClean(other.gameObject);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        TryClean(other.gameObject);
+    }
+
+    private bool TryClean(GameObject targetGameObject)
+    {
+        if (clean) 
+            return false;
+
+        if (targetGameObject.CompareTag("NPC"))
+        {
+            print("limpiado");
+            transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
+            clean = true;
+
+            if (cleaningArea != null)
+            {
+                Destroy(cleaningArea);
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
     private void TryPlaySound(Collision collision){
+         if (!clean){
+            return;
+        }
+        
         if (!collision.gameObject.CompareTag("Player"))
             return;
 
         if (Time.time < nextSoundTime)
             return;
         
-        if (!clean)
-            return;
+       
 
         nextSoundTime = Time.time + soundCooldown;
 
@@ -48,6 +85,7 @@ public class NoiseObject : MonoBehaviour{
         audioSource.PlayOneShot(impactSound);
 
         CreateNoiseArea();
+        CreateCleaningArea();
     }
 
     private void CreateNoiseArea(){
@@ -77,5 +115,17 @@ public class NoiseObject : MonoBehaviour{
 
         clean = false;
         transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
+    }
+
+    private void CreateCleaningArea() {
+        // Destruir la esfera anterior si existe
+        if (cleaningArea != null){
+            Destroy(cleaningArea);
+        }
+
+       cleaningArea = gameObject.AddComponent<SphereCollider>() as SphereCollider;
+       cleaningArea.radius = 1.5f;
+        cleaningArea.isTrigger = true;
+
     }
 }
