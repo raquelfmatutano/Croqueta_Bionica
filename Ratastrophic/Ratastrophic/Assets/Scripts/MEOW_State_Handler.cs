@@ -105,6 +105,7 @@ public class AlertarState : State
     public override void Enter()
     {
         Debug.Log("Gato FSM: Entrando a ALERTAR (Buscando robot en PatrullarState)");
+        meow.pathfinder.velocidad = meow.velocidadAlerta;
         robotAvisado = false;
         tiempoSiguienteRecalculo = 0f;
 
@@ -214,5 +215,8 @@ public class AlertarState : State
         return masCercano;
     }
 
-    public override void Exit() { }
+    public override void Exit()
+    {
+        meow.pathfinder.velocidad = meow.velocidadNormal;
+    }
 }
