@@ -11,9 +11,14 @@ public class NoiseObject : MonoBehaviour{
     public float noiseRadius = 7f;
     public float noiseDuration = 2f;
 
+    [Header("Limpio/Sucio")]
+    public bool clean = true;
+
     private AudioSource audioSource;
     private float nextSoundTime;
     private GameObject currentNoiseArea;
+
+    private SphereCollider cleaningArea;
 
     private void Start(){
         audioSource = GetComponent<AudioSource>();
@@ -29,12 +34,54 @@ public class NoiseObject : MonoBehaviour{
         TryPlaySound(collision);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        TryClean(other.gameObject);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        TryClean(other.gameObject);
+    }
+
+    private bool TryClean(GameObject targetGameObject)
+    {
+        if (clean) 
+            return false;
+        
+        NPC_state state = targetGameObject.GetComponent<NPC_state>();
+
+        if (targetGameObject.CompareTag("NPC") & state != null)
+        {
+            print("limpiado");
+            transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
+            clean = true;
+
+            if (cleaningArea != null)
+            {
+                Destroy(cleaningArea);
+            }
+
+            state.NPC_currentState.NoiseReached();
+
+            return true;
+        }
+
+        return false;
+    }
+
     private void TryPlaySound(Collision collision){
+         if (!clean){
+            return;
+        }
+        
         if (!collision.gameObject.CompareTag("Player"))
             return;
 
         if (Time.time < nextSoundTime)
             return;
+        
+       
 
         nextSoundTime = Time.time + soundCooldown;
 
@@ -42,6 +89,7 @@ public class NoiseObject : MonoBehaviour{
         audioSource.PlayOneShot(impactSound);
 
         CreateNoiseArea();
+        CreateCleaningArea();
     }
 
     private void CreateNoiseArea(){
@@ -68,5 +116,20 @@ public class NoiseObject : MonoBehaviour{
         rb.useGravity = false;
 
         Destroy(currentNoiseArea, noiseDuration);
+
+        clean = false;
+        transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
+    }
+
+    private void CreateCleaningArea() {
+        // Destruir la esfera anterior si existe
+        if (cleaningArea != null){
+            Destroy(cleaningArea);
+        }
+
+       cleaningArea = gameObject.AddComponent<SphereCollider>() as SphereCollider;
+       cleaningArea.radius = 1.5f;
+        cleaningArea.isTrigger = true;
+
     }
 }

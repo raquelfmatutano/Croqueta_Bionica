@@ -27,6 +27,11 @@ public class PatrullarState : State
     }
 
     public override void Exit() { }
+
+    public override void InterestSpotted(Transform obj) {
+        npc.currentInterest = obj;
+        npc.ChangeState(npc.limpiarState);
+    }
 }
 
 
@@ -38,6 +43,11 @@ public class InvestigarState : State
     public void SetTarget(Waypoint target)
     {
         targetWaypoint = target;
+    }
+
+    public override void InterestSpotted(Transform obj) {
+        npc.currentInterest = obj;
+        npc.ChangeState(npc.limpiarState);
     }
 
     public override void NoiseHeard(Waypoint location)
@@ -96,6 +106,31 @@ public class PerseguirState : State
 
     public override void PlayerLost()
     {
+        npc.ChangeState(npc.patrullarState);
+    }
+}
+
+public class LimpiarState : State
+{
+    public LimpiarState(NPC_state npc) : base(npc) { }
+
+    public override void Enter()
+    {
+        Debug.Log("Entering cleaning state");
+    }
+
+    public override void Update()
+    {
+        npc.pathfinder.waypointDestino = npc.currentInterest;
+        Debug.Log("Gotta clean gotta clean");
+
+    }
+
+    public override void Exit() { 
+        
+    } 
+
+    public override void NoiseReached() {
         npc.ChangeState(npc.patrullarState);
     }
 }
