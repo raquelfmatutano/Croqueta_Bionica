@@ -25,7 +25,7 @@ public class Vents_TP : MonoBehaviour{
         if (Time.time < siguienteUso)
             return;
 
-        collision.transform.position = destino.position;
+        collision.transform.position = destino.position + Vector3.up *2f;
         if (audioSource != null && sonidoTP != null){
             audioSource.PlayOneShot(sonidoTP);
         }
