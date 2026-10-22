@@ -48,8 +48,10 @@ public class NoiseObject : MonoBehaviour{
     {
         if (clean) 
             return false;
+        
+        NPC_state state = targetGameObject.GetComponent<NPC_state>();
 
-        if (targetGameObject.CompareTag("NPC"))
+        if (targetGameObject.CompareTag("NPC") & state != null)
         {
             print("limpiado");
             transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
@@ -59,6 +61,8 @@ public class NoiseObject : MonoBehaviour{
             {
                 Destroy(cleaningArea);
             }
+
+            state.NPC_currentState.NoiseReached();
 
             return true;
         }

@@ -129,4 +129,8 @@ public class LimpiarState : State
     public override void Exit() { 
         
     } 
+
+    public override void NoiseReached() {
+        npc.ChangeState(npc.patrullarState);
+    }
 }
