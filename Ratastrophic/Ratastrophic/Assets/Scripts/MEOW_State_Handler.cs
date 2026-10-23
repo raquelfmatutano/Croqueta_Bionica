@@ -15,7 +15,11 @@ public class InspeccionarState : State
         Debug.Log("Gato FSM: Entrando a INSPECCIONAR");
 
         if (meow.visionNPC != null)
+        {
+            meow.visionNPC.jugadorVistoDuranteInspeccion = false;
             meow.visionNPC.ActivarVision();
+        }
+            
 
         if (meow.inspeccionSala != null)
         {
