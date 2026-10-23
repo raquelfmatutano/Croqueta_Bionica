@@ -9,7 +9,7 @@ public class MEOW_Pathfinding : MonoBehaviour
     public Waypoint objetivo;
     public Transform waypointDestino;
 
-    public float velocidad = 3f;
+    public float velocidad = 4f;
     public float fuerzaMaxima = 5f;
     public float radioLlegada = 4f;
     public float velocidadGiro = 5f;

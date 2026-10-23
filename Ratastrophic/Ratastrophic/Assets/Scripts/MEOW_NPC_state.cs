@@ -13,6 +13,8 @@ public class MEOW_NPC_state : NPC_state
     public AlertarState alertarState;
 
     public Waypoint waypointJugadorVisto;
+    public float velocidadNormal = 4f;   
+    public float velocidadAlerta = 8f;
 
     private void Awake()
     {
