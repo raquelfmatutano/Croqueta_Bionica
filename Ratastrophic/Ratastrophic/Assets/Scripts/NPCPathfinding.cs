@@ -97,7 +97,7 @@ public class NPCPathfinding : MonoBehaviour
 
         if (aStar == null)
         {
-            Debug.LogError("El vigilante no tiene una referencia v�lida a AStar.");
+            Debug.LogError("El vigilante no tiene una referencia valida a AStar.");
             return;
         }
 
@@ -191,7 +191,7 @@ public class NPCPathfinding : MonoBehaviour
         }
 
         else {
-            if (!puedeMoverse)
+            if (!puedeMoverse && !going_to_charge)
             return;
 
             if (ruta == null || ruta.Count == 0)
@@ -205,18 +205,56 @@ public class NPCPathfinding : MonoBehaviour
     
         if (indiceRuta == ruta.Count - 1) //final de trayecto
         {
-            if (waypoints_until_charge <= 0) {
-                if(!going_to_charge){
-                    state.NPC_currentState.NeedsCharging(true);
-                    going_to_charge = true;
-                    return;
+            //mandar a cargar
+            if (waypoints_until_charge <= 0) 
+            {
+                if (!going_to_charge)
+                {
+                    if (GameManager.Instance != null && GameManager.Instance.charging_station_available)
+                    {
+                        GameManager.Instance.charging_station_available = false;
+                        state.NPC_currentState.NeedsCharging(true);
+                        going_to_charge = true;
+                        return;
+                    }
+                    else 
+                    {
+                        print("charging station occupied. i can go for a bit longer");
+                        waypoints_until_charge = Random.Range(5, 10);
+                        return;
+                    }
                 }
-                else {
-                    print("charged");
-                    state.NPC_currentState.NeedsCharging(false);
+                else 
+                {
+                    if (!GameManager.Instance.timer_on && !GameManager.Instance.timer_finished) 
+                    {
+                        GameManager.Instance.ChargingTimer();
+                        print("Starting charge");
+                        DetenerMovimiento();
+                        return;
+                    }
+                    //Currently charging
+                    else if (GameManager.Instance.timer_on) 
+                    {
+                        return;
+                    }
+                    //Finished charging
+                    else if (GameManager.Instance.timer_finished) 
+                    {
+                        print("Charged");
+                        ActivarMovimiento();
+                        
+                        GameManager.Instance.charging_station_available = true;
+                        GameManager.Instance.timer_finished = false;
+                        
+                        state.NPC_currentState.NeedsCharging(false);
+                        waypoints_until_charge = Random.Range(10, 15);
+                        
+                        going_to_charge = false;
+                    }
                 }
             }
-
+        
             float distanciaFinal = Vector3.Distance(
                 transform.position,
                 waypointDestino.position

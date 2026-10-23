@@ -14414,6 +14414,7 @@ MonoBehaviour:
   state: {fileID: 0}
   player_tranform: {fileID: 0}
   waypoints_until_charge: 0
+  going_to_charge: 0
 --- !u!114 &645270634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15502,6 +15503,7 @@ MonoBehaviour:
   state: {fileID: 0}
   player_tranform: {fileID: 0}
   waypoints_until_charge: 0
+  going_to_charge: 0
 --- !u!114 &704513682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19954,7 +19956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Waypoint
   vecinos:
-  - {fileID: 1596418805}
+  - {fileID: 1746979525}
   idSala: 11
   reachable: 0
 --- !u!4 &914361094
@@ -19966,7 +19968,7 @@ Transform:
   m_GameObject: {fileID: 914361092}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 88, y: 0, z: -32.6}
+  m_LocalPosition: {x: 80.5, y: 0, z: -32.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24523,6 +24525,7 @@ MonoBehaviour:
   state: {fileID: 0}
   player_tranform: {fileID: 0}
   waypoints_until_charge: 0
+  going_to_charge: 0
 --- !u!114 &1176780253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24712,6 +24715,8 @@ MonoBehaviour:
   visionNPC: {fileID: 816003433}
   meowPathfinder: {fileID: 1185476932}
   waypointJugadorVisto: {fileID: 0}
+  velocidadNormal: 4
+  velocidadAlerta: 8
 --- !u!114 &1185476932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37607,6 +37612,54 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2321631748450920995, guid: ef88c2e8075fd9548ac3054c70512e15, type: 3}
   m_PrefabInstance: {fileID: 1738691275}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1746979524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1746979526}
+  - component: {fileID: 1746979525}
+  m_Layer: 0
+  m_Name: Q (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1746979525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746979524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327f9a2e551b1764b9db1b59b0b0bf1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Waypoint
+  vecinos:
+  - {fileID: 914361093}
+  idSala: 11
+  reachable: 0
+--- !u!4 &1746979526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746979524}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 96.8, y: 0, z: -32.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1798520824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1760029147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38326,7 +38379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b74808983e8a24cbc11f5af44affc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaypointGraph
-  charging_station: {fileID: 914361093}
+  charging_station: {fileID: 1746979525}
 --- !u!4 &1798520824
 Transform:
   m_ObjectHideFlags: 0
@@ -38358,6 +38411,7 @@ Transform:
   - {fileID: 1144930556}
   - {fileID: 1596418806}
   - {fileID: 914361094}
+  - {fileID: 1746979526}
   - {fileID: 753581034}
   - {fileID: 1809404916}
   - {fileID: 1827583442}
@@ -44262,6 +44316,7 @@ MonoBehaviour:
   state: {fileID: 0}
   player_tranform: {fileID: 0}
   waypoints_until_charge: 0
+  going_to_charge: 0
 --- !u!114 &1978779372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45837,6 +45892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 973977b566738f64d9457064c1d182d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  charging_station_available: 1
   winScreen: {fileID: 1163342289}
   loseScreen: {fileID: 2045899626}
 --- !u!65 &2035033078
