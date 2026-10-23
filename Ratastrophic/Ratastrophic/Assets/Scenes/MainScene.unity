@@ -238,6 +238,7 @@ MonoBehaviour:
   - {fileID: 1144930555}
   - {fileID: 1659348054}
   idSala: 11
+  reachable: 1
 --- !u!4 &4040779
 Transform:
   m_ObjectHideFlags: 0
@@ -326,6 +327,7 @@ MonoBehaviour:
   - {fileID: 474518230}
   - {fileID: 973039485}
   idSala: 6
+  reachable: 1
 --- !u!4 &5843592
 Transform:
   m_ObjectHideFlags: 0
@@ -376,6 +378,7 @@ MonoBehaviour:
   - {fileID: 1858276643}
   - {fileID: 703993016}
   idSala: 4
+  reachable: 1
 --- !u!4 &6087903
 Transform:
   m_ObjectHideFlags: 0
@@ -934,6 +937,7 @@ MonoBehaviour:
   - {fileID: 1555367744}
   - {fileID: 1043915199}
   idSala: 9
+  reachable: 1
 --- !u!4 &29238759
 Transform:
   m_ObjectHideFlags: 0
@@ -1243,6 +1247,7 @@ MonoBehaviour:
   - {fileID: 1426886633}
   - {fileID: 1882760806}
   idSala: 7
+  reachable: 1
 --- !u!4 &71359396
 Transform:
   m_ObjectHideFlags: 0
@@ -3715,6 +3720,7 @@ MonoBehaviour:
   - {fileID: 6087902}
   - {fileID: 2126700939}
   idSala: 4
+  reachable: 1
 --- !u!4 &156945866
 Transform:
   m_ObjectHideFlags: 0
@@ -6227,6 +6233,7 @@ MonoBehaviour:
   - {fileID: 703993016}
   - {fileID: 1555367744}
   idSala: 8
+  reachable: 1
 --- !u!1001 &288662995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6751,6 +6758,7 @@ MonoBehaviour:
   vecinos:
   - {fileID: 1978533605}
   idSala: 3
+  reachable: 1
 --- !u!4 &297410549
 Transform:
   m_ObjectHideFlags: 0
@@ -10667,6 +10675,7 @@ MonoBehaviour:
   - {fileID: 1555367744}
   - {fileID: 1043915199}
   idSala: 9
+  reachable: 1
 --- !u!4 &438368422
 Transform:
   m_ObjectHideFlags: 0
@@ -10886,6 +10895,7 @@ MonoBehaviour:
   - {fileID: 1533541984}
   - {fileID: 2144015180}
   idSala: 2
+  reachable: 1
 --- !u!1001 &448814454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11247,6 +11257,7 @@ MonoBehaviour:
   - {fileID: 5843591}
   - {fileID: 1426886633}
   idSala: 6
+  reachable: 1
 --- !u!4 &474518231
 Transform:
   m_ObjectHideFlags: 0
@@ -11545,6 +11556,7 @@ MonoBehaviour:
   vecinos:
   - {fileID: 1307462375}
   idSala: 10
+  reachable: 1
 --- !u!4 &496670358
 Transform:
   m_ObjectHideFlags: 0
@@ -12218,6 +12230,7 @@ MonoBehaviour:
   - {fileID: 1033897107}
   - {fileID: 2144015180}
   idSala: 1
+  reachable: 1
 --- !u!1001 &549971357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13402,6 +13415,7 @@ MonoBehaviour:
   - {fileID: 1043915199}
   - {fileID: 1219673242}
   idSala: 9
+  reachable: 1
 --- !u!4 &599840956
 Transform:
   m_ObjectHideFlags: 0
@@ -14399,6 +14413,7 @@ MonoBehaviour:
   velocidadGiro: 5
   state: {fileID: 0}
   player_tranform: {fileID: 0}
+  waypoints_until_charge: 0
 --- !u!114 &645270634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15411,6 +15426,7 @@ MonoBehaviour:
   - {fileID: 2039808284}
   - {fileID: 285174995}
   idSala: 8
+  reachable: 1
 --- !u!4 &703993017
 Transform:
   m_ObjectHideFlags: 0
@@ -15485,6 +15501,7 @@ MonoBehaviour:
   velocidadGiro: 5
   state: {fileID: 0}
   player_tranform: {fileID: 0}
+  waypoints_until_charge: 0
 --- !u!114 &704513682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16296,6 +16313,7 @@ MonoBehaviour:
   - {fileID: 2039808284}
   - {fileID: 285174995}
   idSala: 8
+  reachable: 1
 --- !u!4 &736712674
 Transform:
   m_ObjectHideFlags: 0
@@ -16620,6 +16638,7 @@ MonoBehaviour:
   - {fileID: 1809404915}
   - {fileID: 1827583443}
   idSala: 12
+  reachable: 1
 --- !u!4 &753581034
 Transform:
   m_ObjectHideFlags: 0
@@ -17460,6 +17479,7 @@ MonoBehaviour:
   - {fileID: 2126700939}
   - {fileID: 1455379436}
   idSala: 5
+  reachable: 1
 --- !u!4 &801621752
 Transform:
   m_ObjectHideFlags: 0
@@ -18356,6 +18376,7 @@ MonoBehaviour:
   - {fileID: 541665564}
   - {fileID: 1213900257}
   idSala: 1
+  reachable: 1
 --- !u!4 &824752577
 Transform:
   m_ObjectHideFlags: 0
@@ -19935,6 +19956,7 @@ MonoBehaviour:
   vecinos:
   - {fileID: 1596418805}
   idSala: 11
+  reachable: 0
 --- !u!4 &914361094
 Transform:
   m_ObjectHideFlags: 0
@@ -19944,7 +19966,7 @@ Transform:
   m_GameObject: {fileID: 914361092}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.9, y: 0, z: -32.6}
+  m_LocalPosition: {x: 88, y: 0, z: -32.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20105,6 +20127,7 @@ MonoBehaviour:
   - {fileID: 6087902}
   - {fileID: 4040778}
   idSala: 4
+  reachable: 1
 --- !u!4 &917639462
 Transform:
   m_ObjectHideFlags: 0
@@ -20729,6 +20752,7 @@ MonoBehaviour:
   - {fileID: 474518230}
   - {fileID: 5843591}
   idSala: 6
+  reachable: 1
 --- !u!1001 &977312295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20847,6 +20871,7 @@ MonoBehaviour:
   - {fileID: 1533541984}
   - {fileID: 1978533605}
   idSala: 2
+  reachable: 1
 --- !u!4 &978384007
 Transform:
   m_ObjectHideFlags: 0
@@ -21354,6 +21379,7 @@ MonoBehaviour:
   - {fileID: 1827583443}
   - {fileID: 1809404915}
   idSala: 12
+  reachable: 1
 --- !u!4 &998216050
 Transform:
   m_ObjectHideFlags: 0
@@ -21740,6 +21766,7 @@ MonoBehaviour:
   - {fileID: 1213900257}
   - {fileID: 541665564}
   idSala: 1
+  reachable: 1
 --- !u!1001 &1040091552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21932,6 +21959,7 @@ MonoBehaviour:
   - {fileID: 599840955}
   - {fileID: 1219673242}
   idSala: 9
+  reachable: 1
 --- !u!4 &1043915200
 Transform:
   m_ObjectHideFlags: 0
@@ -23111,6 +23139,7 @@ MonoBehaviour:
   vecinos:
   - {fileID: 1533541984}
   idSala: 2
+  reachable: 1
 --- !u!1 &1111602604
 GameObject:
   m_ObjectHideFlags: 0
@@ -23829,6 +23858,7 @@ MonoBehaviour:
   - {fileID: 1659348054}
   - {fileID: 4040778}
   idSala: 11
+  reachable: 1
 --- !u!4 &1144930556
 Transform:
   m_ObjectHideFlags: 0
@@ -24492,6 +24522,7 @@ MonoBehaviour:
   velocidadGiro: 5
   state: {fileID: 0}
   player_tranform: {fileID: 0}
+  waypoints_until_charge: 0
 --- !u!114 &1176780253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25400,6 +25431,7 @@ MonoBehaviour:
   - {fileID: 824752576}
   - {fileID: 1033897107}
   idSala: 1
+  reachable: 1
 --- !u!1001 &1215006214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25594,6 +25626,7 @@ MonoBehaviour:
   - {fileID: 599840955}
   - {fileID: 1307462375}
   idSala: 9
+  reachable: 1
 --- !u!4 &1219673243
 Transform:
   m_ObjectHideFlags: 0
@@ -26351,6 +26384,7 @@ MonoBehaviour:
   - {fileID: 1827583443}
   - {fileID: 753581033}
   idSala: 12
+  reachable: 1
 --- !u!1001 &1272851986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27307,6 +27341,7 @@ MonoBehaviour:
   - {fileID: 1219673242}
   - {fileID: 496670357}
   idSala: 10
+  reachable: 1
 --- !u!4 &1307462376
 Transform:
   m_ObjectHideFlags: 0
@@ -30102,6 +30137,7 @@ MonoBehaviour:
   - {fileID: 71359395}
   - {fileID: 1882760806}
   idSala: 7
+  reachable: 1
 --- !u!4 &1426886634
 Transform:
   m_ObjectHideFlags: 0
@@ -30270,6 +30306,7 @@ MonoBehaviour:
   vecinos:
   - {fileID: 801621751}
   idSala: 5
+  reachable: 1
 --- !u!4 &1455379437
 Transform:
   m_ObjectHideFlags: 0
@@ -33382,6 +33419,7 @@ MonoBehaviour:
   - {fileID: 447475388}
   - {fileID: 978384006}
   idSala: 2
+  reachable: 1
 --- !u!1 &1535670967
 GameObject:
   m_ObjectHideFlags: 0
@@ -34129,6 +34167,7 @@ MonoBehaviour:
   - {fileID: 1043915199}
   - {fileID: 438368421}
   idSala: 9
+  reachable: 1
 --- !u!4 &1555367745
 Transform:
   m_ObjectHideFlags: 0
@@ -34900,6 +34939,7 @@ MonoBehaviour:
   - {fileID: 914361093}
   - {fileID: 1659348054}
   idSala: 11
+  reachable: 1
 --- !u!4 &1596418806
 Transform:
   m_ObjectHideFlags: 0
@@ -36231,6 +36271,7 @@ MonoBehaviour:
   - {fileID: 1266459676}
   - {fileID: 4040778}
   idSala: 11
+  reachable: 1
 --- !u!4 &1659348055
 Transform:
   m_ObjectHideFlags: 0
@@ -36797,6 +36838,7 @@ MonoBehaviour:
   - {fileID: 917639461}
   - {fileID: 973039485}
   idSala: 4
+  reachable: 1
 --- !u!4 &1682464490
 Transform:
   m_ObjectHideFlags: 0
@@ -38284,6 +38326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b74808983e8a24cbc11f5af44affc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaypointGraph
+  charging_station: {fileID: 914361093}
 --- !u!4 &1798520824
 Transform:
   m_ObjectHideFlags: 0
@@ -38896,6 +38939,7 @@ MonoBehaviour:
   - {fileID: 753581033}
   - {fileID: 998216049}
   idSala: 12
+  reachable: 1
 --- !u!4 &1809404916
 Transform:
   m_ObjectHideFlags: 0
@@ -39887,6 +39931,7 @@ MonoBehaviour:
   - {fileID: 998216049}
   - {fileID: 753581033}
   idSala: 12
+  reachable: 1
 --- !u!1001 &1829339329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41260,6 +41305,7 @@ MonoBehaviour:
   - {fileID: 6087902}
   - {fileID: 824752576}
   idSala: 4
+  reachable: 1
 --- !u!4 &1858276644
 Transform:
   m_ObjectHideFlags: 0
@@ -41867,6 +41913,7 @@ MonoBehaviour:
   - {fileID: 1426886633}
   - {fileID: 71359395}
   idSala: 7
+  reachable: 1
 --- !u!4 &1882760807
 Transform:
   m_ObjectHideFlags: 0
@@ -44140,6 +44187,7 @@ MonoBehaviour:
   - {fileID: 978384006}
   - {fileID: 297410548}
   idSala: 3
+  reachable: 1
 --- !u!4 &1978533606
 Transform:
   m_ObjectHideFlags: 0
@@ -44213,6 +44261,7 @@ MonoBehaviour:
   velocidadGiro: 5
   state: {fileID: 0}
   player_tranform: {fileID: 0}
+  waypoints_until_charge: 0
 --- !u!114 &1978779372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46259,6 +46308,7 @@ MonoBehaviour:
   - {fileID: 703993016}
   - {fileID: 1533541984}
   idSala: 8
+  reachable: 1
 --- !u!4 &2039808285
 Transform:
   m_ObjectHideFlags: 0
@@ -47590,6 +47640,7 @@ MonoBehaviour:
   - {fileID: 156945865}
   - {fileID: 1858276643}
   idSala: 4
+  reachable: 1
 --- !u!1001 &2126879442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48144,6 +48195,7 @@ MonoBehaviour:
   - {fileID: 541665564}
   - {fileID: 978384006}
   idSala: 2
+  reachable: 1
 --- !u!4 &2144015181
 Transform:
   m_ObjectHideFlags: 0

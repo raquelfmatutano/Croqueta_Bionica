@@ -29,6 +29,10 @@ public class NPCPathfinding : MonoBehaviour
     public NPC_state state;
     public Transform player_tranform;
 
+    public int waypoints_until_charge;
+    public bool going_to_charge = false;
+    //public bool reached_station = false;
+
     private NPC_ObjectDetection objectDetection;
 
     private void Awake()//para que no de errores porque otros scripts necesitan las referencias
@@ -64,13 +68,15 @@ public class NPCPathfinding : MonoBehaviour
 
         waypointActual = waypointInicial;
         Debug.Log("Vigilante - waypointInicial: " +
-            (waypointInicial != null ? waypointInicial.name : "NULL"));//para ver por qu� dan error las referencias
+            (waypointInicial != null ? waypointInicial.name : "NULL"));
 
         Debug.Log("Vigilante - waypointActual: " +
             (waypointActual != null ? waypointActual.name : "NULL"));
-        Vector3 posicion = waypointActual.transform.position;//cambio para que no se hunda en el suelo
-        posicion.y = transform.position.y;//cambio
-        transform.position = posicion;//cambio
+        Vector3 posicion = waypointActual.transform.position;
+        posicion.y = transform.position.y;
+        transform.position = posicion;
+
+        waypoints_until_charge = Random.Range(1, 3);
 
         ElegirNuevoDestino();
         
@@ -116,7 +122,7 @@ public class NPCPathfinding : MonoBehaviour
             return;
         }
 
-        indiceRuta = ruta.Count > 1 ? 1 : 0; //cambio
+        indiceRuta = ruta.Count > 1 ? 1 : 0;
 
         Debug.Log(
             "Nuevo destino: " + objetivo.name
@@ -197,14 +203,26 @@ public class NPCPathfinding : MonoBehaviour
             waypointDestino = ruta[indiceRuta].transform;
         
     
-        if (indiceRuta == ruta.Count - 1)
+        if (indiceRuta == ruta.Count - 1) //final de trayecto
         {
+            if (waypoints_until_charge <= 0) {
+                if(!going_to_charge){
+                    state.NPC_currentState.NeedsCharging(true);
+                    going_to_charge = true;
+                    return;
+                }
+                else {
+                    print("charged");
+                    state.NPC_currentState.NeedsCharging(false);
+                }
+            }
+
             float distanciaFinal = Vector3.Distance(
                 transform.position,
                 waypointDestino.position
             );
 
-            if (distanciaFinal <= distanciaPreparacion)//cambio
+            if (distanciaFinal <= distanciaPreparacion)
             {
                 bool rutaPreparada = PrepararSiguienteRuta();
 
@@ -227,19 +245,20 @@ public class NPCPathfinding : MonoBehaviour
         {
             float distanciaWaypoint = Vector3.Distance(
                 transform.position,
-                ruta[indiceRuta].transform.position //cambio
+                ruta[indiceRuta].transform.position
             );
 
             if (distanciaWaypoint > radioLlegada)
                 break;
 
             indiceRuta++; //ha pasado por un waypoint
+            waypoints_until_charge--;
         }
 
         if (indiceRuta >= ruta.Count)
             return;
 
-        waypointDestino = ruta[indiceRuta].transform; //cambio
+        waypointDestino = ruta[indiceRuta].transform;
         }
 
         Vector3 posicionObjetivo = waypointDestino.transform.position;
@@ -298,7 +317,7 @@ public class NPCPathfinding : MonoBehaviour
         puedeMoverse = true;
     }
 
-    public bool HaLlegadoADestino()//cambio
+    public bool HaLlegadoADestino()
     {
         if (objetivo == null)
             return false;
@@ -309,7 +328,7 @@ public class NPCPathfinding : MonoBehaviour
         ) <= radioLlegada;
     }
 
-    public void DetenerMovimiento()//cambio
+    public void DetenerMovimiento()
     {
         puedeMoverse = false;
         velocidadActual = Vector3.zero;
