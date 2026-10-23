@@ -7579,7 +7579,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &321963880
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8336,7 +8338,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &341033750
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8483,7 +8487,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &342900976
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10737,6 +10743,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -10828,7 +10838,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 7
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &423960628
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10949,7 +10961,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &427774907
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12483,7 +12497,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &513566362
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13077,7 +13093,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &567691799
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13611,7 +13629,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &592280125
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14105,7 +14125,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 7
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &608830962
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15254,7 +15276,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 0
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &660484680
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18427,7 +18451,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &811881861
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18679,7 +18705,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &822020846
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18821,7 +18849,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &824747966
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19778,7 +19808,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &876244505
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20220,6 +20252,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7274080770385732109, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8050581564056615095, guid: 1a0d2020f80bd7841a7f0f91441bee46, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -20311,7 +20347,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 7
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &896345855
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20593,7 +20631,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &915513534
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20928,7 +20968,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 0
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &933811324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23229,7 +23271,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1068175900
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23376,7 +23420,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1076470677
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24017,7 +24063,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1113112476
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24527,7 +24575,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1142843585
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26109,7 +26159,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1210707977
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27505,7 +27557,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1278251985
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27806,7 +27860,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 0
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1294248694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29067,7 +29123,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1341524510
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29345,7 +29403,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1344789518
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30016,7 +30076,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1355718101
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30363,7 +30425,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 0
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1373321861
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30645,7 +30709,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1389534237
 AudioSource:
   m_ObjectHideFlags: 0
@@ -30844,7 +30910,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 0
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1394450154
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31052,7 +31120,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1413198678
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31615,7 +31685,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1460428869
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32061,7 +32133,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1462730266
 AudioSource:
   m_ObjectHideFlags: 0
@@ -32261,7 +32335,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &1462739320
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33296,7 +33372,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1493571566
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33791,7 +33869,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1509629363
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33996,7 +34076,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 7
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &1518175867
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34188,7 +34270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1525774606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34229,7 +34311,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525774605}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -34831,7 +34913,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1537679272
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35052,7 +35136,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1541401751
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35791,7 +35877,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1574692934
 AudioSource:
   m_ObjectHideFlags: 0
@@ -35933,7 +36021,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1585024998
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36248,7 +36338,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1598131553
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36509,7 +36601,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1610645872
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36630,7 +36724,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1610733563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37330,7 +37426,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1655773577
 AudioSource:
   m_ObjectHideFlags: 0
@@ -37580,7 +37678,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1663076294
 AudioSource:
   m_ObjectHideFlags: 0
@@ -38225,7 +38325,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1689253891
 AudioSource:
   m_ObjectHideFlags: 0
@@ -39026,7 +39128,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &1766844655
 AudioSource:
   m_ObjectHideFlags: 0
@@ -39147,7 +39251,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1769831915
 AudioSource:
   m_ObjectHideFlags: 0
@@ -39893,7 +39999,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1804599316
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40376,7 +40484,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1812748142
 AudioSource:
   m_ObjectHideFlags: 0
@@ -40744,7 +40854,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1816406397
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41714,7 +41826,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 0}
 --- !u!82 &1837845452
 AudioSource:
   m_ObjectHideFlags: 0
@@ -41914,7 +42028,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1838325676
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42258,7 +42374,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1844520142
 AudioSource:
   m_ObjectHideFlags: 0
@@ -42835,7 +42953,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1865321519
 AudioSource:
   m_ObjectHideFlags: 0
@@ -43101,7 +43221,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1882273657
 AudioSource:
   m_ObjectHideFlags: 0
@@ -43424,7 +43546,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1892024192
 AudioSource:
   m_ObjectHideFlags: 0
@@ -43862,7 +43986,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1925910234
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44389,7 +44515,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1944482531
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44510,7 +44638,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1949365225
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44795,7 +44925,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1955202022
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45175,7 +45307,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1970949010
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45375,7 +45509,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1975657897
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45638,7 +45774,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1979409510
 AudioSource:
   m_ObjectHideFlags: 0
@@ -46228,7 +46366,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &1998922191
 AudioSource:
   m_ObjectHideFlags: 0
@@ -47027,7 +47167,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &2032208378
 AudioSource:
   m_ObjectHideFlags: 0
@@ -47179,7 +47321,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -47190,7 +47332,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035033076}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -47357,7 +47499,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &2036614326
 AudioSource:
   m_ObjectHideFlags: 0
@@ -47478,7 +47622,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &2037017877
 AudioSource:
   m_ObjectHideFlags: 0
@@ -47748,7 +47894,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &2041023727
 AudioSource:
   m_ObjectHideFlags: 0
@@ -48033,7 +48181,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &2067795714
 AudioSource:
   m_ObjectHideFlags: 0
@@ -48233,7 +48383,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &2072715060
 AudioSource:
   m_ObjectHideFlags: 0
@@ -48436,7 +48588,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &2095989660
 AudioSource:
   m_ObjectHideFlags: 0
@@ -49609,7 +49763,9 @@ MonoBehaviour:
   maxPitch: 1.1
   noiseRadius: 100
   noiseDuration: 2
+  cleanable: 1
   clean: 1
+  smokePoof: {fileID: 6376145277910217954, guid: ebb0dcb750d10bb4a83d9a14130a7b39, type: 3}
 --- !u!82 &2142513572
 AudioSource:
   m_ObjectHideFlags: 0

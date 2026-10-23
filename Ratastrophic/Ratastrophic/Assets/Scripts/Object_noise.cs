@@ -1,4 +1,4 @@
-
+using UnityEngine.VFX;
 using UnityEngine;
 
 public class NoiseObject : MonoBehaviour{
@@ -12,7 +12,11 @@ public class NoiseObject : MonoBehaviour{
     public float noiseDuration = 2f;
 
     [Header("Limpio/Sucio")]
+    public bool cleanable = true;
     public bool clean = true;
+
+    [Header ("VFX")]
+    public GameObject smokePoof;
 
     private AudioSource audioSource;
     private float nextSoundTime;
@@ -54,6 +58,7 @@ public class NoiseObject : MonoBehaviour{
         if (targetGameObject.CompareTag("NPC") & state != null)
         {
             print("limpiado");
+            PlayVFX();
             transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
             clean = true;
 
@@ -89,7 +94,12 @@ public class NoiseObject : MonoBehaviour{
         audioSource.PlayOneShot(impactSound);
 
         CreateNoiseArea();
-        CreateCleaningArea();
+        if(cleanable) {
+            print("a tomar por culo");
+            PlayVFX();
+            CreateCleaningArea();
+        }
+        
     }
 
     private void CreateNoiseArea(){
@@ -116,9 +126,6 @@ public class NoiseObject : MonoBehaviour{
         rb.useGravity = false;
 
         Destroy(currentNoiseArea, noiseDuration);
-
-        clean = false;
-        transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
     }
 
     private void CreateCleaningArea() {
@@ -127,9 +134,25 @@ public class NoiseObject : MonoBehaviour{
             Destroy(cleaningArea);
         }
 
+        clean = false;
+        transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
+
        cleaningArea = gameObject.AddComponent<SphereCollider>() as SphereCollider;
        cleaningArea.radius = 1.5f;
-        cleaningArea.isTrigger = true;
+       cleaningArea.isTrigger = true;
 
+    }
+
+    private void PlayVFX() {
+        if (smokePoof != null) {
+            GameObject vfxInstance = Instantiate(smokePoof, transform.position, Quaternion.identity, gameObject.transform);
+
+            VisualEffect vfx = vfxInstance.GetComponent<VisualEffect>();
+            if (vfx != null) {
+                vfx.Play(); 
+            }
+            
+            Destroy(vfxInstance, 1f);
+        }
     }
 }
