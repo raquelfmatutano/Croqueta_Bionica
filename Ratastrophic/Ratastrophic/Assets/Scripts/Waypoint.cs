@@ -4,7 +4,8 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     public List<Waypoint> vecinos = new List<Waypoint>();
-    public int idSala;//cambio
+    public int idSala;
+    public bool reachable = true;
 
     private void OnDrawGizmos()
     {
