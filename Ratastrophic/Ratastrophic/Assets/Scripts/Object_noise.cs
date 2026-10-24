@@ -55,8 +55,11 @@ public class NoiseObject : MonoBehaviour{
         
         NPC_state state = targetGameObject.GetComponent<NPC_state>();
 
+        
+
         if (targetGameObject.CompareTag("NPC") & state != null)
         {
+
             StopToClean(targetGameObject);
             print("limpiado");
             PlayVFX();
@@ -68,7 +71,7 @@ public class NoiseObject : MonoBehaviour{
                 Destroy(cleaningArea);
             }
 
-            state.NPC_currentState.NoiseReached();
+            //state.NPC_currentState.NoiseReached();
 
             return true;
         }
@@ -77,8 +80,10 @@ public class NoiseObject : MonoBehaviour{
     }
 
     private void StopToClean(GameObject obj) {
-        NPCPathfinding pathfinder = obj.GetComponent<NPCPathfinding>();
-        pathfinder.DetenerMovimiento();
+        NPC_state state = obj.GetComponent<NPC_state>();
+        state.NPC_currentState.InterestSpotted(transform);
+        state.NPC_currentState.StartCleaning();
+        
     }
 
     private void TryPlaySound(Collision collision){

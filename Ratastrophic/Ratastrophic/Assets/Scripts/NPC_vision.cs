@@ -100,7 +100,6 @@ public class NPC_vision : MonoBehaviour
 
             if(!obj_noise.clean) {
                 state.NPC_currentState.InterestSpotted(obj.transform);
-                print("ewewewew");
             }
         }
     }

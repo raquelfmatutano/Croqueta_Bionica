@@ -22,4 +22,6 @@ public abstract class State
     public virtual void NeedsCharging(bool needs) { }
     public virtual void StartCharging() { }
 
+    public virtual void StartCleaning() { }
+
 }

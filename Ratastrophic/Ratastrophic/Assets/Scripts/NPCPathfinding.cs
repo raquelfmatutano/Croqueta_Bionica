@@ -232,6 +232,8 @@ public class NPCPathfinding : MonoBehaviour
                     }
                 }
             }
+
+            state.NPC_currentState.NoiseReached(); //en caso de haber llegado a un sonido
         
             float distanciaFinal = Vector3.Distance(
                 transform.position,
@@ -288,7 +290,6 @@ public class NPCPathfinding : MonoBehaviour
         {
             // ARRIVAL
             velocidadDeseada = CalcularArrive(posicionObjetivo);
-            print("usando arrival");
         }
         else    
         {
@@ -376,20 +377,25 @@ public class NPCPathfinding : MonoBehaviour
         haciaObjetivo.y = 0f; 
 
         float distancia = haciaObjetivo.magnitude;
-        print("distancia: " + distancia);
+        //print("distancia: " + distancia);
         Vector3 velocidadDeseada;
 
         float velocidadAtenuada = (distancia / radioFrenado) * velocidad;
         velocidadDeseada = haciaObjetivo.normalized * velocidadAtenuada;
 
-        print("Magnitud velocidad deseada: " + velocidadDeseada.magnitude);
+        //print("Magnitud velocidad deseada: " + velocidadDeseada.magnitude);
 
         float velocidadCorte = velocidad * 0.15f;
         // Cuando la velocidad deseada sea muy baja o la distancia sea menor al radio de llegada
         if (distancia <= radioLlegada || velocidadDeseada.magnitude < velocidadCorte)
         {
             velocidadActual = Vector3.zero; //Se para
-            state.NPC_currentState.NoiseReached();
+            if (!GameManager.Instance.timer_on && !GameManager.Instance.timer_finished) 
+            {
+                state.NPC_currentState.StartCharging();
+                return Vector3.zero;
+            }
+
             return Vector3.zero;
         }
 

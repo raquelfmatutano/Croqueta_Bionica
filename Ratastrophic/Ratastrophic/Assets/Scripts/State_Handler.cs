@@ -41,6 +41,10 @@ public class PatrullarState : State
         }
             
     }
+
+    public override void StartCleaning() {
+        npc.ChangeState(npc.limpiarState);
+    }
 }
 
 //-----------------------------------------------------------------
@@ -57,10 +61,10 @@ public class InvestigarState : State
         targetWaypoint = target;
     }
 
-    public override void InterestSpotted(Transform obj) {
+    /*public override void InterestSpotted(Transform obj) {
         npc.currentInterest = obj;
         npc.ChangeState(npc.limpiarState);
-    }
+    }*/
 
     public override void NoiseHeard(Waypoint location)
     {
@@ -127,9 +131,11 @@ public class PerseguirState : State
 public class LimpiarState : State
 {
     public LimpiarState(NPC_state npc) : base(npc) { }
+    private bool isCleaning;
 
     public override void Enter()
     {
+        isCleaning = false;
         npc.pathfinder.esInvestigando = false;
         Debug.Log("Entering cleaning state");
         npc.activeVision = false;
@@ -138,17 +144,46 @@ public class LimpiarState : State
     public override void Update()
     {
         npc.pathfinder.waypointDestino = npc.currentInterest;
-        Debug.Log("Gotta clean gotta clean");
 
+        if(isCleaning) {
+            //Currently charging
+            if (GameManager.Instance.timer_on) 
+            {
+                return;
+            }
+
+            //Finished charging
+            else if (GameManager.Instance.timer_finished) 
+            {
+                Debug.Log("Charged");
+                npc.pathfinder.ActivarMovimiento();
+                GameManager.Instance.charging_station_available = true;
+                GameManager.Instance.timer_finished = false;
+
+                npc.ChangeState(npc.patrullarState);
+            }
+       }
+
+    }
+
+    public override void StartCleaning() {
+        isCleaning = true;
+        GameManager.Instance.ChargingTimer();
+        Debug.Log("Starting cleaning");
+        npc.pathfinder.DetenerMovimiento();
     }
 
     public override void Exit() { 
         npc.activeVision = true;
+        npc.activeVision = true;
+        Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
+        Waypoint end = npc.grafo.ObtenerWaypointAleatorio(npc.pathfinder.waypointActual);
+        npc.pathfinder.IrADestino(end, start);
     } 
 
-    public override void NoiseReached() {
+    /*public override void NoiseReached() {
         npc.ChangeState(npc.patrullarState);
-    }
+    }*/
 }
 
 //-----------------------------------------------------------------
