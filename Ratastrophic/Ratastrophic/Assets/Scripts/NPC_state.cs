@@ -11,6 +11,7 @@ public class NPC_state : MonoBehaviour
     public CargarState cargarState;
 
     public bool seesPlayer;
+    public bool activeVision;
     public bool hearsNoise;
 
     public Transform currentInterest;
@@ -33,6 +34,8 @@ public class NPC_state : MonoBehaviour
             grafo = FindFirstObjectByType<WaypointGraph>();
             
         ChangeState(patrullarState);
+
+        activeVision = true;
     }
 
     private void Update()

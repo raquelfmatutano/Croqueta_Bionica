@@ -86,11 +86,6 @@ public class InvestigarState : State
 
     public override void Update()
     {
-        if (npc.seesPlayer)
-        {
-            npc.ChangeState(npc.perseguirState);
-            return;
-        }
 
     }
 
@@ -132,6 +127,7 @@ public class LimpiarState : State
     public override void Enter()
     {
         Debug.Log("Entering cleaning state");
+        npc.activeVision = false;
     }
 
     public override void Update()
@@ -142,7 +138,7 @@ public class LimpiarState : State
     }
 
     public override void Exit() { 
-        
+        npc.activeVision = true;
     } 
 
     public override void NoiseReached() {
@@ -161,6 +157,7 @@ public class CargarState : State
     {
         Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
         npc.pathfinder.IrADestino(npc.grafo.charging_station, start);
+        npc.activeVision = false;
     }
 
     public override void Update()
@@ -169,6 +166,7 @@ public class CargarState : State
     }
 
     public override void Exit() { 
+        npc.activeVision = true;
         Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
         Waypoint end = npc.grafo.ObtenerWaypointAleatorio(npc.pathfinder.waypointActual);
         npc.pathfinder.IrADestino(end, start);

@@ -35,7 +35,16 @@ public class NPC_vision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(state != null) {
+            if(!state.activeVision && visionActiva) {
+                DesactivarVision();
+            }
+            else {
+                if(!visionActiva)
+                    ActivarVision();
+            }
+        }
+        
     }
 
     private bool check_for_walls(Transform obj_seen) {
@@ -137,8 +146,8 @@ public class NPC_vision : MonoBehaviour
 
     public void DesactivarVision()
     {
-        if (tipoNPC != TipoNPC.Gato)
-            return;
+        //if (tipoNPC != TipoNPC.Gato)
+        //    return;
 
         visionActiva = false;
 
