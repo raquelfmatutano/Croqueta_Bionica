@@ -8,6 +8,7 @@ public class NPC_state : MonoBehaviour
     public InvestigarState investigarState;
     public PerseguirState perseguirState;
     public LimpiarState limpiarState;
+    public CargarState cargarState;
 
     public bool seesPlayer;
     public bool hearsNoise;
@@ -23,6 +24,7 @@ public class NPC_state : MonoBehaviour
         investigarState = new InvestigarState(this);
         perseguirState = new PerseguirState(this);
         limpiarState = new LimpiarState(this);
+        cargarState = new CargarState(this);
     }
 
     private void Start()
@@ -35,7 +37,7 @@ public class NPC_state : MonoBehaviour
 
     private void Update()
     {
-        //NPC_currentState?.Update();
+        NPC_currentState?.Update();
     }
 
     public void ChangeState(State newState)

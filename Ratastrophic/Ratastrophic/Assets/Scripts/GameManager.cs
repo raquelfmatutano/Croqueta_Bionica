@@ -5,9 +5,15 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public bool charging_station_available = true;
+    public bool timer_finished = true;
+    public bool timer_on = false;
+    private float timer_end;
+
     [Header("Pantallas UI")]
     public GameObject winScreen;
     public GameObject loseScreen;
+    
 
     private void Awake()
     {
@@ -21,16 +27,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Update() {
+        if(timer_on) {
+            if (Time.time > timer_end) {
+                timer_on = false;
+                timer_finished = true;
+            }
+        }
+    }
+
+    public void ChargingTimer() {
+        timer_on = true;
+        timer_finished = false;
+        float timer_start = Time.time;
+        float timer_duration = Random.Range(10f, 15f);
+        timer_end = timer_start + timer_duration;
+    }
+
     public void TriggerWin()
     {
-        Debug.Log("¡Has escapado con exito!");
+        Debug.Log("Has escapado con exito!");
         if (winScreen != null) winScreen.SetActive(true);
         Time.timeScale = 0f; 
     }
 
     public void TriggerGameOver()
     {
-        Debug.Log("¡Un enemigo te ha atrapado!");
+        Debug.Log("Un enemigo te ha atrapado!");
         if (loseScreen != null) loseScreen.SetActive(true);
         Time.timeScale = 0f; 
     }
