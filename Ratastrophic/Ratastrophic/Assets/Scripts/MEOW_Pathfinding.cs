@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class MEOW_Pathfinding : MonoBehaviour
 {
@@ -8,9 +9,9 @@ public class MEOW_Pathfinding : MonoBehaviour
     public Waypoint objetivo;
     public Transform waypointDestino;
 
-    public float velocidad = 3f;
+    public float velocidad = 4f;
     public float fuerzaMaxima = 5f;
-    public float radioLlegada = 0.3f;
+    public float radioLlegada = 4f;
     public float velocidadGiro = 5f;
 
     private Vector3 velocidadActual;
@@ -19,6 +20,7 @@ public class MEOW_Pathfinding : MonoBehaviour
     private List<Waypoint> ruta;
     private int indiceRuta = 0;
     private bool puedeMoverse = false;
+    public event Action<Waypoint> AlcanzoWaypoint;
 
     private NPC_ObjectDetection objectDetection;
 
@@ -67,11 +69,41 @@ public class MEOW_Pathfinding : MonoBehaviour
             return;
         }
 
+        // Si la ruta contiene el nodo actual en el índice 0, avanzamos directamente al siguiente (índice 1)
+        indiceRuta = (ruta.Count > 1 && ruta[0] == waypointActual) ? 1 : 0;
+
+        // Aseguramos que el movimiento esté habilitado
+        puedeMoverse = true;
+
+        //para ver la ruta
+        string rutaCompleta = "Ruta calculada: ";
+        Debug.Log("Destino del gato: " + objetivo.name +
+          " (Sala " + objetivo.idSala + ")");
+
+        for (int i = 0; i < ruta.Count; i++)
+        {
+            rutaCompleta += ruta[i].name +
+                            " (Sala " + ruta[i].idSala + ")";
+
+            if (i < ruta.Count - 1)
+                rutaCompleta += " -> ";
+        }
+
+        Debug.Log(rutaCompleta);
+        //
+
         indiceRuta = ruta.Count > 1 ? 1 : 0;
+        Debug.Log(
+                "Nueva ruta: inicio=" + waypointActual.name +
+                " | destino=" + objetivo.name +
+                " | siguiente=" + ruta[indiceRuta].name +
+                " | indice=" + indiceRuta
+            );
     }
 
     private void Update()
     {
+
         if (!puedeMoverse || ruta == null || ruta.Count == 0)
             return;
 
@@ -80,11 +112,30 @@ public class MEOW_Pathfinding : MonoBehaviour
 
         waypointDestino = ruta[indiceRuta].transform;
 
-        while (indiceRuta < ruta.Count - 1 &&
-            Vector3.Distance(transform.position, waypointDestino.position) <= radioLlegada)
+        float distanciaAlWaypoint = Vector3.Distance(transform.position,waypointDestino.position);
+
+        if (distanciaAlWaypoint <= radioLlegada)
         {
+            Waypoint alcanzado = ruta[indiceRuta];
+
+            waypointActual = alcanzado;
+
+            Debug.Log("Gato alcanza waypoint: " + alcanzado.name +
+                      " | Sala: " + alcanzado.idSala);
+
+            Debug.Log("Objetivo actual: " + objetivo.name);
+
             indiceRuta++;
-            waypointDestino = ruta[indiceRuta].transform;
+
+            AlcanzoWaypoint?.Invoke(alcanzado);
+
+            if (ruta == null || indiceRuta >= ruta.Count)
+            {
+                velocidadActual = Vector3.zero;
+                return;
+            }
+
+            return;
         }
 
         //SEEK

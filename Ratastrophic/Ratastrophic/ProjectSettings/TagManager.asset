@@ -7,6 +7,7 @@ TagManager:
   - Noise
   - Alert
   - NPC
+  - MEOW
   layers:
   - Default
   - TransparentFX

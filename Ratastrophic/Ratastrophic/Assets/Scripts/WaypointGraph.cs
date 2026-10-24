@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class WaypointGraph : MonoBehaviour
 {
+    public Waypoint charging_station;
+
     private List<Waypoint> waypoints = new List<Waypoint>();
     private List<Waypoint> waypoints_to_delete = new List<Waypoint>();
 
@@ -23,6 +25,11 @@ public class WaypointGraph : MonoBehaviour
 
     public List<int> ObtenerIdsSalas()//cambio
     {
+        if (waypoints.Count == 0)
+        {
+            waypoints.AddRange(FindObjectsByType<Waypoint>(FindObjectsSortMode.None));
+        }
+
         List<int> idsSalas = new List<int>();
 
         foreach (Waypoint waypoint in waypoints)
@@ -68,7 +75,7 @@ public class WaypointGraph : MonoBehaviour
 
         foreach (Waypoint waypoint in waypoints)
         {
-            if (waypoint != null && waypoint != waypointActual)
+            if (waypoint != null && waypoint != waypointActual && waypoint.reachable)
             {
                 posibles.Add(waypoint);
             }

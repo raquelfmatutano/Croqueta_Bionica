@@ -29,15 +29,21 @@ public class NPCPathfinding : MonoBehaviour
     private int indiceRuta = 0;
 
     private bool puedeMoverse = false;
-    private NPC_state state;
+    public NPC_state state;
     public Transform player_tranform;
+
+    public int waypoints_until_charge;
+    public bool going_to_charge = false;
+    //public bool reached_station = false;
 
     private NPC_ObjectDetection objectDetection;
 
     private void Awake()//para que no de errores porque otros scripts necesitan las referencias
     {
         aStar = GetComponent<AStar>();
-        state = GetComponent<NPC_state>();
+        if(state == null)
+            state = GetComponent<NPC_state>();
+
         objectDetection = GetComponent<NPC_ObjectDetection>();
 
         if (aStar == null)
@@ -65,13 +71,15 @@ public class NPCPathfinding : MonoBehaviour
 
         waypointActual = waypointInicial;
         Debug.Log("Vigilante - waypointInicial: " +
-            (waypointInicial != null ? waypointInicial.name : "NULL"));//para ver por qu� dan error las referencias
+            (waypointInicial != null ? waypointInicial.name : "NULL"));
 
         Debug.Log("Vigilante - waypointActual: " +
             (waypointActual != null ? waypointActual.name : "NULL"));
-        Vector3 posicion = waypointActual.transform.position;//cambio para que no se hunda en el suelo
-        posicion.y = transform.position.y;//cambio
-        transform.position = posicion;//cambio
+        Vector3 posicion = waypointActual.transform.position;
+        posicion.y = transform.position.y;
+        transform.position = posicion;
+
+        waypoints_until_charge = Random.Range(1, 3);
 
         ElegirNuevoDestino();
         
@@ -92,7 +100,7 @@ public class NPCPathfinding : MonoBehaviour
 
         if (aStar == null)
         {
-            Debug.LogError("El vigilante no tiene una referencia v�lida a AStar.");
+            Debug.LogError("El vigilante no tiene una referencia valida a AStar.");
             return;
         }
 
@@ -117,7 +125,7 @@ public class NPCPathfinding : MonoBehaviour
             return;
         }
 
-        indiceRuta = ruta.Count > 1 ? 1 : 0; //cambio
+        indiceRuta = ruta.Count > 1 ? 1 : 0;
 
         Debug.Log(
             "Nuevo destino: " + objetivo.name
@@ -179,28 +187,82 @@ public class NPCPathfinding : MonoBehaviour
 
     private void Update()
     {
-        waypointDestino = transform;
 
-        if (!puedeMoverse)
-        return;
+        if (state.NPC_currentState is PerseguirState) {
+            waypointDestino = player_tranform;
+        }
 
-        if (ruta == null || ruta.Count == 0)
+        else {
+            if (!puedeMoverse && !going_to_charge)
             return;
 
-        if (indiceRuta >= ruta.Count)
-            return;
+            if (ruta == null || ruta.Count == 0)
+                return;
 
-        waypointDestino = ruta[indiceRuta].transform;
+            if (indiceRuta >= ruta.Count)
+                return;
+
+            waypointDestino = ruta[indiceRuta].transform;
+        
     
-        if (indiceRuta == ruta.Count - 1)
+        if (indiceRuta == ruta.Count - 1) //final de trayecto
         {
+            //mandar a cargar
+            if (waypoints_until_charge <= 0) 
+            {
+                if (!going_to_charge)
+                {
+                    if (GameManager.Instance != null && GameManager.Instance.charging_station_available)
+                    {
+                        GameManager.Instance.charging_station_available = false;
+                        state.NPC_currentState.NeedsCharging(true);
+                        going_to_charge = true;
+                        return;
+                    }
+                    else 
+                    {
+                        print("charging station occupied. i can go for a bit longer");
+                        waypoints_until_charge = Random.Range(5, 10);
+                        return;
+                    }
+                }
+                else 
+                {
+                    if (!GameManager.Instance.timer_on && !GameManager.Instance.timer_finished) 
+                    {
+                        GameManager.Instance.ChargingTimer();
+                        print("Starting charge");
+                        DetenerMovimiento();
+                        return;
+                    }
+                    //Currently charging
+                    else if (GameManager.Instance.timer_on) 
+                    {
+                        return;
+                    }
+                    //Finished charging
+                    else if (GameManager.Instance.timer_finished) 
+                    {
+                        print("Charged");
+                        ActivarMovimiento();
+                        
+                        GameManager.Instance.charging_station_available = true;
+                        GameManager.Instance.timer_finished = false;
+                        
+                        state.NPC_currentState.NeedsCharging(false);
+                        waypoints_until_charge = Random.Range(10, 15);
+                        
+                        going_to_charge = false;
+                    }
+                }
+            }
+        
             float distanciaFinal = Vector3.Distance(
                 transform.position,
                 waypointDestino.position
             );
 
-            // SOLO amplia la ruta si NO esta investigando un ruido
-            if (!esInvestigando && distanciaFinal <= distanciaPreparacion)
+            if (distanciaFinal <= distanciaPreparacion)
             {
                 bool rutaPreparada = PrepararSiguienteRuta();
 
@@ -225,15 +287,15 @@ public class NPCPathfinding : MonoBehaviour
             if (distanciaWaypoint > radioLlegada)
                 break;
 
-            indiceRuta++;
+            indiceRuta++; //ha pasado por un waypoint
+            waypoints_until_charge--;
         }
 
         if (indiceRuta >= ruta.Count)
             return;
 
         waypointDestino = ruta[indiceRuta].transform;
-
-
+        }
 
         Vector3 posicionObjetivo = waypointDestino.transform.position;
         Vector3 haciaObjetivo = posicionObjetivo - transform.position;
@@ -302,7 +364,7 @@ public class NPCPathfinding : MonoBehaviour
         puedeMoverse = true;
     }
 
-    public bool HaLlegadoADestino()//cambio
+    public bool HaLlegadoADestino()
     {
         if (objetivo == null)
             return false;
@@ -313,7 +375,7 @@ public class NPCPathfinding : MonoBehaviour
         ) <= radioLlegada;
     }
 
-    public void DetenerMovimiento()//cambio
+    public void DetenerMovimiento()
     {
         puedeMoverse = false;
         velocidadActual = Vector3.zero;

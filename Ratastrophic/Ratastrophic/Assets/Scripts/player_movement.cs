@@ -7,6 +7,7 @@ public class player_movemet : MonoBehaviour
 
     [Header("Settings")]
     public float moveSpeed = 5.0f;
+    public float maxSpeed = 600f;
     public float rotationSpeed = 15.0f;
     public bool hasPotion = false;
 
@@ -71,7 +72,24 @@ public class player_movemet : MonoBehaviour
     private void MovePlayer()
     {
         Vector3 targetVelocity = _moveDirection * moveSpeed;
-        _rigidbody.linearVelocity = new Vector3(targetVelocity.x, _rigidbody.linearVelocity.y, targetVelocity.z);
+        _rigidbody.linearVelocity = new Vector3(targetVelocity.x, 0, targetVelocity.z);
+
+        /*Vector3 currentHorizontalVel = new Vector3(_rigidbody.linearVelocity.x, 0f, _rigidbody.linearVelocity.z);
+        
+        if (_moveDirection.sqrMagnitude > 0.01f) {
+            _rigidbody.AddForce(_moveDirection * moveSpeed, ForceMode.Force);
+            if (currentHorizontalVel.magnitude > maxSpeed)
+            {
+                Vector3 clampedVel = currentHorizontalVel.normalized * maxSpeed;
+                _rigidbody.linearVelocity = new Vector3(clampedVel.x, _rigidbody.linearVelocity.y, clampedVel.z);
+            }
+        }
+        else
+        {
+            Vector3 dampedVel = Vector3.Lerp(currentHorizontalVel, Vector3.zero, 15 * Time.fixedDeltaTime);
+            _rigidbody.linearVelocity = new Vector3(dampedVel.x, _rigidbody.linearVelocity.y, dampedVel.z);
+        }*/
+        
     }
 
     private void RotatePlayer()
