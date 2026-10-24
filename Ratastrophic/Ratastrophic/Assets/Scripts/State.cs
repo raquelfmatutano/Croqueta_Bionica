@@ -18,6 +18,8 @@ public abstract class State
     public virtual void NoiseReached() { }
     public virtual void PlayerSpotted() { }
     public virtual void PlayerLost() { }
+
     public virtual void NeedsCharging(bool needs) { }
+    public virtual void StartCharging() { }
 
 }

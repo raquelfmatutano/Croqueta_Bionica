@@ -36,8 +36,9 @@ public class NPC_vision : MonoBehaviour
     void Update()
     {
         if(state != null) {
-            if(!state.activeVision && visionActiva) {
-                DesactivarVision();
+            if(!state.activeVision) {
+                if(visionActiva)
+                    DesactivarVision();
             }
             else {
                 if(!visionActiva)

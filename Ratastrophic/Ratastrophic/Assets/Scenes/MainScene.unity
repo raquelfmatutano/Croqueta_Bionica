@@ -42839,7 +42839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b74808983e8a24cbc11f5af44affc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaypointGraph
-  charging_station: {fileID: 1746979525}
+  charging_station: {fileID: 914361093}
 --- !u!4 &1798520824
 Transform:
   m_ObjectHideFlags: 0

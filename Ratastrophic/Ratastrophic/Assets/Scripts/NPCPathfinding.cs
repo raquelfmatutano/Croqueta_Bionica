@@ -193,7 +193,7 @@ public class NPCPathfinding : MonoBehaviour
         }
 
         else {
-            if (!puedeMoverse && !going_to_charge)
+            if (!puedeMoverse)
             return;
 
             if (ruta == null || ruta.Count == 0)
@@ -214,9 +214,7 @@ public class NPCPathfinding : MonoBehaviour
                 {
                     if (GameManager.Instance != null && GameManager.Instance.charging_station_available)
                     {
-                        GameManager.Instance.charging_station_available = false;
                         state.NPC_currentState.NeedsCharging(true);
-                        going_to_charge = true;
                         return;
                     }
                     else 
@@ -230,29 +228,8 @@ public class NPCPathfinding : MonoBehaviour
                 {
                     if (!GameManager.Instance.timer_on && !GameManager.Instance.timer_finished) 
                     {
-                        GameManager.Instance.ChargingTimer();
-                        print("Starting charge");
-                        DetenerMovimiento();
+                        state.NPC_currentState.StartCharging();
                         return;
-                    }
-                    //Currently charging
-                    else if (GameManager.Instance.timer_on) 
-                    {
-                        return;
-                    }
-                    //Finished charging
-                    else if (GameManager.Instance.timer_finished) 
-                    {
-                        print("Charged");
-                        ActivarMovimiento();
-                        
-                        GameManager.Instance.charging_station_available = true;
-                        GameManager.Instance.timer_finished = false;
-                        
-                        state.NPC_currentState.NeedsCharging(false);
-                        waypoints_until_charge = Random.Range(10, 15);
-                        
-                        going_to_charge = false;
                     }
                 }
             }
@@ -303,7 +280,7 @@ public class NPCPathfinding : MonoBehaviour
 
         bool esUltimoNode = (indiceRuta == ruta.Count - 1);
 
-        if (esInvestigando && esUltimoNode)
+        if (esInvestigando && esUltimoNode && state.NPC_currentState is not LimpiarState)
         {
             // ARRIVAL
             velocidadDeseada = CalcularArrive(posicionObjetivo);
@@ -361,6 +338,7 @@ public class NPCPathfinding : MonoBehaviour
 
     public void ActivarMovimiento()
     {
+        print("movimiento activado");
         puedeMoverse = true;
     }
 
@@ -377,6 +355,7 @@ public class NPCPathfinding : MonoBehaviour
 
     public void DetenerMovimiento()
     {
+        print("movimiento desactivado");
         puedeMoverse = false;
         velocidadActual = Vector3.zero;
     }

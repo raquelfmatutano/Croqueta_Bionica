@@ -57,6 +57,7 @@ public class NoiseObject : MonoBehaviour{
 
         if (targetGameObject.CompareTag("NPC") & state != null)
         {
+            StopToClean(targetGameObject);
             print("limpiado");
             PlayVFX();
             transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
@@ -73,6 +74,11 @@ public class NoiseObject : MonoBehaviour{
         }
 
         return false;
+    }
+
+    private void StopToClean(GameObject obj) {
+        NPCPathfinding pathfinder = obj.GetComponent<NPCPathfinding>();
+        pathfinder.DetenerMovimiento();
     }
 
     private void TryPlaySound(Collision collision){
@@ -155,4 +161,6 @@ public class NoiseObject : MonoBehaviour{
             Destroy(vfxInstance, 1f);
         }
     }
+
+    
 }
