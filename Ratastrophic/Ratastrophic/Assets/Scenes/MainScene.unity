@@ -20591,6 +20591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Waypoint
   vecinos:
   - {fileID: 1746979525}
+  - {fileID: 1596418805}
   idSala: 11
   reachable: 0
 --- !u!4 &914361094
@@ -25580,6 +25581,8 @@ MonoBehaviour:
   currentInterest: {fileID: 0}
   pathfinder: {fileID: 0}
   grafo: {fileID: 0}
+  npcAnimator: {fileID: 0}
+  currentAnimID: 0
   inspeccionSala: {fileID: 1185476929}
   visionNPC: {fileID: 816003433}
   meowPathfinder: {fileID: 1185476932}

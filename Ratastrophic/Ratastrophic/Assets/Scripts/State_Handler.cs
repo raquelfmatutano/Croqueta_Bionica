@@ -8,6 +8,7 @@ public class PatrullarState : State
     public override void Enter()
     {
         Debug.Log("Entering Patrol State");
+        npc.ChangeAnimation(0);
     }
 
     public override void Update()
@@ -80,6 +81,7 @@ public class InvestigarState : State
             Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
             npc.pathfinder.IrADestino(targetWaypoint, start);
         }
+        npc.ChangeAnimation(0);
     }
 
     public override void Update()
@@ -105,6 +107,7 @@ public class PerseguirState : State
     public override void Enter()
     {
         Debug.Log("Entering Chase State");
+        npc.ChangeAnimation(0);
     }
 
     public override void Update()
@@ -130,6 +133,7 @@ public class LimpiarState : State
     public override void Enter()
     {
         Debug.Log("Entering cleaning state");
+        npc.ChangeAnimation(1);
     }
 
     public override void Update()
@@ -139,8 +143,8 @@ public class LimpiarState : State
 
     }
 
-    public override void Exit() { 
-        
+    public override void Exit() {
+        npc.ChangeAnimation(0);
     } 
 
     public override void NoiseReached() {
@@ -159,6 +163,7 @@ public class CargarState : State
     {
         Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
         npc.pathfinder.IrADestino(npc.grafo.charging_station, start);
+        npc.ChangeAnimation(1);
     }
 
     public override void Update()
