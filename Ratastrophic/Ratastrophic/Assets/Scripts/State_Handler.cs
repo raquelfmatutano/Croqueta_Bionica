@@ -90,7 +90,7 @@ public class InvestigarState : State
 
     public override void Update()
     {
-
+        npc.pathfinder.waypointDestino = targetWaypoint.transform;
     }
 
     public override void Exit() { }

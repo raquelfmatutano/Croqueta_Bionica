@@ -201,10 +201,11 @@ public class NPCPathfinding : MonoBehaviour
 
             if (indiceRuta >= ruta.Count)
                 return;
+            
+            
 
             waypointDestino = ruta[indiceRuta].transform;
         
-    
         if (indiceRuta == ruta.Count - 1) //final de trayecto
         {
             //mandar a cargar
@@ -215,13 +216,11 @@ public class NPCPathfinding : MonoBehaviour
                     if (GameManager.Instance != null && GameManager.Instance.charging_station_available)
                     {
                         state.NPC_currentState.NeedsCharging(true);
-                        return;
                     }
                     else 
                     {
                         print("charging station occupied. i can go for a bit longer");
                         waypoints_until_charge = Random.Range(5, 10);
-                        return;
                     }
                 }
                 else 
@@ -278,20 +277,31 @@ public class NPCPathfinding : MonoBehaviour
         Vector3 haciaObjetivo = posicionObjetivo - transform.position;
         Vector3 velocidadDeseada;
 
-        bool esUltimoNode = (indiceRuta == ruta.Count - 1);
+        bool esUltimoNode;
+        if(ruta.Count >= 2)
+            esUltimoNode = (indiceRuta == ruta.Count - 2);
+        else
+            esUltimoNode = (indiceRuta == ruta.Count - 1);
 
-        if (esInvestigando && esUltimoNode && state.NPC_currentState is not LimpiarState)
+        
+        if (going_to_charge && esUltimoNode)
         {
             // ARRIVAL
             velocidadDeseada = CalcularArrive(posicionObjetivo);
             print("usando arrival");
         }
-        else
+        else    
         {
             // SEEK
             velocidadDeseada = haciaObjetivo.sqrMagnitude > 0.001f
                 ? haciaObjetivo.normalized * velocidad
                 : Vector3.zero;
+        }
+
+        if (velocidadDeseada == Vector3.zero)
+        {
+            velocidadActual = Vector3.zero;
+            return; 
         }
 
         // STEERING 
@@ -369,19 +379,14 @@ public class NPCPathfinding : MonoBehaviour
         print("distancia: " + distancia);
         Vector3 velocidadDeseada;
 
-        if (distancia < radioFrenado)
-        {
-            float velocidadAtenuada = (distancia / radioFrenado) * velocidad;
-            velocidadDeseada = haciaObjetivo.normalized * velocidadAtenuada;
-        }
-        else
-        {
-            velocidadDeseada = haciaObjetivo.normalized * velocidad;
-        }
+        float velocidadAtenuada = (distancia / radioFrenado) * velocidad;
+        velocidadDeseada = haciaObjetivo.normalized * velocidadAtenuada;
+
         print("Magnitud velocidad deseada: " + velocidadDeseada.magnitude);
 
+        float velocidadCorte = velocidad * 0.15f;
         // Cuando la velocidad deseada sea muy baja o la distancia sea menor al radio de llegada
-        if (distancia <= radioLlegada || velocidadDeseada.magnitude < 0.1f)
+        if (distancia <= radioLlegada || velocidadDeseada.magnitude < velocidadCorte)
         {
             velocidadActual = Vector3.zero; //Se para
             state.NPC_currentState.NoiseReached();

@@ -12884,6 +12884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DEBUG_NPC 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5308326109191699364, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -18906,6 +18910,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 235966925}
     m_Modifications:
+    - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
+      propertyPath: radioFrenado
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3654417176758176, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: player_tranform
       value: 
@@ -28331,7 +28339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1185476928
 Transform:
   m_ObjectHideFlags: 0
@@ -42839,7 +42847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12b74808983e8a24cbc11f5af44affc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaypointGraph
-  charging_station: {fileID: 914361093}
+  charging_station: {fileID: 1746979525}
 --- !u!4 &1798520824
 Transform:
   m_ObjectHideFlags: 0
