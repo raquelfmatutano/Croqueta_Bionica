@@ -112,6 +112,7 @@ public class PerseguirState : State
     {
         lost_timer_on = false;
         Debug.Log("Entering Chase State");
+        npc.pathfinder.velocidad = 19;
         npc.ChangeAnimation(2);
     }
 
@@ -130,7 +131,9 @@ public class PerseguirState : State
 
     }
 
-    public override void Exit() { }
+    public override void Exit() { 
+        npc.pathfinder.velocidad = 9;
+    }
 
     public override void PlayerSpotted() {
         lost_timer_on = false;
