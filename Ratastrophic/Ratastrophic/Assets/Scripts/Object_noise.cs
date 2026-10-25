@@ -50,27 +50,20 @@ public class NoiseObject : MonoBehaviour{
 
     private bool TryClean(GameObject targetGameObject)
     {
-        if (clean) 
-            return false;
+        /*if (clean) 
+            return false;*/
         
         NPC_state state = targetGameObject.GetComponent<NPC_state>();
 
         if (targetGameObject.CompareTag("NPC") & state != null)
         {
-            state.NPC_currentState.InterestSpotted(transform);
-
-            StopToClean(targetGameObject);
-            print("limpiado");
-            PlayVFX();
-            transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
+            state.NPC_currentState.StartCleaning();
             clean = true;
 
             if (cleaningArea != null)
             {
                 Destroy(cleaningArea);
             }
-
-            //state.NPC_currentState.NoiseReached();
 
             return true;
         }
@@ -103,11 +96,16 @@ public class NoiseObject : MonoBehaviour{
 
         CreateNoiseArea();
         if(cleanable) {
-            print("a tomar por culo");
             PlayVFX();
             CreateCleaningArea();
         }
         
+    }
+
+    public void CleanObject() {
+        print("limpiado");
+        PlayVFX();
+        transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
     }
 
     private void CreateNoiseArea(){
@@ -146,7 +144,7 @@ public class NoiseObject : MonoBehaviour{
         transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
 
        cleaningArea = gameObject.AddComponent<SphereCollider>() as SphereCollider;
-       cleaningArea.radius = 1.5f;
+       cleaningArea.radius = 0.8f;
        cleaningArea.isTrigger = true;
 
     }
