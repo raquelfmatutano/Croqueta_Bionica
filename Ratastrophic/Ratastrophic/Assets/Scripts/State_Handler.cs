@@ -112,7 +112,7 @@ public class PerseguirState : State
     {
         lost_timer_on = false;
         Debug.Log("Entering Chase State");
-        npc.ChangeAnimation(0);
+        npc.ChangeAnimation(2);
     }
 
     public override void Update()
@@ -161,7 +161,7 @@ public class LimpiarState : State
         npc.pathfinder.esInvestigando = false;
         Debug.Log("Entering cleaning state");
         npc.activeVision = false;
-        npc.ChangeAnimation(1);
+        npc.ChangeAnimation(0);
     }
 
     public override void Update()
@@ -173,6 +173,7 @@ public class LimpiarState : State
             if (Time.time < end_timer) 
             {
                 Debug.Log(end_timer - Time.time);
+                npc.ChangeAnimation(1);
                 return;
             }
 
@@ -184,7 +185,7 @@ public class LimpiarState : State
                 if (npc.currentInterest.GetComponent<NoiseObject>() != null) {
                     npc.currentInterest.GetComponent<NoiseObject>().CleanObject();
                 }
-                
+
                 npc.pathfinder.ActivarMovimiento();
                 npc.ChangeState(npc.patrullarState);
             }
@@ -231,11 +232,12 @@ public class CargarState : State
     public override void Enter()
     {
         isCharging = false;
+        npc.ChangeAnimation(0);
 
         Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
         npc.pathfinder.IrADestino(npc.grafo.charging_station, start);
         npc.activeVision = false;
-        npc.ChangeAnimation(1);
+        
     }
 
     public override void Update()
@@ -280,6 +282,7 @@ public class CargarState : State
         GameManager.Instance.ChargingTimer();
         Debug.Log("Starting charge");
         npc.pathfinder.DetenerMovimiento();
+        npc.ChangeAnimation(1);
         isCharging = true;
     }
 }
