@@ -11,6 +11,7 @@ public class NPC_state : MonoBehaviour
     public CargarState cargarState;
 
     public bool seesPlayer;
+    public bool activeVision;
     public bool hearsNoise;
 
     public Transform currentInterest;
@@ -36,12 +37,15 @@ public class NPC_state : MonoBehaviour
             grafo = FindFirstObjectByType<WaypointGraph>();
             
         ChangeState(patrullarState);
+
+        activeVision = true;
     }
 
     private void Update()
     {
         NPC_currentState?.Update();
-        npcAnimator.SetInteger("animID", currentAnimID);
+        if(npcAnimator != null)
+            npcAnimator.SetInteger("animID", currentAnimID);
     }
 
     public void ChangeState(State newState)

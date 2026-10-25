@@ -19,6 +19,9 @@ public class NPCPathfinding : MonoBehaviour
     public float distanciaPreparacion = 2f;
     public float velocidadGiro = 5f;
 
+    public float radioFrenado = 5f;
+    public bool esInvestigando = false;
+
     private Vector3 velocidadActual;
 
     private AStar aStar;
@@ -154,7 +157,6 @@ public class NPCPathfinding : MonoBehaviour
 
     private bool PrepararSiguienteRuta()
     {
-        state.NPC_currentState.NoiseReached();
        
         Waypoint nuevoObjetivo =
             grafo.ObtenerWaypointAleatorio(objetivo);
@@ -191,7 +193,7 @@ public class NPCPathfinding : MonoBehaviour
         }
 
         else {
-            if (!puedeMoverse && !going_to_charge)
+            if (!puedeMoverse)
             return;
 
             if (ruta == null || ruta.Count == 0)
@@ -199,10 +201,11 @@ public class NPCPathfinding : MonoBehaviour
 
             if (indiceRuta >= ruta.Count)
                 return;
+            
+            
 
             waypointDestino = ruta[indiceRuta].transform;
         
-    
         if (indiceRuta == ruta.Count - 1) //final de trayecto
         {
             //mandar a cargar
@@ -212,48 +215,25 @@ public class NPCPathfinding : MonoBehaviour
                 {
                     if (GameManager.Instance != null && GameManager.Instance.charging_station_available)
                     {
-                        GameManager.Instance.charging_station_available = false;
                         state.NPC_currentState.NeedsCharging(true);
-                        going_to_charge = true;
-                        return;
                     }
                     else 
                     {
                         print("charging station occupied. i can go for a bit longer");
                         waypoints_until_charge = Random.Range(5, 10);
-                        return;
                     }
                 }
                 else 
                 {
                     if (!GameManager.Instance.timer_on && !GameManager.Instance.timer_finished) 
                     {
-                        GameManager.Instance.ChargingTimer();
-                        print("Starting charge");
-                        DetenerMovimiento();
+                        state.NPC_currentState.StartCharging();
                         return;
-                    }
-                    //Currently charging
-                    else if (GameManager.Instance.timer_on) 
-                    {
-                        return;
-                    }
-                    //Finished charging
-                    else if (GameManager.Instance.timer_finished) 
-                    {
-                        print("Charged");
-                        ActivarMovimiento();
-                        
-                        GameManager.Instance.charging_station_available = true;
-                        GameManager.Instance.timer_finished = false;
-                        
-                        state.NPC_currentState.NeedsCharging(false);
-                        waypoints_until_charge = Random.Range(10, 15);
-                        
-                        going_to_charge = false;
                     }
                 }
             }
+
+            state.NPC_currentState.NoiseReached(); //en caso de haber llegado a un sonido
         
             float distanciaFinal = Vector3.Distance(
                 transform.position,
@@ -265,13 +245,9 @@ public class NPCPathfinding : MonoBehaviour
                 bool rutaPreparada = PrepararSiguienteRuta();
 
                 if (rutaPreparada &&
-                    Vector3.Distance(
-                        transform.position,
-                        waypointDestino.position
-                    ) <= radioLlegada)
+                    Vector3.Distance(transform.position, waypointDestino.position) <= radioLlegada)
                 {
                     indiceRuta++;
-                    
                 }
             }
         }
@@ -301,12 +277,33 @@ public class NPCPathfinding : MonoBehaviour
 
         Vector3 posicionObjetivo = waypointDestino.transform.position;
         Vector3 haciaObjetivo = posicionObjetivo - transform.position;
+        Vector3 velocidadDeseada;
 
-        // SEEK
-        Vector3 velocidadDeseada =
-            haciaObjetivo.sqrMagnitude > 0.001f
+        bool esUltimoNode;
+        if(ruta.Count >= 2)
+            esUltimoNode = (indiceRuta == ruta.Count - 2);
+        else
+            esUltimoNode = (indiceRuta == ruta.Count - 1);
+
+        
+        if (going_to_charge && esUltimoNode)
+        {
+            // ARRIVAL
+            velocidadDeseada = CalcularArrive(posicionObjetivo);
+        }
+        else    
+        {
+            // SEEK
+            velocidadDeseada = haciaObjetivo.sqrMagnitude > 0.001f
                 ? haciaObjetivo.normalized * velocidad
                 : Vector3.zero;
+        }
+
+        if (velocidadDeseada == Vector3.zero)
+        {
+            velocidadActual = Vector3.zero;
+            return; 
+        }
 
         // STEERING 
         Vector3 fuerzaDireccion = velocidadDeseada - velocidadActual;
@@ -352,6 +349,7 @@ public class NPCPathfinding : MonoBehaviour
 
     public void ActivarMovimiento()
     {
+        print("movimiento activado");
         puedeMoverse = true;
     }
 
@@ -368,7 +366,40 @@ public class NPCPathfinding : MonoBehaviour
 
     public void DetenerMovimiento()
     {
+        print("movimiento desactivado");
         puedeMoverse = false;
         velocidadActual = Vector3.zero;
     }
+
+    private Vector3 CalcularArrive(Vector3 posicionObjetivo)
+    {
+        Vector3 haciaObjetivo = posicionObjetivo - transform.position;
+        haciaObjetivo.y = 0f; 
+
+        float distancia = haciaObjetivo.magnitude;
+        //print("distancia: " + distancia);
+        Vector3 velocidadDeseada;
+
+        float velocidadAtenuada = (distancia / radioFrenado) * velocidad;
+        velocidadDeseada = haciaObjetivo.normalized * velocidadAtenuada;
+
+        //print("Magnitud velocidad deseada: " + velocidadDeseada.magnitude);
+
+        float velocidadCorte = velocidad * 0.15f;
+        // Cuando la velocidad deseada sea muy baja o la distancia sea menor al radio de llegada
+        if (distancia <= radioLlegada || velocidadDeseada.magnitude < velocidadCorte)
+        {
+            velocidadActual = Vector3.zero; //Se para
+            if (!GameManager.Instance.timer_on && !GameManager.Instance.timer_finished) 
+            {
+                state.NPC_currentState.StartCharging();
+                return Vector3.zero;
+            }
+
+            return Vector3.zero;
+        }
+
+        return velocidadDeseada;
+    }
+
 }

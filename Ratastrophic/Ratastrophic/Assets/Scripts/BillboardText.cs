@@ -24,6 +24,10 @@ public class BillboardText : MonoBehaviour
             textComponent.text = "!";
         }
 
+        else if (state.NPC_currentState is CargarState) {
+            textComponent.text = "...";
+        }
+
         else {
             textComponent.text = "";
         }

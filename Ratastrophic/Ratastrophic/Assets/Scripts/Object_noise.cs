@@ -57,6 +57,9 @@ public class NoiseObject : MonoBehaviour{
 
         if (targetGameObject.CompareTag("NPC") & state != null)
         {
+            state.NPC_currentState.InterestSpotted(transform);
+
+            StopToClean(targetGameObject);
             print("limpiado");
             PlayVFX();
             transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
@@ -67,12 +70,17 @@ public class NoiseObject : MonoBehaviour{
                 Destroy(cleaningArea);
             }
 
-            state.NPC_currentState.NoiseReached();
+            //state.NPC_currentState.NoiseReached();
 
             return true;
         }
 
         return false;
+    }
+
+    private void StopToClean(GameObject obj) {
+        NPC_state state = obj.GetComponent<NPC_state>();
+        state.NPC_currentState.InterestSpotted(transform);
     }
 
     private void TryPlaySound(Collision collision){
@@ -155,4 +163,6 @@ public class NoiseObject : MonoBehaviour{
             Destroy(vfxInstance, 1f);
         }
     }
+
+    
 }

@@ -24,13 +24,16 @@ public class player_movemet : MonoBehaviour
 
     private void OnEnable()
     {
-        animatorRat.SetBool("isDead", false);
+        if(animatorRat != null)
+            animatorRat.SetBool("isDead", false);
+
         moveAction.Enable();
     }
 
     private void OnDisable()
     {
-        animatorRat.SetBool("isDead", true);
+        if(animatorRat != null)
+            animatorRat.SetBool("isDead", true);
         moveAction.Disable();
     }
 
@@ -59,9 +62,12 @@ public class player_movemet : MonoBehaviour
 
         if(input.x != 0 || input.y != 0)
         {
-            animatorRat.SetBool("isWalking", true);
+            if(animatorRat != null)
+                animatorRat.SetBool("isWalking", true);
         }
-        else animatorRat.SetBool("isWalking", false);
+        else 
+            if(animatorRat != null)
+                animatorRat.SetBool("isWalking", false);
 
         if (input.sqrMagnitude > 0.01f)
         {

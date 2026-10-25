@@ -35,7 +35,17 @@ public class NPC_vision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(state != null) {
+            if(!state.activeVision) {
+                if(visionActiva)
+                    DesactivarVision();
+            }
+            else {
+                if(!visionActiva)
+                    ActivarVision();
+            }
+        }
+        
     }
 
     private bool check_for_walls(Transform obj_seen) {
@@ -90,7 +100,6 @@ public class NPC_vision : MonoBehaviour
 
             if(!obj_noise.clean) {
                 state.NPC_currentState.InterestSpotted(obj.transform);
-                print("ewewewew");
             }
         }
     }
@@ -137,8 +146,8 @@ public class NPC_vision : MonoBehaviour
 
     public void DesactivarVision()
     {
-        if (tipoNPC != TipoNPC.Gato)
-            return;
+        //if (tipoNPC != TipoNPC.Gato)
+        //    return;
 
         visionActiva = false;
 

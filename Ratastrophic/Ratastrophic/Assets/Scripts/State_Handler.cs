@@ -7,6 +7,7 @@ public class PatrullarState : State
 
     public override void Enter()
     {
+        npc.pathfinder.esInvestigando = false;
         Debug.Log("Entering Patrol State");
         npc.ChangeAnimation(0);
     }
@@ -35,8 +36,12 @@ public class PatrullarState : State
     }
 
     public override void NeedsCharging(bool needs) {
-        if (needs)
+        if (needs) {
             npc.ChangeState(npc.cargarState);
+            GameManager.Instance.charging_station_available = false;
+            npc.pathfinder.going_to_charge = true;
+        }
+            
     }
 }
 
@@ -54,10 +59,10 @@ public class InvestigarState : State
         targetWaypoint = target;
     }
 
-    public override void InterestSpotted(Transform obj) {
+    /*public override void InterestSpotted(Transform obj) {
         npc.currentInterest = obj;
         npc.ChangeState(npc.limpiarState);
-    }
+    }*/
 
     public override void NoiseHeard(Waypoint location)
     {
@@ -66,6 +71,7 @@ public class InvestigarState : State
     }
 
     public override void NoiseReached() {
+        npc.pathfinder.esInvestigando = false;
         npc.ChangeState(npc.patrullarState);
     }
 
@@ -80,18 +86,14 @@ public class InvestigarState : State
         {
             Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
             npc.pathfinder.IrADestino(targetWaypoint, start);
+            npc.pathfinder.esInvestigando = true;
         }
         npc.ChangeAnimation(0);
     }
 
     public override void Update()
     {
-        if (npc.seesPlayer)
-        {
-            npc.ChangeState(npc.perseguirState);
-            return;
-        }
-
+        npc.pathfinder.waypointDestino = targetWaypoint.transform;
     }
 
     public override void Exit() { }
@@ -129,27 +131,61 @@ public class PerseguirState : State
 public class LimpiarState : State
 {
     public LimpiarState(NPC_state npc) : base(npc) { }
+    private bool isCleaning;
 
     public override void Enter()
     {
+        isCleaning = false;
+        npc.pathfinder.esInvestigando = false;
         Debug.Log("Entering cleaning state");
+        npc.activeVision = false;
         npc.ChangeAnimation(1);
     }
 
     public override void Update()
     {
         npc.pathfinder.waypointDestino = npc.currentInterest;
-        Debug.Log("Gotta clean gotta clean");
+
+        if(isCleaning) {
+            //Currently charging
+            if (GameManager.Instance.timer_on) 
+            {
+                return;
+            }
+
+            //Finished charging
+            else if (GameManager.Instance.timer_finished) 
+            {
+                Debug.Log("Charged");
+                npc.pathfinder.ActivarMovimiento();
+                GameManager.Instance.charging_station_available = true;
+                GameManager.Instance.timer_finished = false;
+
+                npc.ChangeState(npc.patrullarState);
+            }
+       }
 
     }
 
-    public override void Exit() {
+    public override void StartCleaning() {
+        isCleaning = true;
+        GameManager.Instance.ChargingTimer();
+        Debug.Log("Starting cleaning");
+        npc.pathfinder.DetenerMovimiento();
+    }
+
+    public override void Exit() { 
+        npc.activeVision = true;
+        npc.activeVision = true;
+        Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
+        Waypoint end = npc.grafo.ObtenerWaypointAleatorio(npc.pathfinder.waypointActual);
+        npc.pathfinder.IrADestino(end, start);
         npc.ChangeAnimation(0);
     } 
 
-    public override void NoiseReached() {
+    /*public override void NoiseReached() {
         npc.ChangeState(npc.patrullarState);
-    }
+    }*/
 }
 
 //-----------------------------------------------------------------
@@ -159,19 +195,45 @@ public class CargarState : State
 {
     public CargarState(NPC_state npc) : base(npc) { }
 
+    private bool isCharging;
+
     public override void Enter()
     {
+        isCharging = false;
+
         Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
         npc.pathfinder.IrADestino(npc.grafo.charging_station, start);
+        npc.activeVision = false;
         npc.ChangeAnimation(1);
     }
 
     public override void Update()
     {
-       
+       if(isCharging) {
+            //Currently charging
+            if (GameManager.Instance.timer_on) 
+            {
+                return;
+            }
+
+            //Finished charging
+            else if (GameManager.Instance.timer_finished) 
+            {
+                Debug.Log("Charged");
+                npc.pathfinder.ActivarMovimiento();
+                npc.pathfinder.waypoints_until_charge = Random.Range(10, 15);
+                npc.pathfinder.going_to_charge = false;
+                
+                GameManager.Instance.charging_station_available = true;
+                GameManager.Instance.timer_finished = false;
+
+                npc.ChangeState(npc.patrullarState);
+            }
+       }
     }
 
     public override void Exit() { 
+        npc.activeVision = true;
         Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
         Waypoint end = npc.grafo.ObtenerWaypointAleatorio(npc.pathfinder.waypointActual);
         npc.pathfinder.IrADestino(end, start);
@@ -181,5 +243,12 @@ public class CargarState : State
         if(!needs) {
             npc.ChangeState(npc.patrullarState);
         }
+    }
+
+    public override void StartCharging() {
+        GameManager.Instance.ChargingTimer();
+        Debug.Log("Starting charge");
+        npc.pathfinder.DetenerMovimiento();
+        isCharging = true;
     }
 }
