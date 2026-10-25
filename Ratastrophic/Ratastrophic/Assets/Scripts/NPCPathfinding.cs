@@ -192,6 +192,10 @@ public class NPCPathfinding : MonoBehaviour
             waypointDestino = player_tranform;
         }
 
+        if (state.NPC_currentState is LimpiarState) {
+            waypointDestino = state.currentInterest;
+        }
+
         else {
             if (!puedeMoverse)
             return;

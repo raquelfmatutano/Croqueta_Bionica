@@ -57,9 +57,11 @@ public class NoiseObject : MonoBehaviour{
 
         if (targetGameObject.CompareTag("NPC") & state != null)
         {
-            state.NPC_currentState.InterestSpotted(transform);
+            //state.NPC_currentState.InterestSpotted(transform);
+            state.NPC_currentState.StartCleaning();
+            
 
-            StopToClean(targetGameObject);
+            //StopToClean(targetGameObject);
             print("limpiado");
             PlayVFX();
             transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
