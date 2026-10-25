@@ -161,6 +161,11 @@ public class MEOW_InspeccionSala : MonoBehaviour
 
         CargarSalaActual();
 
+        if (visionNPC != null)
+        {
+            visionNPC.jugadorVistoDuranteInspeccion = false;
+        }
+
         if (waypointsSala.Count > 0)
         {
             desplazandoseEntreSalas = true;
