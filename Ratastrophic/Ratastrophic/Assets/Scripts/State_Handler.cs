@@ -41,10 +41,6 @@ public class PatrullarState : State
         }
             
     }
-
-    public override void StartCleaning() {
-        npc.ChangeState(npc.limpiarState);
-    }
 }
 
 //-----------------------------------------------------------------

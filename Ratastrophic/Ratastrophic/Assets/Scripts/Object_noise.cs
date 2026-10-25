@@ -55,10 +55,9 @@ public class NoiseObject : MonoBehaviour{
         
         NPC_state state = targetGameObject.GetComponent<NPC_state>();
 
-        
-
         if (targetGameObject.CompareTag("NPC") & state != null)
         {
+            state.NPC_currentState.InterestSpotted(transform);
 
             StopToClean(targetGameObject);
             print("limpiado");
@@ -82,8 +81,6 @@ public class NoiseObject : MonoBehaviour{
     private void StopToClean(GameObject obj) {
         NPC_state state = obj.GetComponent<NPC_state>();
         state.NPC_currentState.InterestSpotted(transform);
-        state.NPC_currentState.StartCleaning();
-        
     }
 
     private void TryPlaySound(Collision collision){
