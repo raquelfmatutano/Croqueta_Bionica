@@ -44,7 +44,8 @@ public class NPC_state : MonoBehaviour
     private void Update()
     {
         NPC_currentState?.Update();
-        npcAnimator.SetInteger("animID", currentAnimID);
+        if(npcAnimator != null)
+            npcAnimator.SetInteger("animID", currentAnimID);
     }
 
     public void ChangeState(State newState)
