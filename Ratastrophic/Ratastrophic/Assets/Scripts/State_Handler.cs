@@ -137,6 +137,8 @@ public class LimpiarState : State
 
     public override void Enter()
     {
+        if(!npc.currentInterest.GetComponent<NoiseObject>().clean)
+            npc.currentInterest.GetComponent<NoiseObject>().clean = true;
         isCleaning = false;
         npc.pathfinder.esInvestigando = false;
         Debug.Log("Entering cleaning state");
@@ -152,6 +154,7 @@ public class LimpiarState : State
             //Currently cleaning
             if (Time.time < end_timer) 
             {
+                Debug.Log(end_timer - Time.time);
                 return;
             }
 

@@ -50,8 +50,8 @@ public class NoiseObject : MonoBehaviour{
 
     private bool TryClean(GameObject targetGameObject)
     {
-        if (clean) 
-            return false;
+        /*if (clean) 
+            return false;*/
         
         NPC_state state = targetGameObject.GetComponent<NPC_state>();
 
@@ -144,7 +144,7 @@ public class NoiseObject : MonoBehaviour{
         transform.Rotate(90.0f, 0.0f, 0.0f, Space.Self);
 
        cleaningArea = gameObject.AddComponent<SphereCollider>() as SphereCollider;
-       cleaningArea.radius = 1.5f;
+       cleaningArea.radius = 0.8f;
        cleaningArea.isTrigger = true;
 
     }
