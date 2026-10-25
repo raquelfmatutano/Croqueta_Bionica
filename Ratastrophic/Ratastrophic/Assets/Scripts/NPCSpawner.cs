@@ -33,6 +33,7 @@ public class NPCSpawner : MonoBehaviour
             npc.gameObject.SetActive(false);
         }
 
+        textoTemporizador.gameObject.SetActive(true);
 
         while (tiempoRestante > 0)
         {
@@ -47,7 +48,8 @@ public class NPCSpawner : MonoBehaviour
             tiempoRestante -= Time.deltaTime;
             yield return null;
         }
-        
+        textoTemporizador.gameObject.SetActive(false);
+
         foreach (NPCPathfinding npc in npcs)
         {
             if (npc != null)
