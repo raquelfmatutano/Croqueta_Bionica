@@ -92,13 +92,13 @@ public class MEOW_InspeccionSala : MonoBehaviour
         movimientoNPC.ActivarMovimiento();
         IrAlSiguienteWaypoint();
 
-        Debug.Log("Inspección iniciada");
+        Debug.Log("Inspecciï¿½n iniciada");
     }
 
     public void IniciarOContinuarInspeccionSala()
     {
         inspeccionEnCurso = true;
-        if (movimientoNPC != null) movimientoNPC.ActivarMovimiento();
+        //if (movimientoNPC != null) movimientoNPC.ActivarMovimiento();
 
         if (waypointsSala.Count == 0 && idsSalas.Count > 0)
         {
@@ -128,14 +128,14 @@ public class MEOW_InspeccionSala : MonoBehaviour
         return indiceSalaActual < idsSalas.Count - 1;
     }
 
-    // Método llamado por la FSM al entrar en TrasladarState
+    // Mï¿½todo llamado por la FSM al entrar en TrasladarState
     public void ViajarASiguienteSala()
     {
         if (indiceSalaActual >= idsSalas.Count) return;
 
         int idSalaTerminada = idsSalas[indiceSalaActual];
 
-        // Guardar resultado y colocar carteles si la sala quedó limpia
+        // Guardar resultado y colocar carteles si la sala quedï¿½ limpia
         bool visto = visionNPC != null && visionNPC.jugadorVistoDuranteInspeccion;
         resultadosPorSala[idSalaTerminada] = visto;
 
@@ -179,14 +179,14 @@ public class MEOW_InspeccionSala : MonoBehaviour
         inspeccionEnCurso = false;
         if (movimientoNPC != null) movimientoNPC.DetenerMovimiento();
 
-        Debug.Log("===== RESUMEN DE INSPECCIÓN =====");
+        Debug.Log("===== RESUMEN DE INSPECCIï¿½N =====");
 
         foreach (KeyValuePair<int, bool> resultado in resultadosPorSala)
         {
             Debug.Log("Sala " + resultado.Key + " | Jugador visto: " + resultado.Value);
         }
 
-        Debug.Log("Inspección de todas las salas terminada.");
+        Debug.Log("Inspecciï¿½n de todas las salas terminada.");
     }
 
     private void IrAlSiguienteWaypoint()
@@ -201,7 +201,7 @@ public class MEOW_InspeccionSala : MonoBehaviour
             }
         }
 
-        // Si ya no quedan pendientes en esta sala, detenemos el avance automático y dejamos que la FSM gestione el cambio de estado
+        // Si ya no quedan pendientes en esta sala, detenemos el avance automï¿½tico y dejamos que la FSM gestione el cambio de estado
         if (pendientes.Count == 0)
         {
             return;
@@ -244,7 +244,7 @@ public class MEOW_InspeccionSala : MonoBehaviour
 
                 Debug.Log("Gato entra en la sala " + idSalaObjetivo + " en waypoint " + waypoint.name);
 
-                // Búsqueda inmediata del siguiente waypoint de la sala
+                // Bï¿½squeda inmediata del siguiente waypoint de la sala
                 IrAlSiguienteWaypoint();
                 return;
             }

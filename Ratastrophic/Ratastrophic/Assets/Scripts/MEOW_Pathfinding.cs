@@ -69,10 +69,10 @@ public class MEOW_Pathfinding : MonoBehaviour
             return;
         }
 
-        // Si la ruta contiene el nodo actual en el índice 0, avanzamos directamente al siguiente (índice 1)
+        // Si la ruta contiene el nodo actual en el ï¿½ndice 0, avanzamos directamente al siguiente (ï¿½ndice 1)
         indiceRuta = (ruta.Count > 1 && ruta[0] == waypointActual) ? 1 : 0;
 
-        // Aseguramos que el movimiento esté habilitado
+        // Aseguramos que el movimiento estï¿½ habilitado
         puedeMoverse = true;
 
         //para ver la ruta
@@ -185,6 +185,7 @@ public class MEOW_Pathfinding : MonoBehaviour
 
     public void ActivarMovimiento()
     {
+        print("movimiento gato activado");
         puedeMoverse = true;
     }
 

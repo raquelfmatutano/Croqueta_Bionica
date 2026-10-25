@@ -26,6 +26,13 @@ public class NPCSpawner : MonoBehaviour
     private IEnumerator ActivarNPCs()
     {
         float tiempoRestante = tiempoInicial;
+        MEOW_Pathfinding rumba = FindFirstObjectByType<MEOW_Pathfinding>();
+        rumba.gameObject.SetActive(false);
+
+        foreach (NPCPathfinding npc in npcs ) {
+            npc.gameObject.SetActive(false);
+        }
+
 
         while (tiempoRestante > 0)
         {
@@ -45,11 +52,16 @@ public class NPCSpawner : MonoBehaviour
         {
             if (npc != null)
             {
+                npc.gameObject.SetActive(true);
                 npc.ActivarMovimiento();
             }
 
             yield return new WaitForSeconds(intervaloSalida);
         }
+
+        
+        rumba.gameObject.SetActive(true);
+        rumba.ActivarMovimiento();
 
         if(textoTemporizador != null)
         {
