@@ -119,6 +119,7 @@ public class PerseguirState : State
     public override void Update()
     {
         npc.pathfinder.waypointDestino = npc.pathfinder.player_tranform;
+        npc.currentInterest = npc.pathfinder.player_tranform;
 
         if (lost_timer_on) {
             if(Time.time > end_timer) 
