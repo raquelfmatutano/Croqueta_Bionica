@@ -105,9 +105,12 @@ public class InvestigarState : State
 public class PerseguirState : State
 {
     public PerseguirState(NPC_state npc) : base(npc) { }
+    private float end_timer;
+    private bool lost_timer_on;
 
     public override void Enter()
     {
+        lost_timer_on = false;
         Debug.Log("Entering Chase State");
         npc.ChangeAnimation(0);
     }
@@ -115,13 +118,28 @@ public class PerseguirState : State
     public override void Update()
     {
         npc.pathfinder.waypointDestino = npc.pathfinder.player_tranform;
+
+        if (lost_timer_on) {
+            if(Time.time > end_timer) 
+                npc.ChangeState(npc.patrullarState);
+            
+            else
+                Debug.Log(end_timer - Time.time);
+        }
+
+
     }
 
     public override void Exit() { }
 
+    public override void PlayerSpotted() {
+        lost_timer_on = false;
+    }
+
     public override void PlayerLost()
     {
-        npc.ChangeState(npc.patrullarState);
+        lost_timer_on = true;
+        end_timer = Time.time + 3f;
     }
 }
 
