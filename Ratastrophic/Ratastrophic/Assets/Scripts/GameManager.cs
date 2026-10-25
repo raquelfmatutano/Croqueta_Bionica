@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("Pantallas UI")]
     public GameObject winScreen;
     public GameObject loseScreen;
-    
+
 
     private void Awake()
     {
@@ -47,20 +47,20 @@ public class GameManager : MonoBehaviour
     public void TriggerWin()
     {
         Debug.Log("Has escapado con exito!");
-        if (winScreen != null) winScreen.SetActive(true);
-        Time.timeScale = 0f; 
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("WinScreen");
     }
 
     public void TriggerGameOver()
     {
         Debug.Log("Un enemigo te ha atrapado!");
-        if (loseScreen != null) loseScreen.SetActive(true);
-        Time.timeScale = 0f; 
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("LoseScreen");
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("MainScene");
     }
 }
