@@ -57,22 +57,13 @@ public class NoiseObject : MonoBehaviour{
 
         if (targetGameObject.CompareTag("NPC") & state != null)
         {
-            //state.NPC_currentState.InterestSpotted(transform);
             state.NPC_currentState.StartCleaning();
-            
-
-            //StopToClean(targetGameObject);
-            print("limpiado");
-            PlayVFX();
-            transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
             clean = true;
 
             if (cleaningArea != null)
             {
                 Destroy(cleaningArea);
             }
-
-            //state.NPC_currentState.NoiseReached();
 
             return true;
         }
@@ -105,11 +96,16 @@ public class NoiseObject : MonoBehaviour{
 
         CreateNoiseArea();
         if(cleanable) {
-            print("a tomar por culo");
             PlayVFX();
             CreateCleaningArea();
         }
         
+    }
+
+    public void CleanObject() {
+        print("limpiado");
+        PlayVFX();
+        transform.Rotate(-90.0f, 0.0f, 0.0f, Space.Self);
     }
 
     private void CreateNoiseArea(){

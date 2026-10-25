@@ -133,6 +133,8 @@ public class LimpiarState : State
     public LimpiarState(NPC_state npc) : base(npc) { }
     private bool isCleaning;
 
+    private float end_timer;
+
     public override void Enter()
     {
         isCleaning = false;
@@ -147,20 +149,22 @@ public class LimpiarState : State
         npc.pathfinder.waypointDestino = npc.currentInterest;
 
         if(isCleaning) {
-            //Currently charging
-            if (GameManager.Instance.timer_on) 
+            //Currently cleaning
+            if (Time.time < end_timer) 
             {
                 return;
             }
 
-            //Finished charging
-            else if (GameManager.Instance.timer_finished) 
+            //Finished cleaning
+            else
             {
-                Debug.Log("Charged");
-                npc.pathfinder.ActivarMovimiento();
-                GameManager.Instance.charging_station_available = true;
-                GameManager.Instance.timer_finished = false;
+                Debug.Log("Finished cleaning");
 
+                if (npc.currentInterest.GetComponent<NoiseObject>() != null) {
+                    npc.currentInterest.GetComponent<NoiseObject>().CleanObject();
+                }
+                
+                npc.pathfinder.ActivarMovimiento();
                 npc.ChangeState(npc.patrullarState);
             }
        }
@@ -172,11 +176,17 @@ public class LimpiarState : State
         GameManager.Instance.ChargingTimer();
         Debug.Log("Starting cleaning");
         npc.pathfinder.DetenerMovimiento();
+
+        end_timer = Time.time + Random.Range(2f, 4f);
+        Debug.Log(end_timer);
     }
 
     public override void Exit() { 
         npc.activeVision = true;
         npc.activeVision = true;
+
+        npc.currentInterest = null;
+
         Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
         Waypoint end = npc.grafo.ObtenerWaypointAleatorio(npc.pathfinder.waypointActual);
         npc.pathfinder.IrADestino(end, start);
