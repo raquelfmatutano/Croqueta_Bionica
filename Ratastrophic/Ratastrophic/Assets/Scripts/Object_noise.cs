@@ -33,10 +33,10 @@ public class NoiseObject : MonoBehaviour{
         TryPlaySound(collision);
     }
 
-    private void OnCollisionStay(Collision collision){
+    /*private void OnCollisionStay(Collision collision){
 
         TryPlaySound(collision);
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
