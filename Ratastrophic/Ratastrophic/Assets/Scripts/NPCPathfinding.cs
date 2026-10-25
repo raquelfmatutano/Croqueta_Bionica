@@ -187,14 +187,18 @@ public class NPCPathfinding : MonoBehaviour
 
     private void Update()
     {
+        if (!puedeMoverse)
+            return;
 
         if (state.NPC_currentState is PerseguirState) {
             waypointDestino = player_tranform;
         }
 
+        if (state.NPC_currentState is LimpiarState) {
+            waypointDestino = state.currentInterest;
+        }
+
         else {
-            if (!puedeMoverse)
-            return;
 
             if (ruta == null || ruta.Count == 0)
                 return;
