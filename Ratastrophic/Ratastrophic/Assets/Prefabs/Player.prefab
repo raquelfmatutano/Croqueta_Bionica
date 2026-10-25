@@ -34,8 +34,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7097018635919653173}
+<<<<<<< Updated upstream
+  - {fileID: 2578870473013875724}
+=======
+>>>>>>> Stashed changes
   - {fileID: 4532093985173065825}
+  - {fileID: 608905965714105008}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3893266671945625637
@@ -180,10 +184,13 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   moveSpeed: 4
+  maxSpeed: 600
   rotationSpeed: 14.9
+  hasPotion: 0
   walkingAudioSource: {fileID: 0}
   walk_soundClip: {fileID: 8300000, guid: af8a29f9b4e55fa48ae16d7ab644b09e, type: 3}
   audio_area: {fileID: 6841153760887454725}
+  animatorRat: {fileID: 3141872035483233447}
 --- !u!54 &9175888716975090107
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -323,7 +330,11 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &7347365113225813726
+<<<<<<< Updated upstream
+--- !u!1001 &2613007479700796391
+=======
+--- !u!1001 &1151230191897150811
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -331,73 +342,166 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5107521144879628960}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+<<<<<<< Updated upstream
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalScale.x
-      value: 30.000002
+      value: 0.3587229
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalScale.y
-      value: 30.000002
+      value: 0.3587229
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalScale.z
-      value: 30.000002
+      value: 0.3587229
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.00015513
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -0.77502
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.07
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
-      propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
-      propertyPath: m_LocalRotation.z
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
+=======
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.38405654
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.38405654
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.38405654
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000046491623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.753
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.057220995
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+>>>>>>> Stashed changes
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
+=======
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+>>>>>>> Stashed changes
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
+    - target: {fileID: 919132149155446097, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
       propertyPath: m_Name
-      value: ratastrophic_rat
+      value: ratastrophic_rat_final_animated
+=======
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      propertyPath: m_Name
+      value: ratastrophic_rat_final_animated_v2
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
+<<<<<<< Updated upstream
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
---- !u!4 &7097018635919653173 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
+--- !u!4 &2578870473013875724 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a0d025198f07f9b42b140b18bf4da33d, type: 3}
-  m_PrefabInstance: {fileID: 7347365113225813726}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e43daaba2d58b044f94e847f1c753227, type: 3}
+  m_PrefabInstance: {fileID: 2613007479700796391}
+=======
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 859630a4d70372948b9a3299827af883, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3141872035483233447}
+  m_SourcePrefab: {fileID: 100100000, guid: 859630a4d70372948b9a3299827af883, type: 3}
+--- !u!1 &232098192126195722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 859630a4d70372948b9a3299827af883, type: 3}
+  m_PrefabInstance: {fileID: 1151230191897150811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3141872035483233447
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232098192126195722}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6d80eef1fb30712499778b2d74ea0430, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &608905965714105008 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 859630a4d70372948b9a3299827af883, type: 3}
+  m_PrefabInstance: {fileID: 1151230191897150811}
+>>>>>>> Stashed changes
   m_PrefabAsset: {fileID: 0}

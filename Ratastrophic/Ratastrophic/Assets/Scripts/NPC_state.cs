@@ -19,6 +19,9 @@ public class NPC_state : MonoBehaviour
     public NPCPathfinding pathfinder;
     public WaypointGraph grafo;
 
+    public Animator npcAnimator;
+    public int currentAnimID;
+
     private void Awake()
     {
         patrullarState = new PatrullarState(this);
@@ -41,6 +44,7 @@ public class NPC_state : MonoBehaviour
     private void Update()
     {
         NPC_currentState?.Update();
+        npcAnimator.SetInteger("animID", currentAnimID);
     }
 
     public void ChangeState(State newState)
@@ -48,5 +52,10 @@ public class NPC_state : MonoBehaviour
         NPC_currentState?.Exit();
         NPC_currentState = newState;
         NPC_currentState.Enter();
+    }
+
+    public void ChangeAnimation(int id)
+    {
+        currentAnimID = id;
     }
 }

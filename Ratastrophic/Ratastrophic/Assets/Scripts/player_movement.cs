@@ -19,8 +19,20 @@ public class player_movemet : MonoBehaviour
     public AudioClip walk_soundClip;
     public GameObject audio_area;
 
-    private void OnEnable() => moveAction.Enable();
-    private void OnDisable() => moveAction.Disable();
+    [Header("Animation")]
+    public Animator animatorRat;
+
+    private void OnEnable()
+    {
+        animatorRat.SetBool("isDead", false);
+        moveAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        animatorRat.SetBool("isDead", true);
+        moveAction.Disable();
+    }
 
     private void Start()
     {
@@ -44,6 +56,12 @@ public class player_movemet : MonoBehaviour
 
         Vector2 input = moveAction.ReadValue<Vector2>();
         _moveDirection = new Vector3(input.x, 0f, input.y).normalized;
+
+        if(input.x != 0 || input.y != 0)
+        {
+            animatorRat.SetBool("isWalking", true);
+        }
+        else animatorRat.SetBool("isWalking", false);
 
         if (input.sqrMagnitude > 0.01f)
         {
