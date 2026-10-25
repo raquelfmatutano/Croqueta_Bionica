@@ -19963,6 +19963,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuertaSalida
       objectReference: {fileID: 0}
+    - target: {fileID: 2399431864912847816, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6309006728156397827, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19991,6 +19999,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b943e09eade729a438b55de8723e8633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EscapeZone
+  puertaIzq: {fileID: 1403614905}
+  puertaDer: {fileID: 1451460320}
 --- !u!65 &792020575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33595,6 +33605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuertaSalida
       objectReference: {fileID: 0}
+    - target: {fileID: 2399431864912847816, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34117,6 +34131,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1403614905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7551824102768936815, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
+  m_PrefabInstance: {fileID: 792020572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1405291056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4013872764929490983, guid: 50beb1511eb269f45a78c378cc185250, type: 3}
@@ -34677,6 +34696,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6717196092908391265, guid: eaf83230f52568c4495a0882e7042a12, type: 3}
   m_PrefabInstance: {fileID: 1444891447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1451460320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1694909528035693793, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
+  m_PrefabInstance: {fileID: 792020572}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1452028931
 GameObject:
@@ -37422,6 +37446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b943e09eade729a438b55de8723e8633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  puertaIzq: {fileID: 0}
+  puertaDer: {fileID: 0}
 --- !u!65 &1525774607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44825,6 +44851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30f21a5356e6a24e8d092570047ffc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  puerta: {fileID: 792020574}
 --- !u!136 &1831229547
 CapsuleCollider:
   m_ObjectHideFlags: 0

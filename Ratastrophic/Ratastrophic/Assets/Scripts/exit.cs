@@ -2,6 +2,18 @@ using UnityEngine;
 
 public class EscapeZone : MonoBehaviour
 {
+    public GameObject puertaIzq;
+    public GameObject puertaDer;
+
+    public void openDoor() 
+    {
+        //puertaDer.transform.position = new Vector3(1.359f, puertaDer.transform.position.y, puertaDer.transform.position.z);
+        //puertaIzq.transform.global_position = new Vector3(2f, puertaIzq.transform.position.y, puertaIzq.transform.position.z);
+
+        puertaIzq.SetActive(false);
+        puertaDer.SetActive(false);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
