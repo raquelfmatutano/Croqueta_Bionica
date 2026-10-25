@@ -16408,6 +16408,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1476126160510780592, guid: ab7ff21c5d49bfc43934a50e8ccd96b8, type: 3}
   m_PrefabInstance: {fileID: 634724482}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &638990641 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7551824102768936815, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
+  m_PrefabInstance: {fileID: 792020572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &639240570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20007,6 +20012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b943e09eade729a438b55de8723e8633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EscapeZone
+  puertaIzq: {fileID: 1114347186}
+  puertaDer: {fileID: 638990641}
 --- !u!65 &792020575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26600,6 +26607,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1114347186 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1694909528035693793, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
+  m_PrefabInstance: {fileID: 792020572}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1117610437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33089,6 +33101,10 @@ PrefabInstance:
     - target: {fileID: 2399431864912847816, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
       propertyPath: m_Name
       value: PuertaSalida
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399431864912847816, guid: b8b34acfa8da3c84cb8aad2f9c369da9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -40259,6 +40275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f30f21a5356e6a24e8d092570047ffc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PotionItem
+  puerta: {fileID: 792020574}
 --- !u!136 &1672623624
 CapsuleCollider:
   m_ObjectHideFlags: 0
