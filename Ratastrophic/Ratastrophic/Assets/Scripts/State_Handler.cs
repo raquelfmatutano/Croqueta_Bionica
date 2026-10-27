@@ -8,6 +8,8 @@ public class PatrullarState : State
     public override void Enter()
     {
         npc.pathfinder.esInvestigando = false;
+        npc.currentInterest = null;
+
         Debug.Log("Entering Patrol State");
         npc.ChangeAnimation(0);
     }
@@ -133,6 +135,12 @@ public class PerseguirState : State
     }
 
     public override void Exit() { 
+        npc.currentInterest = null;
+        
+        Waypoint start = npc.grafo.find_nearest_waypoint(npc.transform.position);
+        Waypoint end = npc.grafo.ObtenerWaypointAleatorio(npc.pathfinder.waypointActual);
+        npc.pathfinder.IrADestino(end, start);
+
         npc.pathfinder.velocidad = 9;
     }
 

@@ -190,11 +190,7 @@ public class NPCPathfinding : MonoBehaviour
         if (!puedeMoverse)
             return;
 
-        if (state.currentInterest == player_tranform) {
-            waypointDestino = player_tranform;
-        }
-
-        else if (state.currentInterest != null) {
+        if (state.currentInterest != null) {
             waypointDestino = state.currentInterest;
         }
 

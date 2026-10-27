@@ -50,7 +50,7 @@ public class InspeccionarState : State
 
     public override void PlayerSpotted()
     {
-        Debug.Log("Gato FSM: ¡Jugador visto! Cambiando a ALERTAR");
+        Debug.Log("Gato FSM: Jugador visto! Cambiando a ALERTAR");
         meow.waypointJugadorVisto = meow.grafo.find_nearest_waypoint(meow.transform.position);//posicion del gato cuando ve al jugador
         meow.ChangeState(meow.alertarState);
     }
@@ -138,12 +138,12 @@ public class AlertarState : State
 
             if (robotState == null || !(robotState.NPC_currentState is PatrullarState))
             {
-                Debug.Log("Gato FSM: El robot ya no está en PatrullarState. Buscando otro...");
+                Debug.Log("Gato FSM: El robot ya no est en PatrullarState. Buscando otro...");
                 robotObjetivo = BuscarRobotMasCercanoLibre();
 
                 if (robotObjetivo == null)
                 {
-                    Debug.Log("Gato FSM: No hay ningún robot disponible en patrulla. Cambiando a TRASLADAR.");
+                    Debug.Log("Gato FSM: No hay ningun robot disponible en patrulla. Cambiando a TRASLADAR.");
                     robotAvisado = true;
                     meow.ChangeState(meow.trasladarState);
                     return;
@@ -161,7 +161,8 @@ public class AlertarState : State
         }
 
         float distancia = Vector3.Distance(meow.transform.position, robotObjetivo.position);
-        if (distancia <= 2.5f)
+        Debug.Log("Distancia a robot: " + distancia);
+        if (distancia <= 16.5f)
         {
             AvisarAlRobot();
         }
@@ -170,7 +171,7 @@ public class AlertarState : State
     private void AvisarAlRobot()
     {
         robotAvisado = true;
-        Debug.Log("Gato FSM: ¡Robot en patrulla alcanzado! Transmitiendo alerta por sonido...");
+        Debug.Log("Gato FSM: Robot en patrulla alcanzado! Transmitiendo alerta por sonido...");
 
         Waypoint waypointAlerta = meow.waypointJugadorVisto;
 

@@ -1369,6 +1369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DEBUG_NPC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5308326109191699364, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -26839,6 +26843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DEBUG_NPC (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5308326109191699364, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_IsKinematic
       value: 0
@@ -28913,7 +28921,7 @@ MonoBehaviour:
   meowPathfinder: {fileID: 1185476932}
   waypointJugadorVisto: {fileID: 0}
   velocidadNormal: 4
-  velocidadAlerta: 8
+  velocidadAlerta: 12
 --- !u!114 &1185476932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31462,6 +31470,10 @@ PrefabInstance:
     - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_Name
       value: DEBUG_NPC (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787604950602349222, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5308326109191699364, guid: ef7aab68fc911954a90c1068013a9bbe, type: 3}
       propertyPath: m_IsKinematic
